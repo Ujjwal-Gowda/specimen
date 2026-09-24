@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { languages } from '../data';
 import { useDocumentTitle } from '../hooks';
+import { REPO_URL } from '../config';
 import { PageHead } from '../components/ui';
 
 const BRANDS = ['apple', 'stripe', 'linear.app', 'vercel', 'notion', 'figma', 'framer', 'raycast', 'airbnb', 'spotify', 'nike', 'ibm', 'theverge', 'wired', 'supabase', 'cursor', 'claude', 'revolut', 'tesla', 'ferrari', 'dell-1996', 'nintendo-2001'];
@@ -11,6 +12,9 @@ export default function Sources() {
   return (
     <div className="page">
       <PageHead eyebrow="About" title="Sources & DESIGN.md" lede="Where the names and facts come from, and how to hand a style to a coding agent." />
+      <section className="section"><h2 className="sec">Source code</h2>
+        <p>Specimen is open source: <a href={REPO_URL} {...ext}>{REPO_URL.replace('https://', '')}</a>. Corrections to names, dates, licences and prices are welcome as issues or pull requests.</p>
+      </section>
       <section className="section"><h2 className="sec">DESIGN.md files</h2>
         <div className="prose"><p>DESIGN.md is an open format from Google Labs (born in Stitch) for describing a visual identity to coding agents: design tokens in YAML front matter, rationale in Markdown prose, sections in a fixed order — Overview, Colors, Typography, Layout, Elevation &amp; Depth, Shapes, Components, Do's and Don'ts.</p>
           <p>Every design language here generates one. They are also written to <code>public/design-md/&lt;id&gt;.md</code> by <code>npm run design-md</code>, and your brief can export one that blends your chosen language with your chosen fonts.</p></div>

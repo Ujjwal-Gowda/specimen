@@ -65,8 +65,8 @@ and makes the connections explicit, so a builder and a client can point at the s
 Requires Node 20 or newer.
 
 ```bash
-git clone <this repo>
-cd specimen-atlas
+git clone https://github.com/Ujjwal-Gowda/specimen.git
+cd specimen
 npm install
 npm run dev          # http://localhost:5173
 ```
