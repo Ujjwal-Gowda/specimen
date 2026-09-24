@@ -86,7 +86,11 @@ npm run dev          # http://localhost:5173
 
 ### Deploy
 
-`npm run build` produces a fully static site with relative asset paths and hash-based
+**GitHub Pages (built in):** `.github/workflows/deploy.yml` runs every check on pull requests
+and deploys `main` to Pages. Enable it once under *Settings → Pages → Source: GitHub Actions*;
+the site appears at `https://<user>.github.io/<repo>/`.
+
+**Anywhere else:** `npm run build` produces a fully static site with relative asset paths and hash-based
 routes, so `dist/` works on any static host (GitHub Pages, Netlify, Vercel, Cloudflare
 Pages, S3) and from any sub-path, with no rewrite rules. The only external requests are
 to Google Fonts.
