@@ -107,7 +107,11 @@ export function AppShell() {
               ))}
             </div>
           ))}
+          <div className="sidenav__footer">
+            <a href={REPO_URL} target="_blank" rel="noopener">Source on GitHub ↗</a>
+          </div>
         </nav>
+        {navOpen && <button className="sidenav-scrim" type="button" aria-label="Close sections" onClick={() => setNavOpen(false)} />}
         <main id="main" ref={mainRef} className="main" tabIndex={-1}><Outlet /></main>
       </div>
 

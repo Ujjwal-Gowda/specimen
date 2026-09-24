@@ -58,7 +58,7 @@ export default function Type() {
       <PageHead eyebrow="Atlas · Typography" title="Typography"
         lede={`${typefaces.length} typefaces by their exact published names, the classification each belongs to, named pairings, modular scales and the vocabulary to talk about all of it. Commercial faces are flagged and come with free alternatives.`}>
       </PageHead>
-      <nav className="chips" aria-label="Sections on this page">{SECTIONS.map(([k, l]) => <Link key={k} className="chip" to={`/type?sec=${k}`} replace>{l}</Link>)}</nav>
+      <nav className="chips chips--scroll" aria-label="Sections on this page">{SECTIONS.map(([k, l]) => <Link key={k} className="chip" to={`/type?sec=${k}`} replace>{l}</Link>)}</nav>
 
       <section className="section" id="sec-faces">
         <h2 className="sec">Typefaces</h2>

@@ -635,3 +635,52 @@ table.data td.num { font-variant-numeric: tabular-nums; font-family: var(--f-mon
   font-size: var(--t-sm);
 }
 .is-client .main { padding-bottom: 140px; }
+
+/* ================================================================
+   Phones and small tablets
+   ================================================================ */
+.sidenav__footer { display: none; }
+.sidenav-scrim { display: none; }
+@media (max-width: 860px) {
+  /* the drawer: out of the tab order while closed, scrim to close it */
+  .sidenav { visibility: hidden; transition: transform .3s cubic-bezier(.16, 1, .3, 1), visibility 0s linear .3s; overflow-y: auto; }
+  .sidenav.is-open { visibility: visible; transition: transform .3s cubic-bezier(.16, 1, .3, 1); }
+  .sidenav-scrim { display: block; position: fixed; inset: var(--top) 0 0 0; z-index: 39; background: rgb(0 0 0 / .35); border: 0; }
+  .sidenav__footer { display: block; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--rule); }
+  .topbar .icon-btn--gh { display: none; }
+
+  /* filters: not sticky (they'd cover the screen), chip groups scroll sideways in one row */
+  .filters { position: static; backdrop-filter: none; -webkit-backdrop-filter: none; background: none; }
+  .filters .chips, .chips--scroll {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain;
+    margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); width: calc(100% + var(--gutter) * 2);
+    mask-image: linear-gradient(90deg, transparent, #000 var(--gutter), #000 calc(100% - 28px), transparent);
+  }
+  .filters .chips::-webkit-scrollbar, .chips--scroll::-webkit-scrollbar { display: none; }
+  .filters .chip, .chips--scroll .chip { flex: none; }
+  .filters .field { width: 100%; }
+  .filters .select { flex: 1; }
+
+  /* compare: swipe between columns; rows become labelled stacks */
+  .compare-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 86%; scroll-snap-type: x mandatory; scrollbar-width: thin; padding-bottom: 6px; }
+  .compare-grid .mini { scroll-snap-align: start; }
+  .compare-rows > div { display: block; overflow: visible; }
+  .compare-rows > div > b { display: block; margin-bottom: 6px; }
+  .compare-rows > div > div { display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 8px; padding: 3px 0; }
+  .compare-rows > div > div::before { content: attr(data-lang); font: 500 11px/1.4 var(--f-mono); color: var(--ink-3); }
+
+  /* touch-friendly targets, and no iOS zoom-on-focus (needs >= 16px inputs) */
+  .chip, .pin, .btn--sm { min-height: 38px; }
+  input, select, textarea { font-size: 16px; }
+  .palette { padding: 8px; align-items: flex-start; }
+  .palette__box { max-height: calc(100dvh - 16px); }
+  .main { padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 520px) {
+  .tile__actions { flex-wrap: wrap; }
+  .actions { flex-wrap: wrap; }
+  .actions .btn { flex: 1 1 auto; }
+}
+/* long chip labels (e.g. pairing names) wrap instead of pushing the page sideways */
+.chip { max-width: 100%; overflow-wrap: anywhere; }
+.filters .chips .chip, .chips--scroll .chip { max-width: none; white-space: nowrap; }

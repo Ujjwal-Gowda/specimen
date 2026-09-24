@@ -25,7 +25,7 @@ export default function Component() {
         <CompFrame comp={c} langId={compTheme} />
         <div className="tile__body">
           <ThemePicker />
-          <div className="chips" role="group" aria-label="Render in design language">
+          <div className="chips chips--scroll" role="group" aria-label="Render in design language">
             {languages.map(l => <button key={l.id} className="chip" type="button" aria-pressed={l.id === compTheme} onClick={() => setCompTheme(l.id)}>{l.name}</button>)}
           </div>
         </div>

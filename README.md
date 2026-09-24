@@ -86,14 +86,14 @@ npm run dev          # http://localhost:5173
 
 ### Deploy
 
-**GitHub Pages (built in):** `.github/workflows/deploy.yml` runs every check on pull requests
-and deploys `main` to Pages. Enable it once under *Settings → Pages → Source: GitHub Actions*;
-the site appears at `https://<user>.github.io/<repo>/`.
+The live site is deployed on **Netlify** from `main`. `netlify.toml` holds the build
+settings (`npm run build` → `dist/`, Node 22), and every pull request gets a preview URL.
+`.github/workflows/ci.yml` runs typecheck, lint, tests, the validator and a build on every
+push and pull request.
 
-**Anywhere else:** `npm run build` produces a fully static site with relative asset paths and hash-based
-routes, so `dist/` works on any static host (GitHub Pages, Netlify, Vercel, Cloudflare
-Pages, S3) and from any sub-path, with no rewrite rules. The only external requests are
-to Google Fonts.
+The build is a fully static site with relative asset paths and hash-based routes, so
+`dist/` also works on any other static host (Cloudflare Pages, Vercel, GitHub Pages, S3)
+and from any sub-path, with no rewrite rules. The only external requests are to Google Fonts.
 
 ## How it's built
 

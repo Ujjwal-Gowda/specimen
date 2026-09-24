@@ -56,7 +56,7 @@ export default function Compare() {
           </div>
         ))}</div>
         <div className="compare-rows" style={{ ['--n' as string]: langs.length }}>
-          {rows.map(([label, fn]) => <div key={label}><b>{label}</b>{langs.map(l => <div key={l.id}>{fn(l)}</div>)}</div>)}
+          {rows.map(([label, fn]) => <div key={label}><b>{label}</b>{langs.map(l => <div key={l.id} data-lang={l.name}>{fn(l)}</div>)}</div>)}
         </div>
       </> : <div className="empty">Nothing to compare yet. Add languages above, or press “Compare” on any design language.</div>}
     </div>
