@@ -1,0 +1,32 @@
+/* mid-century-modern — tokens, primitive overrides and media-slot art direction, scoped under .lang-mid-century-modern */
+.lang-mid-century-modern {
+  --ui-bg: #F4ECDC;
+  --ui-surface: #FBF6EA;
+  --ui-text: #3A2A20;
+  --ui-muted: #6B5A4B;
+  --ui-accent: #1F6F6B;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #D9C9AC;
+  --ui-radius: 4px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 0px;
+  --ui-shadow: none;
+  --ui-font-display: "Jost", Futura, system-ui, sans-serif;
+  --ui-font-body: "Jost", system-ui, sans-serif;
+  --ui-font-mono: ui-monospace, monospace;
+  --ui-display-weight: 500;
+  --ui-display-tracking: -0.01em;
+  --ui-display-transform: lowercase;
+}
+.lang-mid-century-modern .ui-h1 { font-size: clamp(28px, 3.4vw, 42px); }
+.lang-mid-century-modern .ui-btn { border-radius: 999px; }
+.lang-mid-century-modern .ui-card:nth-child(1) { background: #e0a526; color: #3a2a20; }
+.lang-mid-century-modern .ui-card:nth-child(2) { background: #1f6f6b; color: #fff; }
+.lang-mid-century-modern .ui-card:nth-child(2) .ui-p { color: #d7ece9; }
+.lang-mid-century-modern .ui-card:nth-child(3) { background: #c8552b; color: #fff; }
+.lang-mid-century-modern .ui-card:nth-child(3) .ui-p { color: #fbe3d8; }
+.lang-mid-century-modern .ui-card .ui-chip, .lang-mid-century-modern .ui-card .ui-badge { background: #f4ecdc; color: #3a2a20; border-color: #f4ecdc; }
+.lang-mid-century-modern .ui-media { border: 0; background:
+  conic-gradient(from 0deg at 72% 34%, #e0a526 0 10deg, transparent 10deg 30deg, #e0a526 30deg 40deg, transparent 40deg 60deg, #e0a526 60deg 70deg, transparent 70deg 90deg, #e0a526 90deg 100deg, transparent 100deg 120deg, #e0a526 120deg 130deg, transparent 130deg 150deg, #e0a526 150deg 160deg, transparent 160deg 180deg, #e0a526 180deg 190deg, transparent 190deg 210deg, #e0a526 210deg 220deg, transparent 220deg 240deg, #e0a526 240deg 250deg, transparent 250deg 270deg, #e0a526 270deg 280deg, transparent 280deg 300deg, #e0a526 300deg 310deg, transparent 310deg 330deg, #e0a526 330deg 340deg, transparent 340deg),
+  radial-gradient(ellipse 34% 20% at 34% 72%, #1f6f6b 98%, transparent 100%),
+  radial-gradient(circle at 20% 30%, #c8552b 0 13%, transparent 13.5%), #f4ecdc; }

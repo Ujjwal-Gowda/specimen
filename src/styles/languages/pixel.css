@@ -1,0 +1,88 @@
+/* pixel — tokens, primitive overrides and media-slot art direction, scoped under .lang-pixel */
+.lang-pixel {
+  --ui-bg: #1D2B53;
+  --ui-surface: #000000;
+  --ui-text: #FFF1E8;
+  --ui-muted: #C2C3C7;
+  --ui-accent: #FFEC27;
+  --ui-accent-text: #000000;
+  --ui-border: #FFF1E8;
+  --ui-radius: 0px;
+  --ui-radius-sm: 0px;
+  --ui-bw: 4px;
+  --ui-shadow: 4px 4px 0 #000000;
+  --ui-font-display: "Press Start 2P", ui-monospace, monospace;
+  --ui-font-body: "VT323", ui-monospace, monospace;
+  --ui-font-mono: "VT323", ui-monospace, monospace;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0em;
+  --ui-display-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.1;
+  -webkit-font-smoothing: none;
+  image-rendering: pixelated;
+  background:
+    radial-gradient(circle, #FFF1E8 1px, transparent 1.3px) 0 0 / 37px 41px,
+    radial-gradient(circle, #83769C 1px, transparent 1.3px) 17px 23px / 53px 47px,
+    #1D2B53;
+}
+.lang-pixel .ui-btn,
+.lang-pixel .ui-card,
+.lang-pixel .ui-input,
+.lang-pixel .ui-tabs {
+  margin: 4px;
+  border: 0;
+  box-shadow: 0 -4px 0 var(--px, #000000), 0 4px 0 var(--px, #000000), -4px 0 0 var(--px, #000000), 4px 0 0 var(--px, #000000);
+}
+.lang-pixel .ui-btn {
+  font-family: var(--ui-font-display);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  box-shadow: 0 -4px 0 #000000, 0 4px 0 #000000, -4px 0 0 #000000, 4px 0 0 #000000, inset -4px -4px 0 #FFA300;
+}
+.lang-pixel .ui-btn:active { transform: translateY(2px); }
+.lang-pixel .ui-btn--sm { font-size: 8px; }
+.lang-pixel .ui-btn--ghost {
+  background: #C2C3C7;
+  color: #000000;
+  box-shadow: 0 -4px 0 #000000, 0 4px 0 #000000, -4px 0 0 #000000, 4px 0 0 #000000, inset -4px -4px 0 #5F574F;
+}
+.lang-pixel .ui-logo { font-size: 12px; color: var(--ui-accent); text-shadow: 2px 2px 0 #FF004D; }
+.lang-pixel .ui-link { font-family: var(--ui-font-body); font-size: 18px; color: var(--ui-muted); }
+.lang-pixel .ui-eyebrow {
+  font-family: var(--ui-font-display);
+  font-size: 9px;
+  letter-spacing: 0;
+  color: #00E436;
+  animation: lang-pixel-blink 1.2s steps(1) infinite;
+}
+@keyframes lang-pixel-blink { 50% { opacity: 0; } }
+.lang-pixel .ui-h1 { max-width: 22ch; font-size: clamp(16px, 2vw, 22px); line-height: 1.4; text-shadow: 3px 3px 0 #7E2553; }
+.lang-pixel .ui-p { font-size: 18px; line-height: 1.15; color: var(--ui-muted); }
+.lang-pixel .ui-grid { gap: 16px; }
+.lang-pixel .ui-card { --px: #FFF1E8; background: #000000; }
+.lang-pixel .ui-h2 { font-size: 10px; line-height: 1.4; color: #29ADFF; }
+.lang-pixel .ui-badge,
+.lang-pixel .ui-chip { padding: 4px 6px; border: 0; font-family: var(--ui-font-display); font-size: 8px; font-weight: 400; }
+.lang-pixel .ui-badge { background: #FF004D; color: #000000; }
+.lang-pixel .ui-chip { background: #29ADFF; color: #000000; }
+.lang-pixel .ui-input { background: #FFF1E8; color: #000000; font-family: var(--ui-font-body); font-size: 18px; }
+.lang-pixel .ui-input::placeholder { color: #5F574F; }
+.lang-pixel .ui-tabs { --px: #FFF1E8; padding: 4px; background: #000000; }
+.lang-pixel .ui-tab { font-family: var(--ui-font-display); font-size: 8px; font-weight: 400; color: var(--ui-muted); }
+.lang-pixel .ui-tab[aria-selected="true"] { background: var(--ui-accent); color: #000000; box-shadow: none; }
+.lang-pixel .ui-switch span { border-radius: 0; background: #5F574F; }
+.lang-pixel .ui-switch span::after { border-radius: 0; background: #FFF1E8; box-shadow: none; }
+.lang-pixel .ui-switch input:checked + span { background: #00E436; }
+@media (prefers-reduced-motion: reduce) {
+  .lang-pixel .ui-eyebrow { animation: none; }
+}
+
+.lang-pixel .ui-media { border: 0; image-rendering: pixelated; background:
+  linear-gradient(#008751, #008751) 0 100% / 100% 20% no-repeat,
+  linear-gradient(#ffec27, #ffec27) 70% 22% / 12% 16% no-repeat,
+  linear-gradient(#ff004d, #ff004d) 28% 64% / 8% 16% no-repeat, linear-gradient(#fff1e8, #fff1e8) 28% 52% / 8% 8% no-repeat,
+  linear-gradient(#c2c3c7, #c2c3c7) 50% 52% / 24% 8% no-repeat,
+  #29adff; box-shadow: 0 0 0 3px #000; }
+.lang-pixel .ui-media-cap { color: #fff1e8; }

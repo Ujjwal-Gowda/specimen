@@ -1,0 +1,45 @@
+/* flat — tokens, primitive overrides and media-slot art direction, scoped under .lang-flat */
+.lang-flat {
+  --ui-bg: #FFFFFF; --ui-surface: #ECF0F1; --ui-text: #2C3E50; --ui-muted: #566573;
+  --ui-accent: #2471A3; --ui-accent-text: #FFFFFF; --ui-border: #D5DBDB;
+  --ui-radius: 6px; --ui-radius-sm: 4px; --ui-bw: 0px; --ui-shadow: none;
+  --ui-font-display: "Lato", "Segoe UI", sans-serif;
+  --ui-font-body: "Open Sans", "Segoe UI", sans-serif;
+  --ui-font-mono: "Fira Code", ui-monospace, monospace;
+  --ui-display-weight: 900; --ui-display-tracking: -0.01em; --ui-display-transform: none;
+}
+.lang-flat .ui-nav { background: #2C3E50; margin: -18px -20px 0; padding: 12px 20px; }
+.lang-flat .ui-logo, .lang-flat .ui-link { color: #ECF0F1; }
+.lang-flat .ui-nav .ui-btn { background: #1ABC9C; color: #0B2E27; border-color: #1ABC9C; }
+.lang-flat .ui-eyebrow { font-family: var(--ui-font-body); font-weight: 700; color: #16A085; letter-spacing: .04em; }
+.lang-flat .ui-btn { border-radius: 4px; border-bottom: 3px solid #1A5276; }
+.lang-flat .ui-btn:active { border-bottom-width: 1px; transform: translateY(2px); }
+.lang-flat .ui-btn--ghost { background: #ECF0F1; color: #2C3E50; border: 0; border-bottom: 3px solid #BDC3C7; }
+.lang-flat .ui-card { color: #fff; border: 0; }
+.lang-flat .ui-card .ui-p { color: rgba(255, 255, 255, .9); }
+.lang-flat .ui-card:nth-child(1) { background: #117A65; }
+.lang-flat .ui-card:nth-child(2) { background: #8E44AD; }
+.lang-flat .ui-card:nth-child(3) { background: #C0392B; }
+.lang-flat .ui-badge { background: #F1C40F; color: #2C3E50; border: 0; border-radius: 3px; }
+.lang-flat .ui-chip { background: rgba(255, 255, 255, .2); color: #fff; border: 0; border-radius: 3px; }
+.lang-flat .ui-input { background: #ECF0F1; border: 2px solid #ECF0F1; }
+.lang-flat .ui-input:focus { border-color: #2471A3; outline: none; }
+.lang-flat .ui-tabs { background: #ECF0F1; border: 0; }
+.lang-flat .ui-tab[aria-selected="true"] { background: #2471A3; color: #fff; box-shadow: none; }
+.lang-flat .ui-switch span::after { box-shadow: none; }
+.lang-flat .ui-switch input:checked + span { background: #1ABC9C; }
+.lang-flat .ui-media {
+  border: 0; border-radius: 6px;
+  background:
+    linear-gradient(transparent 62%, #27AE60 62%) ,
+    #5DADE2;
+}
+.lang-flat .ui-media::before {
+  content: ''; position: absolute; right: 16%; top: 14%;
+  width: 22%; aspect-ratio: 1; border-radius: 50%; background: #F4D03F;
+}
+.lang-flat .ui-media::after {
+  content: ''; position: absolute; left: -5%; right: -5%; bottom: 20%; height: 40%;
+  background: #1E8449; clip-path: polygon(0 100%, 22% 20%, 44% 100%, 58% 45%, 78% 100%, 90% 30%, 100% 100%);
+}
+.lang-flat .ui-media-cap { color: #fff; z-index: 1; }

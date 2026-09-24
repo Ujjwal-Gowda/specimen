@@ -1,0 +1,34 @@
+/* cyberpunk — tokens, primitive overrides and media-slot art direction, scoped under .lang-cyberpunk */
+.lang-cyberpunk {
+  --ui-bg: #0A0A12;
+  --ui-surface: #12121E;
+  --ui-text: #E8ECF4;
+  --ui-muted: #9AA0B4;
+  --ui-accent: #FCEE0A;
+  --ui-accent-text: #0A0A12;
+  --ui-border: #00F0FF;
+  --ui-radius: 0px;
+  --ui-radius-sm: 0px;
+  --ui-bw: 1px;
+  --ui-shadow: 0 0 18px rgba(0,240,255,.35);
+  --ui-font-display: "Rajdhani", "Orbitron", sans-serif;
+  --ui-font-body: "Rajdhani", system-ui, sans-serif;
+  --ui-font-mono: "Share Tech Mono", ui-monospace, monospace;
+  --ui-display-weight: 700;
+  --ui-display-tracking: 0.06em;
+  --ui-display-transform: uppercase;
+}
+.lang-cyberpunk { background: linear-gradient(rgba(0,240,255,.04) 1px, transparent 1px) 0 0 / 100% 3px, #0a0a12; }
+.lang-cyberpunk .ui-nav { border-bottom: 1px solid #00f0ff55; }
+.lang-cyberpunk .ui-eyebrow { font-family: var(--ui-font-mono); color: #00f0ff; letter-spacing: .12em; }
+.lang-cyberpunk .ui-h1 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1; text-shadow: 2px 0 #ff2a6d, -2px 0 #00f0ff; }
+.lang-cyberpunk .ui-btn { clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
+.lang-cyberpunk .ui-btn--ghost { background: transparent; color: #00f0ff; border-color: #00f0ff; }
+.lang-cyberpunk .ui-card { border-color: #00f0ff66; clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); box-shadow: none; }
+.lang-cyberpunk .ui-badge { background: #ff2a6d; border-color: #ff2a6d; color: #0a0a12; }
+.lang-cyberpunk .ui-media { border-color: #fcee0a; background:
+  linear-gradient(transparent 0 58%, #fcee0a 58% 59%, transparent 59%),
+  repeating-linear-gradient(90deg, transparent 0 14px, rgba(0,240,255,.35) 14px 15px) 0 100% / 100% 42% no-repeat,
+  linear-gradient(0deg, #ff2a6d 0 6%, transparent 6%) 18% 58% / 8% 44% no-repeat, linear-gradient(0deg, #00f0ff 0 6%, transparent 6%) 38% 58% / 12% 60% no-repeat,
+  linear-gradient(#1a1030, #0a0a12); clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%); }
+.lang-cyberpunk .ui-media-cap { color: #fcee0a; }

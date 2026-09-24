@@ -1,0 +1,123 @@
+import type { Language } from '../../types';
+
+const y2k: Language = {
+  id: 'y2k',
+  name: 'Y2K Aesthetic',
+  aka: ['Cyber Y2K', 'Y2K Futurism', 'Frutiger Aero (adjacent)', 'Millennium aesthetic'],
+  category: 'Aesthetic',
+  era: '1997–2004 original; revival from ~2019',
+  origin: 'The optimistic tech-futurism of the turn of the millennium: the translucent Bondi Blue iMac G3 (1998), Apple’s Aqua interface for Mac OS X (unveiled January 2000) with its lickable glossy buttons, chrome logotypes, bubbles, blobby 3D renders, Winamp skins and pop music videos. The Consumer Aesthetics Research Institute (CARI) catalogues it as “Y2K Futurism” and documents related strands, including “Frutiger Aero”, the glossy nature-meets-technology look of roughly 2004–2013 (Windows Vista and 7, aqua skies, Frutiger-family type). Gen-Z fashion and social media revived Y2K around 2019–2020.',
+  summary: 'Glossy, chrome and bubbly: metallic gradients, translucent plastics, pill-shaped Aqua buttons and techno display type, all with naive optimism about the future.',
+  identify: [
+    'Chrome or liquid-metal gradient text and logos',
+    'Glossy pill buttons with a white highlight across the top half (Aqua style)',
+    'Translucent, icy blues with pops of bubblegum pink and lime',
+    'Orbs, bubbles, blobs and lens flares',
+    'Wide, techno or extended display type (Eurostile/Orbitron-like)',
+  ],
+  principles: [
+    'Everything is shiny: gloss, chrome, highlight',
+    'Technology as fun and friendly',
+    'Rounded, inflatable shapes',
+    'Playful excess over restraint',
+  ],
+  color: {
+    strategy: 'Icy blue and silver chrome base with candy accents (bubblegum pink, lime) for badges and highlights.',
+    palette: [
+      { name: 'Ice', hex: '#EAF4FF', role: 'background' },
+      { name: 'Chrome', hex: '#C9D3DE', role: 'surface / metallic' },
+      { name: 'Deep Navy', hex: '#0A1A3A', role: 'text' },
+      { name: 'Steel', hex: '#3E4C63', role: 'muted text' },
+      { name: 'Aqua Blue', hex: '#0062D6', role: 'accent' },
+      { name: 'Bubblegum', hex: '#FF6EC7', role: 'highlight' },
+      { name: 'Lime Pop', hex: '#B6FF3B', role: 'highlight' },
+    ],
+  },
+  typography: {
+    approach: 'Extended or techno display faces for headlines and logos, a rounded-geometric body face. For the Frutiger Aero variant, a humanist sans (Frutiger or similar).',
+    display: ['orbitron', 'michroma', 'audiowide', 'syne', 'unbounded'],
+    body: ['outfit', 'sora', 'frutiger'],
+    mono: ['space-mono'],
+    scale: 'Major Third (1.25)',
+    notes: 'Chrome text works with gradient + background-clip: text plus a thin text-stroke. Keep body copy in a normal-width face.',
+  },
+  shape: {
+    radius: 'Pill (999px) buttons, 18–24px cards',
+    borders: '1px darker rims under glossy surfaces',
+    elevation: 'Inner highlights plus soft blue drop shadows (“bevel and gloss”)',
+    texture: 'Gloss highlights, lens flares, bubbles',
+  },
+  layout: {
+    grid: 'Loose, collage-like; centred heroes with floating 3D objects',
+    layouts: ['centered-hero', 'card-grid', 'broken-grid', 'full-bleed-hero'],
+    density: 'balanced',
+  },
+  imagery: '3D chrome objects, blobs and bubbles, translucent tech products, butterfly and star motifs; low-poly or glossy renders.',
+  motion: {
+    character: 'Bouncy and shiny: shine sweeps across buttons, floating orbs, springy presses.',
+    animations: ['shine-sweep', 'blob-morph', 'gradient-drift', 'tilt-3d', 'spring-press', 'glitch', 'marquee-scroll'],
+    easing: 'cubic-bezier(0.34, 1.56, 0.64, 1) — easeOutBack (overshoot)',
+    duration: '300–600ms interactions; 8–20s ambient floats',
+  },
+  components: {
+    signature: ['button', 'badge', 'chip', 'card', 'product-card', 'marquee-band', 'navbar'],
+    notes: 'Buttons are the signature: glossy Aqua pills. Product cards float with chrome frames.',
+  },
+  purposes: ['ecommerce', 'event', 'gaming', 'portfolio'],
+  avoidFor: ['government', 'fintech', 'healthcare', 'docs'],
+  pairsWith: ['vaporwave', 'maximalism', 'pixel', 'glassmorphism'],
+  dos: [
+    'Commit to gloss: highlights, bevels and chrome',
+    'Use candy colours as small accents on icy neutrals',
+    'Keep body text plain and readable',
+    'Reference the era knowingly (Aqua, iMac G3)',
+  ],
+  donts: [
+    'Don’t apply chrome gradients to body text',
+    'Don’t mix with flat or brutalist styles in the same component',
+    'Don’t use low-contrast light-blue text',
+    'Don’t forget to test gloss effects in dark mode',
+  ],
+  a11y: 'Chrome gradients reduce contrast at their light stops, so keep them for large display text and logos only. Glossy buttons need a text colour that passes against the lightest part of the gradient.',
+  examples: [
+    { name: 'Poolsuite', url: 'https://poolsuite.net' },
+  ],
+  references: [
+    { label: 'Consumer Aesthetics Research Institute (CARI)', url: 'https://cari.institute' },
+    { label: 'Y2K aesthetic — Wikipedia', url: 'https://en.wikipedia.org/wiki/Y2K_aesthetic' },
+    { label: 'Frutiger Aero — Wikipedia', url: 'https://en.wikipedia.org/wiki/Frutiger_Aero' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#EAF4FF',
+      surface: '#F7FAFF',
+      text: '#0A1A3A',
+      muted: '#3E4C63',
+      accent: '#0062D6',
+      accentText: '#FFFFFF',
+      border: '#A9B8CC',
+    },
+    fonts: {
+      display: '"Orbitron", "Arial Black", sans-serif',
+      body: '"Outfit", system-ui, sans-serif',
+      mono: '"Space Mono", ui-monospace, monospace',
+    },
+    googleFonts: 'family=Orbitron:wght@600;800;900&family=Outfit:wght@400;500;700&family=Space+Mono:wght@400;700',
+    radius: '20px',
+    radiusSm: '999px',
+    borderWidth: '1px',
+    shadow: 'inset 0 1px 0 rgba(255,255,255,0.9), 0 6px 16px rgba(0,60,140,0.25)',
+    displayWeight: 800,
+    displayTracking: '0.01em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'HYPERLINK',
+    eyebrow: 'Drop 02 · Millennium',
+    headline: 'Log on to the future',
+    body: 'Translucent tech accessories in Ice, Tangerine and Bondi. Limited run, shipping worldwide.',
+    cta: 'Shop the drop',
+  },
+};
+
+export default y2k;

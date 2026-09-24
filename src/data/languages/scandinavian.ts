@@ -1,0 +1,116 @@
+import type { Language } from '../../types';
+
+const scandinavian: Language = {
+  id: 'scandinavian',
+  name: 'Scandinavian',
+  aka: ['Nordic design', 'Scandi', 'Scandinavian modern'],
+  category: 'Aesthetic',
+  era: '1930s–60s design movement; ubiquitous since 2010s',
+  origin: 'Scandinavian Modern grew from Danish, Swedish, Finnish and Norwegian craft traditions: Alvar Aalto, Arne Jacobsen, Hans Wegner, Marimekko’s prints. The 1954–57 "Design in Scandinavia" exhibition toured North America and made it a style. Its values — democratic, functional, warm, natural materials, light — shape IKEA, HAY, Muuto and much of today’s calm, airy web design.',
+  summary: 'Light, calm and warm: off-white and pale wood tones, muted natural colours, simple friendly sans type, generous space and honest materials. Functional, democratic and cosy (hygge).',
+  identify: [
+    'Off-white, pale grey and light wood backgrounds',
+    'Muted natural accents: sage, clay, dusty blue, ochre',
+    'Simple, friendly sans in regular weights',
+    'Lots of daylight and space in photography',
+    'Soft small radii and thin lines',
+  ],
+  principles: [
+    'Function first, beauty through simplicity',
+    'Natural materials and daylight',
+    'Design for everyone — democratic and affordable',
+  ],
+  color: {
+    strategy: 'Light neutral base (white, oat, pale wood) with one or two muted natural accents.',
+    palette: [
+      { name: 'Snow', hex: '#F7F5F1', role: 'background' },
+      { name: 'Birch', hex: '#E8DFD2', role: 'surface' },
+      { name: 'Charcoal', hex: '#2B2B2B', role: 'text' },
+      { name: 'Fjord Blue', hex: '#5B7489', role: 'accent' },
+      { name: 'Sage', hex: '#A3B09A', role: 'secondary' },
+      { name: 'Clay', hex: '#C8876B', role: 'warm accent' },
+    ],
+  },
+  typography: {
+    approach: 'Clean geometric or grotesque sans, regular to medium weights, sentence case; a warm serif for editorial accents.',
+    display: ['dm-sans', 'work-sans', 'manrope'],
+    body: ['dm-sans', 'work-sans'],
+    mono: ['ibm-plex-mono'],
+    scale: 'Major Third (1.25)',
+    notes: 'Avoid heavy weights; Scandinavian type is quiet and even.',
+  },
+  shape: {
+    radius: '4–8px',
+    borders: 'Thin 1px lines in warm grey',
+    elevation: 'Almost none; soft shadows only for overlays',
+    texture: 'Wood, linen and wool in photography',
+  },
+  layout: {
+    grid: 'Airy 12-column grid with large margins and simple rows.',
+    layouts: ['split-hero', 'card-grid', 'twelve-col-grid', 'masonry'],
+    density: 'airy',
+  },
+  imagery: 'Daylit interiors, pale wood, plants, knitwear, nature and seasons.',
+  motion: {
+    character: 'Calm and unhurried: soft fades and gentle reveals.',
+    animations: ['fade-in', 'fade-up-reveal', 'hover-lift', 'ken-burns'],
+    easing: 'cubic-bezier(0.25, 0.1, 0.25, 1) — ease',
+    duration: '300–600ms',
+  },
+  components: {
+    signature: ['product-card', 'navbar', 'gallery-masonry', 'newsletter-signup', 'footer'],
+    notes: 'Product cards with lots of white space and small, quiet price labels.',
+  },
+  purposes: ['ecommerce', 'real-estate', 'wellness', 'restaurant', 'personal-blog'],
+  avoidFor: ['gaming', 'web3'],
+  pairsWith: ['minimalism', 'organic', 'wabi-sabi'],
+  dos: [
+    'Let daylight photography carry the mood',
+    'Use muted natural accents',
+    'Keep weights regular and spacing generous',
+  ],
+  donts: ['Use saturated primaries', 'Crowd the layout', 'Use heavy drop shadows'],
+  a11y: 'Muted accents often fail contrast as text; keep text charcoal and use accents for fills with dark text.',
+  examples: [
+    { name: 'HAY', url: 'https://hay.dk' },
+    { name: 'Muuto', url: 'https://www.muuto.com' },
+    { name: 'Marimekko', url: 'https://www.marimekko.com' },
+  ],
+  references: [
+    { label: 'Scandinavian design (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Scandinavian_design' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#F7F5F1',
+      surface: '#FFFFFF',
+      text: '#2B2B2B',
+      muted: '#6A665F',
+      accent: '#4A6275',
+      accentText: '#FFFFFF',
+      border: '#E0D8CC',
+    },
+    fonts: {
+      display: '"DM Sans", system-ui, sans-serif',
+      body: '"DM Sans", system-ui, sans-serif',
+      mono: '"IBM Plex Mono", monospace',
+    },
+    googleFonts: 'family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600',
+    radius: '8px',
+    radiusSm: '4px',
+    borderWidth: '1px',
+    shadow: 'none',
+    displayWeight: 500,
+    displayTracking: '-0.02em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Lykke',
+    eyebrow: 'Autumn collection',
+    headline: 'Made for long, slow evenings',
+    body: 'Wool throws, oak tables and lamps that glow like the last hour of daylight.',
+    cta: 'Shop the room',
+    media: 'Oak & wool',
+  },
+};
+
+export default scandinavian;

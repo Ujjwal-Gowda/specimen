@@ -1,0 +1,31 @@
+/* constructivism — tokens, primitive overrides and media-slot art direction, scoped under .lang-constructivism */
+.lang-constructivism {
+  --ui-bg: #EFE6D2;
+  --ui-surface: #F8F2E4;
+  --ui-text: #141414;
+  --ui-muted: #4E4A43;
+  --ui-accent: #C8102E;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #141414;
+  --ui-radius: 0px;
+  --ui-radius-sm: 0px;
+  --ui-bw: 3px;
+  --ui-shadow: none;
+  --ui-font-display: "Bebas Neue", "Oswald", Impact, sans-serif;
+  --ui-font-body: "Archivo", "Futura", system-ui, sans-serif;
+  --ui-font-mono: "Space Mono", monospace;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0.02em;
+  --ui-display-transform: uppercase;
+}
+.lang-constructivism .ui-h1 { font-size: clamp(34px, 4.2vw, 54px); line-height: .9; transform: rotate(-6deg); transform-origin: 0 100%; margin: 6px 0 10px; }
+.lang-constructivism .ui-h1::first-line { color: #c8102e; }
+.lang-constructivism .ui-hero { position: relative; }
+.lang-constructivism .ui-eyebrow { background: #c8102e; color: #fff; padding: 3px 8px; width: max-content; }
+.lang-constructivism .ui-btn { text-transform: uppercase; letter-spacing: .08em; }
+.lang-constructivism .ui-card { border-width: 0; border-top: 6px solid #141414; background: transparent; }
+.lang-constructivism .ui-card:nth-child(2) { border-top-color: #c8102e; }
+.lang-constructivism .ui-media { border: 0; background:
+  linear-gradient(-28deg, transparent 47%, #c8102e 47% 60%, transparent 60%),
+  radial-gradient(circle at 30% 34%, #141414 0 20%, transparent 20.5%),
+  linear-gradient(62deg, transparent 70%, #141414 70% 74%, transparent 74%), #efe6d2; }

@@ -1,0 +1,104 @@
+/* memphis — tokens, primitive overrides and media-slot art direction, scoped under .lang-memphis */
+.lang-memphis {
+  --ui-bg: #FFFBF1;
+  --ui-surface: #FFFFFF;
+  --ui-text: #111111;
+  --ui-muted: #3D3D3D;
+  --ui-accent: #2D46B9;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #111111;
+  --ui-radius: 14px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 2px;
+  --ui-shadow: 5px 5px 0 #111111;
+  --ui-font-display: "Shrikhand", "Arial Black", cursive;
+  --ui-font-body: "DM Sans", system-ui, sans-serif;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0em;
+  --ui-display-transform: none;
+}
+.lang-memphis::before {
+  content: '';
+  position: absolute;
+  top: -34px;
+  right: -34px;
+  width: 160px;
+  height: 160px;
+  z-index: -1;
+  border: 2px solid #111111;
+  border-radius: 50%;
+  background: #FFD23F;
+}
+.lang-memphis::after {
+  content: '';
+  position: absolute;
+  left: -6px;
+  bottom: 12px;
+  width: 190px;
+  height: 22px;
+  z-index: -1;
+  background:
+    linear-gradient(135deg, transparent 33%, #1AC8DB 33% 66%, transparent 66%) 0 0 / 22px 22px,
+    linear-gradient(45deg, transparent 33%, #1AC8DB 33% 66%, transparent 66%) 11px 0 / 22px 22px;
+}
+.lang-memphis .ui-hero { position: relative; }
+.lang-memphis .ui-hero::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 8%;
+  width: 0;
+  height: 0;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-bottom: 42px solid #FF5D8F;
+  transform: rotate(18deg);
+  z-index: -1;
+}
+.lang-memphis .ui-grid { position: relative; }
+.lang-memphis .ui-grid::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: -14px;
+  width: 45%;
+  height: 64px;
+  z-index: -1;
+  background-image: radial-gradient(#111111 1.5px, transparent 1.8px);
+  background-size: 12px 12px;
+}
+.lang-memphis .ui-logo { font-size: 20px; color: #FF5D8F; text-shadow: 2px 2px 0 #111111; }
+.lang-memphis .ui-link { color: var(--ui-text); font-weight: 700; }
+.lang-memphis .ui-eyebrow {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 2px solid #111111;
+  background: #1AC8DB;
+  color: #111111;
+  font-family: var(--ui-font-body);
+  font-weight: 700;
+  transform: rotate(-2deg);
+}
+.lang-memphis .ui-h1 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.05; text-shadow: 3px 3px 0 #FFD23F; }
+.lang-memphis .ui-btn { border-color: #111111; border-radius: 999px; box-shadow: 4px 4px 0 #111111; }
+.lang-memphis .ui-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #111111; }
+.lang-memphis .ui-btn--ghost { background: #FFD23F; color: #111111; }
+.lang-memphis .ui-card:nth-child(1) { background: #BDF2D5; }
+.lang-memphis .ui-card:nth-child(2) { background: #FFC9DA; transform: rotate(1deg); }
+.lang-memphis .ui-card:nth-child(3) { background: #FFE9A8; }
+.lang-memphis .ui-h2 { font-size: 18px; }
+.lang-memphis .ui-badge { border-color: #111111; background: #FF5D8F; color: #111111; }
+.lang-memphis .ui-chip { border-color: #111111; background: #FFFFFF; }
+.lang-memphis .ui-input { border-radius: 999px; box-shadow: 3px 3px 0 #111111; }
+.lang-memphis .ui-tabs { border-radius: 999px; background: #FFFFFF; }
+.lang-memphis .ui-tab { border-radius: 999px; color: #111111; }
+.lang-memphis .ui-tab[aria-selected="true"] { background: #FFD23F; box-shadow: none; }
+.lang-memphis .ui-switch span { border: 2px solid #111111; background: #FFFFFF; }
+.lang-memphis .ui-switch span::after { top: 1px; left: 1px; border: 2px solid #111111; background: #FF5D8F; box-shadow: none; }
+.lang-memphis .ui-switch input:checked + span { background: #1AC8DB; }
+
+.lang-memphis .ui-media { border: 3px solid #111; background:
+  radial-gradient(circle at 26% 30%, #ffd23f 0 14%, transparent 14.5%),
+  linear-gradient(135deg, transparent 40%, #ff5d8f 40% 58%, transparent 58%) 70% 70% / 50% 50% no-repeat,
+  repeating-linear-gradient(45deg, transparent 0 8px, #1ac8db 8px 11px) 80% 10% / 34% 30% no-repeat,
+  radial-gradient(circle, #111 1.3px, transparent 1.8px) 0 0 / 10px 10px, #fffbf1; }

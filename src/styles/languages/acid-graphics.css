@@ -1,0 +1,34 @@
+/* acid-graphics — tokens, primitive overrides and media-slot art direction, scoped under .lang-acid-graphics */
+.lang-acid-graphics {
+  --ui-bg: #0B0B0B;
+  --ui-surface: #161616;
+  --ui-text: #E6E9EE;
+  --ui-muted: #9AA0A8;
+  --ui-accent: #C6FF00;
+  --ui-accent-text: #0B0B0B;
+  --ui-border: #3A3D42;
+  --ui-radius: 0px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 1px;
+  --ui-shadow: 0 0 24px rgba(198,255,0,.25);
+  --ui-font-display: "Unbounded", "Syne", sans-serif;
+  --ui-font-body: "Space Grotesk", system-ui, sans-serif;
+  --ui-font-mono: "Space Mono", monospace;
+  --ui-display-weight: 900;
+  --ui-display-tracking: -0.02em;
+  --ui-display-transform: uppercase;
+}
+.lang-acid-graphics { background: radial-gradient(60% 50% at 80% 0%, rgba(139,92,246,.35), transparent 70%), #0b0b0b; }
+.lang-acid-graphics .ui-h1 { font-size: clamp(26px, 3.4vw, 44px); line-height: .92; background: linear-gradient(180deg, #ffffff, #9aa0a8 45%, #ffffff 55%, #6b7078); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lang-acid-graphics .ui-eyebrow { font-family: var(--ui-font-mono); color: #c6ff00; font-size: 10px; letter-spacing: .2em; }
+.lang-acid-graphics .ui-btn { border-radius: 999px; text-transform: uppercase; font-weight: 700; }
+.lang-acid-graphics .ui-btn--ghost { color: #c6ff00; border-color: #c6ff00; background: transparent; }
+.lang-acid-graphics .ui-card { border-color: #3a3d42; position: relative; }
+.lang-acid-graphics .ui-card::before { content: '+'; position: absolute; top: 4px; right: 8px; color: #c6ff00; font: 400 14px var(--ui-font-mono); }
+.lang-acid-graphics .ui-badge { background: #c6ff00; color: #0b0b0b; border-color: #c6ff00; }
+.lang-acid-graphics .ui-media { border-color: #3a3d42; background:
+  radial-gradient(ellipse 30% 26% at 46% 50%, #fff 0 8%, #c9ced6 20%, #5b616b 45%, #e5e8ec 60%, #2a2d33 80%, transparent 82%),
+  radial-gradient(ellipse 18% 14% at 62% 36%, #fff, #8b5cf6 60%, transparent 62%),
+  repeating-linear-gradient(0deg, transparent 0 17px, rgba(198,255,0,.25) 17px 18px),
+  repeating-linear-gradient(90deg, transparent 0 17px, rgba(198,255,0,.25) 17px 18px), #0b0b0b; }
+.lang-acid-graphics .ui-media-cap { color: #c6ff00; }

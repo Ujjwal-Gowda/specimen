@@ -1,0 +1,68 @@
+/* glassmorphism — tokens, primitive overrides and media-slot art direction, scoped under .lang-glassmorphism */
+.lang-glassmorphism {
+  --ui-bg: #1B1340; --ui-surface: rgba(255, 255, 255, 0.12); --ui-text: #FFFFFF; --ui-muted: rgba(255, 255, 255, 0.78);
+  --ui-accent: #F5F3FF; --ui-accent-text: #2A1B6E; --ui-border: rgba(255, 255, 255, 0.35);
+  --ui-radius: 20px; --ui-radius-sm: 14px; --ui-bw: 1px; --ui-shadow: 0 8px 32px rgba(10, 5, 40, 0.35);
+  --ui-font-display: "Outfit", "Poppins", system-ui, sans-serif;
+  --ui-font-body: "Outfit", system-ui, sans-serif;
+  --ui-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --ui-display-weight: 600; --ui-display-tracking: -0.02em; --ui-display-transform: none;
+  background:
+    radial-gradient(circle at 15% 20%, #7B2FF7 0, transparent 34%),
+    radial-gradient(circle at 85% 30%, #F107A3 0, transparent 30%),
+    radial-gradient(circle at 60% 90%, #00D2FF 0, transparent 34%),
+    linear-gradient(135deg, #1B1340, #2D0B4E);
+}
+.lang-glassmorphism .ui-nav,
+.lang-glassmorphism .ui-card,
+.lang-glassmorphism .ui-tabs,
+.lang-glassmorphism .ui-input,
+.lang-glassmorphism .ui-btn--ghost {
+  background: rgba(255, 255, 255, .12);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, .35);
+  box-shadow: 0 8px 32px rgba(10, 5, 40, .35);
+}
+.lang-glassmorphism .ui-nav { border-radius: 16px; padding: 8px 8px 8px 16px; }
+.lang-glassmorphism .ui-link { color: rgba(255, 255, 255, .85); }
+.lang-glassmorphism .ui-h1 { text-shadow: 0 2px 20px rgba(0, 0, 0, .25); }
+.lang-glassmorphism .ui-eyebrow { color: #C9B8FF; }
+.lang-glassmorphism .ui-btn { box-shadow: 0 6px 24px rgba(241, 7, 163, .35); }
+.lang-glassmorphism .ui-btn--ghost { color: #fff; }
+.lang-glassmorphism .ui-card .ui-p { color: rgba(255, 255, 255, .8); }
+.lang-glassmorphism .ui-badge { background: linear-gradient(90deg, #F107A3, #7B2FF7); color: #fff; border: 0; }
+.lang-glassmorphism .ui-chip { background: rgba(255, 255, 255, .15); color: #fff; border-color: rgba(255, 255, 255, .35); }
+.lang-glassmorphism .ui-input { color: #fff; }
+.lang-glassmorphism .ui-input::placeholder { color: rgba(255, 255, 255, .7); }
+.lang-glassmorphism .ui-tab { color: rgba(255, 255, 255, .8); }
+.lang-glassmorphism .ui-tab[aria-selected="true"] { background: rgba(255, 255, 255, .9); color: #2A1B6E; }
+.lang-glassmorphism .ui-switch span { background: rgba(255, 255, 255, .25); }
+.lang-glassmorphism .ui-switch input:checked + span { background: linear-gradient(90deg, #F107A3, #7B2FF7); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .lang-glassmorphism .ui-card, .lang-glassmorphism .ui-nav { background: rgba(45, 25, 100, .85); }
+}
+.lang-glassmorphism .ui-media {
+  border: 1px solid rgba(255,255,255,.3); border-radius: 20px;
+  background:
+    radial-gradient(circle at 25% 30%, #FF6FD8 0 20%, transparent 21%),
+    radial-gradient(circle at 78% 70%, #38F9D7 0 22%, transparent 23%),
+    radial-gradient(circle at 70% 20%, #7F5AF0 0 16%, transparent 17%),
+    #1B1340;
+}
+.lang-glassmorphism .ui-media::before {
+  content: ''; position: absolute; inset: 22% 16%;
+  border-radius: 16px; border: 1px solid rgba(255,255,255,.45);
+  background: linear-gradient(135deg, rgba(255,255,255,.28), rgba(255,255,255,.08));
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.25);
+}
+.lang-glassmorphism .ui-media::after {
+  content: '•••• 4821'; position: absolute; left: 24%; bottom: 30%;
+  font: 600 12px/1 var(--ui-font-mono); letter-spacing: .12em; color: #fff;
+}
+.lang-glassmorphism .ui-media-cap { color: rgba(255,255,255,.8); }
+
+@media (prefers-reduced-motion: reduce) {
+  .lang-glassmorphism .ui-media::before { transition: none; }
+}

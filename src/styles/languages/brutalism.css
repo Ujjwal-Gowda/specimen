@@ -1,0 +1,45 @@
+/* brutalism — tokens, primitive overrides and media-slot art direction, scoped under .lang-brutalism */
+.lang-brutalism {
+  --ui-bg: #FFFFFF; --ui-surface: #FFFFFF; --ui-text: #000000; --ui-muted: #333333;
+  --ui-accent: #0000EE; --ui-accent-text: #FFFFFF; --ui-border: #000000;
+  --ui-radius: 0px; --ui-radius-sm: 0px; --ui-bw: 2px; --ui-shadow: none;
+  --ui-font-display: "Times New Roman", Times, serif;
+  --ui-font-body: "Courier Prime", "Courier New", Courier, monospace;
+  --ui-font-mono: "Courier Prime", "Courier New", monospace;
+  --ui-display-weight: 700; --ui-display-tracking: 0em; --ui-display-transform: none;
+  gap: 12px;
+}
+.lang-brutalism .ui-nav { gap: 10px; border: 2px solid #000; padding: 6px 8px; }
+.lang-brutalism .ui-logo { font-family: var(--ui-font-mono); font-size: 13px; background: #FFFF00; padding: 0 4px; }
+.lang-brutalism .ui-link { color: #0000EE; text-decoration: underline; font-family: var(--ui-font-display); font-size: 15px; }
+.lang-brutalism .ui-link:nth-of-type(2) { color: #551A8B; }
+.lang-brutalism .ui-h1 { font-size: clamp(34px, 5vw, 58px); line-height: .9; max-width: none; text-transform: uppercase; }
+.lang-brutalism .ui-eyebrow { font-family: var(--ui-font-mono); letter-spacing: 0; text-transform: none; color: #000; }
+.lang-brutalism .ui-p { color: #000; }
+.lang-brutalism .ui-btn { font-family: var(--ui-font-mono); font-weight: 700; background: #0000EE; transition: none; }
+.lang-brutalism .ui-btn:hover { background: #000; border-color: #000; }
+.lang-brutalism .ui-btn--ghost { background: #EFEFEF; color: #000; border: 2px outset #CFCFCF; }
+.lang-brutalism .ui-grid { gap: 0; border: 2px solid #000; }
+.lang-brutalism .ui-card { border: 0; border-right: 2px solid #000; background: #fff; }
+.lang-brutalism .ui-card:last-child { border-right: 0; }
+.lang-brutalism .ui-card:nth-child(2) { background: #FFFF00; }
+.lang-brutalism .ui-badge { border-radius: 0; background: #000; color: #fff; border-color: #000; }
+.lang-brutalism .ui-chip { border-radius: 0; font-family: var(--ui-font-mono); border: 1px dashed #000; }
+.lang-brutalism .ui-h2 { font-size: 18px; text-decoration: underline; }
+.lang-brutalism .ui-input { border: 2px inset #999; font-family: var(--ui-font-mono); }
+.lang-brutalism .ui-tabs { border-radius: 0; background: transparent; border: 0; padding: 0; gap: 6px; }
+.lang-brutalism .ui-tab { border-radius: 0; font-family: var(--ui-font-mono); color: #0000EE; text-decoration: underline; padding: 0; }
+.lang-brutalism .ui-tab[aria-selected="true"] { background: #000; color: #fff; text-decoration: none; box-shadow: none; padding: 0 4px; }
+.lang-brutalism .ui-switch span, .lang-brutalism .ui-switch span::after { border-radius: 0; }
+.lang-brutalism .ui-switch span { background: #fff; border: 2px solid #000; }
+.lang-brutalism .ui-switch span::after { top: 2px; left: 2px; background: #000; box-shadow: none; }
+.lang-brutalism .ui-switch input:checked + span { background: #FFFF00; }
+.lang-brutalism .ui-media {
+  border: 2px solid #000; border-radius: 0; background: #fff;
+}
+.lang-brutalism .ui-media::before {
+  content: 'Index of /img\A\A ../\A photo_01.jpg   12K\A photo_02.jpg   9K\A notes.txt      2K';
+  position: absolute; left: 8px; top: 6px; white-space: pre;
+  font: 11px/1.45 "Courier Prime", "Courier New", monospace; color: #0000EE; text-decoration: underline;
+}
+.lang-brutalism .ui-media-cap { color: #000; text-transform: none; }

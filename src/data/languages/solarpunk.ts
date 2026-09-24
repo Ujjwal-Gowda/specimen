@@ -1,0 +1,111 @@
+import type { Language } from '../../types';
+
+const solarpunk: Language = {
+  id: 'solarpunk',
+  name: 'Solarpunk',
+  aka: ['Eco-futurism', 'Green futurism'],
+  category: 'Aesthetic',
+  era: 'Named c. 2008–2014; design trend 2020s',
+  origin: 'A literary and art movement imagining hopeful, sustainable futures: solar panels and gardens on every roof, Art Nouveau-inspired architecture, community and craft. The term appeared around 2008 and spread through a 2014 Tumblr manifesto and anthologies like "Sunvault" (2017). Visually it borrows from Art Nouveau, Studio Ghibli and biophilic architecture, and it is increasingly used by climate-tech and regenerative brands.',
+  summary: 'Hopeful green futures: lush greens and sunlit golds, organic curves, Art Nouveau-inspired ornament meeting clean tech, plants growing through architecture. Optimistic, communal and handmade.',
+  identify: [
+    'Lush greens with sunlit gold and sky blue',
+    'Plants and gardens integrated with technology',
+    'Organic, Art Nouveau-flavoured curves and arches',
+    'Stained-glass and hand-drawn illustration',
+    'Soft, warm light',
+  ],
+  principles: [
+    'Optimism: the future can be green and just',
+    'Technology in harmony with nature and community',
+    'Repair, craft and local over disposable',
+  ],
+  color: {
+    strategy: 'Leafy greens and warm solar golds on cream, with sky blue for air and water.',
+    palette: [
+      { name: 'Canopy Green', hex: '#2F6B3A', role: 'accent' },
+      { name: 'Solar Gold', hex: '#F2B632', role: 'highlight' },
+      { name: 'Sky', hex: '#8EC5E8', role: 'secondary' },
+      { name: 'Linen', hex: '#F6F1E3', role: 'background' },
+      { name: 'Soil', hex: '#2E2A20', role: 'text' },
+    ],
+  },
+  typography: {
+    approach: 'Soft, warm serif display with organic character, paired with a friendly humanist sans.',
+    display: ['fraunces', 'young-serif'],
+    body: ['nunito', 'figtree'],
+    mono: [],
+    scale: 'Major Third (1.25)',
+    notes: 'Fraunces’ "SOFT" and "WONK" axes give the handmade warmth.',
+  },
+  shape: {
+    radius: '16–32px and arches',
+    borders: 'Thin botanical line ornament',
+    elevation: 'Soft, sunlit shadows',
+    texture: 'Paper, leaves, dappled light',
+  },
+  layout: {
+    grid: 'Airy, rounded card grids with arched image frames.',
+    layouts: ['split-hero', 'card-grid', 'scrollytelling'],
+    density: 'airy',
+  },
+  imagery: 'Illustrated green cities, rooftop gardens, solar arrays, people working together; warm golden-hour photography.',
+  motion: {
+    character: 'Growing and breathing: vines draw in, leaves sway gently.',
+    animations: ['draw-svg', 'fade-up-reveal', 'parallax', 'blob-morph'],
+    easing: 'cubic-bezier(0.33, 1, 0.68, 1) — easeOutCubic',
+    duration: '500–1000ms',
+  },
+  components: {
+    signature: ['hero', 'feature-grid', 'stats-band', 'timeline', 'newsletter-signup'],
+    notes: 'Impact stats (tonnes saved, trees planted) in a stats band are typical.',
+  },
+  purposes: ['nonprofit', 'wellness', 'education', 'real-estate', 'ecommerce'],
+  avoidFor: ['gaming', 'fintech'],
+  pairsWith: ['organic', 'art-nouveau', 'scandinavian'],
+  dos: ['Show people and nature together', 'Use arched frames for imagery', 'Back optimism with real numbers'],
+  donts: [
+    'Greenwash with leaves on unrelated products',
+    'Use cold greys and neon',
+    'Make it look like a stock "eco" template',
+  ],
+  a11y: 'Gold highlights fail as text on cream; keep text in soil brown or canopy green.',
+  examples: [],
+  references: [
+    { label: 'Solarpunk (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Solarpunk' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#F6F1E3',
+      surface: '#FFFBF0',
+      text: '#2E2A20',
+      muted: '#5D5847',
+      accent: '#2F6B3A',
+      accentText: '#FFFFFF',
+      border: '#D8CFB4',
+    },
+    fonts: {
+      display: '"Fraunces", Georgia, serif',
+      body: '"Nunito", system-ui, sans-serif',
+      mono: 'ui-monospace, monospace',
+    },
+    googleFonts: 'family=Fraunces:opsz,wght,SOFT,WONK@9..144,600,100,1&family=Nunito:wght@400;700',
+    radius: '24px',
+    radiusSm: '999px',
+    borderWidth: '1px',
+    shadow: '0 10px 30px rgba(47,107,58,.12)',
+    displayWeight: 600,
+    displayTracking: '-0.02em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Sunroot',
+    eyebrow: 'Community solar',
+    headline: 'Power grown on your street',
+    body: 'Neighbours share rooftop panels and gardens — and split the savings.',
+    cta: 'Join a co-op',
+    media: 'Rooftop garden',
+  },
+};
+
+export default solarpunk;

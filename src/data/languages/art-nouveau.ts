@@ -1,0 +1,112 @@
+import type { Language } from '../../types';
+
+const artNouveau: Language = {
+  id: 'art-nouveau',
+  name: 'Art Nouveau',
+  aka: ['Jugendstil', 'Modern Style', 'Secession style'],
+  category: 'Movement',
+  era: 'c. 1890–1910, Europe',
+  origin: 'A total-art movement that swept Europe around 1900: Alphonse Mucha’s posters in Paris, Hector Guimard’s Métro entrances, Victor Horta in Brussels, Gustav Klimt and the Vienna Secession, Charles Rennie Mackintosh in Glasgow and "Jugendstil" in Germany. It took its forms from nature — whiplash curves, flowers, vines, flowing hair — and rejected the historicism of the 19th century. Its decorative lettering influenced the 1960s psychedelic posters.',
+  summary: 'Organic, ornamental and flowing: whiplash curves, botanical ornament, framed panels, muted golds and greens, and decorative hand-drawn lettering. Craft and nature as luxury.',
+  identify: [
+    'Whiplash and S-curves, vines, flowers and flowing hair',
+    'Ornamental frames and arches around content',
+    'Muted earth greens, golds, mauves and cream',
+    'Decorative, hand-drawn display lettering',
+    'Idealised figures (Mucha’s women) in portrait panels',
+  ],
+  principles: [
+    'Nature is the source of all form',
+    'Unite fine art and craft — everything can be beautiful',
+    'Line is the protagonist',
+  ],
+  color: {
+    strategy: 'Muted, harmonious naturals — sage, olive, ochre, mauve — with gold highlights on cream.',
+    palette: [
+      { name: 'Parchment', hex: '#F3EAD7', role: 'background' },
+      { name: 'Olive Vine', hex: '#5C6B3A', role: 'accent' },
+      { name: 'Gilded Ochre', hex: '#C49A3A', role: 'ornament' },
+      { name: 'Mauve', hex: '#9C6B7E', role: 'secondary' },
+      { name: 'Sepia Ink', hex: '#3B2A1E', role: 'text' },
+    ],
+  },
+  typography: {
+    approach: 'Decorative display lettering for titles (the originals were hand-drawn), with a graceful old-style serif for text.',
+    display: ['cormorant-garamond', 'fraunces', 'cinzel'],
+    body: ['eb-garamond', 'lora'],
+    mono: [],
+    scale: 'Golden Ratio (1.618)',
+    notes: 'True Nouveau faces (Arnold Böcklin, Auriol, Eckmann) are commercial or hard to find; Cormorant’s italic carries the mood for free.',
+  },
+  shape: {
+    radius: 'Arches and organic curves',
+    borders: 'Ornamental double rules and curved frames',
+    elevation: 'Flat, framed panels',
+    texture: 'Paper, gold leaf, fine linework',
+  },
+  layout: {
+    grid: 'Symmetrical, framed compositions with arched panels and borders.',
+    layouts: ['centered-hero', 'single-column-longform', 'magazine-multicolumn'],
+    density: 'balanced',
+  },
+  imagery: 'Botanical illustration, portraits in decorative frames, stained glass and ironwork.',
+  motion: {
+    character: 'Slow and flowing: lines draw themselves, petals unfurl.',
+    animations: ['draw-svg', 'fade-in', 'svg-morph', 'ken-burns'],
+    easing: 'cubic-bezier(0.37, 0, 0.63, 1) — easeInOutSine',
+    duration: '800–1600ms',
+  },
+  components: {
+    signature: ['hero', 'blog-card', 'testimonial', 'footer'],
+    notes: 'Frames and dividers carry the style; keep controls simple inside them.',
+  },
+  purposes: ['luxury-brand', 'restaurant', 'wellness', 'event', 'personal-blog'],
+  avoidFor: ['devtool', 'saas', 'fintech'],
+  pairsWith: ['art-deco', 'organic', 'editorial'],
+  dos: [
+    'Use one ornamental frame motif consistently',
+    'Keep the palette muted with gold highlights',
+    'Use SVG line ornament that scales',
+  ],
+  donts: ['Use raster ornament that blurs', 'Set body text in decorative faces', 'Over-frame every element'],
+  a11y: 'Ornament must be decorative (aria-hidden); gold on cream usually fails as text — use sepia ink.',
+  examples: [],
+  references: [
+    { label: 'Art Nouveau (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Art_Nouveau' },
+    { label: 'Alphonse Mucha (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Alphonse_Mucha' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#F3EAD7',
+      surface: '#FBF5E8',
+      text: '#3B2A1E',
+      muted: '#6B5646',
+      accent: '#5C6B3A',
+      accentText: '#FFFFFF',
+      border: '#C49A3A',
+    },
+    fonts: {
+      display: '"Cormorant Garamond", Garamond, serif',
+      body: '"EB Garamond", Garamond, serif',
+      mono: 'ui-monospace, monospace',
+    },
+    googleFonts: 'family=Cormorant+Garamond:ital,wght@0,500;1,500&family=EB+Garamond:wght@400;500',
+    radius: '18px',
+    radiusSm: '999px',
+    borderWidth: '1px',
+    shadow: 'none',
+    displayWeight: 500,
+    displayTracking: '0em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Maison Lys',
+    eyebrow: 'Parfumerie · Paris 1898',
+    headline: 'Scents drawn from the garden',
+    body: 'Iris, lily and moss, distilled in small batches and bottled by hand.',
+    cta: 'Discover',
+    media: 'Iris & vine',
+  },
+};
+
+export default artNouveau;

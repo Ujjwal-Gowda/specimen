@@ -1,0 +1,31 @@
+/* solarpunk — tokens, primitive overrides and media-slot art direction, scoped under .lang-solarpunk */
+.lang-solarpunk {
+  --ui-bg: #F6F1E3;
+  --ui-surface: #FFFBF0;
+  --ui-text: #2E2A20;
+  --ui-muted: #5D5847;
+  --ui-accent: #2F6B3A;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #D8CFB4;
+  --ui-radius: 24px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 1px;
+  --ui-shadow: 0 10px 30px rgba(47,107,58,.12);
+  --ui-font-display: "Fraunces", Georgia, serif;
+  --ui-font-body: "Nunito", system-ui, sans-serif;
+  --ui-font-mono: ui-monospace, monospace;
+  --ui-display-weight: 600;
+  --ui-display-tracking: -0.02em;
+  --ui-display-transform: none;
+}
+.lang-solarpunk .ui-h1 { font-size: clamp(28px, 3.4vw, 42px); font-variation-settings: "SOFT" 100, "WONK" 1; color: #2f6b3a; }
+.lang-solarpunk .ui-eyebrow { color: #8a6a12; }
+.lang-solarpunk .ui-btn { border-radius: 999px; }
+.lang-solarpunk .ui-card { border-radius: 60px 60px 18px 18px; text-align: center; align-items: center; }
+.lang-solarpunk .ui-badge { background: #f2b632; border-color: #f2b632; color: #2e2a20; }
+.lang-solarpunk .ui-media { border: 0; border-radius: 999px 999px 18px 18px; background:
+  radial-gradient(circle at 70% 22%, #f2b632 0 10%, rgba(242,182,50,.35) 11% 16%, transparent 17%),
+  linear-gradient(#2f6b3a, #2f6b3a) 22% 100% / 18% 46% no-repeat, linear-gradient(#3f8a4a, #3f8a4a) 48% 100% / 16% 62% no-repeat,
+  linear-gradient(#2f6b3a, #2f6b3a) 74% 100% / 18% 38% no-repeat,
+  radial-gradient(ellipse 14% 10% at 48% 36%, #6fa85f 96%, transparent 100%),
+  linear-gradient(180deg, #8ec5e8, #f6f1e3 90%); }

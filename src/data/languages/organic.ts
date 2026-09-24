@@ -1,0 +1,122 @@
+import type { Language } from '../../types';
+
+const organic: Language = {
+  id: 'organic',
+  name: 'Organic Modern',
+  aka: ['Earthy / Natural', 'Organic design', 'Biophilic web design'],
+  category: 'Aesthetic',
+  era: '2018–present; lineage in mid-century organic modernism',
+  origin: 'Brings the warmth of natural materials to the screen: clay, oat, sage and terracotta palettes, soft “wonky” serifs, hand-cut blob shapes, paper grain and rounded forms. Its lineage runs through the organic modernism of Alvar Aalto and Isamu Noguchi and biophilic design thinking. On the web it became the go-to language for direct-to-consumer wellness, food, skincare and sustainability brands from the late 2010s, helped by soft variable serifs like Fraunces (Undercase Type, 2018–2020).',
+  summary: 'Warm, tactile and calm: earthy colours, soft serifs, irregular blob shapes and natural photography that feel handmade rather than engineered.',
+  identify: [
+    'Earth palette: oat, clay, terracotta, sage, moss',
+    'Soft or “wonky” serif display type (Fraunces, Recoleta)',
+    'Irregular blob shapes and asymmetric radii',
+    'Paper grain or subtle noise textures',
+    'Natural-light photography of ingredients, hands and plants',
+  ],
+  principles: [
+    'Warmth over precision',
+    'Imperfect, hand-made shapes',
+    'Nature-derived colour only',
+    'Calm pacing and soft motion',
+  ],
+  color: {
+    strategy: 'Warm earth neutrals with a terracotta action colour and sage as a secondary.',
+    palette: [
+      { name: 'Oat', hex: '#F2EADF', role: 'background' },
+      { name: 'Clay', hex: '#E7D8C6', role: 'surface' },
+      { name: 'Bark', hex: '#2F2A22', role: 'text' },
+      { name: 'Driftwood', hex: '#6B6255', role: 'muted text' },
+      { name: 'Terracotta', hex: '#B5532E', role: 'accent' },
+      { name: 'Sage', hex: '#9CAF88', role: 'secondary' },
+      { name: 'Moss', hex: '#56613F', role: 'label' },
+    ],
+  },
+  typography: {
+    approach: 'A soft serif display with personality (optical-size and “softness” axes) paired with a warm geometric or humanist sans.',
+    display: ['fraunces', 'recoleta', 'young-serif', 'gloock'],
+    body: ['dm-sans', 'outfit', 'lora'],
+    mono: [],
+    scale: 'Major Third (1.25)',
+    notes: 'Fraunces’ SOFT and WONK axes give the characteristic wobble. Keep headlines at 400–600 weight.',
+  },
+  shape: {
+    radius: '24–32px, often asymmetric (e.g. 28px 28px 28px 8px); blob radii on decorative shapes',
+    borders: 'Thin, warm borders or none',
+    elevation: 'Minimal; separation through tone',
+    texture: 'Paper grain, subtle noise',
+  },
+  layout: {
+    grid: 'Relaxed splits and asymmetric grids with overlapping shapes',
+    layouts: ['split-hero', 'asymmetric-grid', 'card-grid', 'z-pattern'],
+    density: 'airy',
+  },
+  imagery: 'Natural-light photography of ingredients, textures, hands and plants; hand-drawn line illustrations.',
+  motion: {
+    character: 'Soft and organic: morphing blobs, gentle rises, hand-drawn line reveals.',
+    animations: ['blob-morph', 'fade-up-reveal', 'noise-grain', 'parallax', 'draw-svg', 'hover-lift'],
+    easing: 'cubic-bezier(0.45, 0, 0.55, 1) — easeInOutQuad',
+    duration: '500–1000ms',
+  },
+  components: {
+    signature: ['hero', 'product-card', 'testimonial', 'newsletter-signup', 'feature-grid', 'badge', 'footer'],
+    notes: 'Ingredient/benefit feature grids and product cards with soft shapes are central.',
+  },
+  purposes: ['wellness', 'restaurant', 'ecommerce', 'nonprofit', 'healthcare', 'real-estate'],
+  avoidFor: ['devtool', 'gaming', 'web3'],
+  pairsWith: ['quiet-luxury', 'corporate-memphis', 'editorial', 'claymorphism'],
+  dos: [
+    'Pull colours from real materials and photography',
+    'Vary radii to feel hand-made',
+    'Use grain subtly to add warmth',
+    'Keep CTAs clearly terracotta',
+  ],
+  donts: [
+    'Don’t use neon or pure saturated colours',
+    'Don’t use sharp 0px corners everywhere',
+    'Don’t over-texture reading areas',
+    'Don’t fall into generic cream-and-terracotta without real imagery',
+  ],
+  a11y: 'Earthy mid-tones are easy to under-contrast, so keep text Bark on Oat (~12:1) and check terracotta buttons with white text (~5:1). Grain overlays must not reduce text contrast.',
+  examples: [
+    { name: 'Aesop', url: 'https://www.aesop.com' },
+  ],
+  references: [
+    { label: 'Biophilic design — Wikipedia', url: 'https://en.wikipedia.org/wiki/Biophilic_design' },
+    { label: 'Fraunces — Google Fonts', url: 'https://fonts.google.com/specimen/Fraunces' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#F2EADF',
+      surface: '#FBF6EF',
+      text: '#2F2A22',
+      muted: '#6B6255',
+      accent: '#B5532E',
+      accentText: '#FFFFFF',
+      border: '#D6C7B2',
+    },
+    fonts: {
+      display: '"Fraunces", Georgia, serif',
+      body: '"DM Sans", system-ui, sans-serif',
+      mono: 'ui-monospace, monospace',
+    },
+    googleFonts: 'family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,0..100,0..1&family=DM+Sans:wght@400;500;700',
+    radius: '28px',
+    radiusSm: '999px',
+    borderWidth: '1px',
+    shadow: 'none',
+    displayWeight: 500,
+    displayTracking: '-0.02em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Fern & Field',
+    eyebrow: 'Small-batch · Plant-based',
+    headline: 'Grown slowly, made by hand',
+    body: 'Seasonal skincare from regenerative farms in the Cotswolds, bottled in reusable glass.',
+    cta: 'Shop the harvest',
+  },
+};
+
+export default organic;

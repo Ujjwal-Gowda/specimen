@@ -1,0 +1,59 @@
+/* bauhaus — tokens, primitive overrides and media-slot art direction, scoped under .lang-bauhaus */
+.lang-bauhaus {
+  --ui-bg: #F4EFE4; --ui-surface: #FFFFFF; --ui-text: #111111; --ui-muted: #4A4A4A;
+  --ui-accent: #D6281C; --ui-accent-text: #FFFFFF; --ui-border: #111111;
+  --ui-radius: 0px; --ui-radius-sm: 0px; --ui-bw: 2px; --ui-shadow: none;
+  --ui-font-display: "Jost", Futura, "Century Gothic", sans-serif;
+  --ui-font-body: "Jost", Futura, sans-serif;
+  --ui-font-mono: "Space Mono", ui-monospace, monospace;
+  --ui-display-weight: 800; --ui-display-tracking: -0.01em; --ui-display-transform: lowercase;
+}
+.lang-bauhaus .ui-nav { border-bottom: 8px solid #111; padding-bottom: 10px; }
+.lang-bauhaus .ui-logo::before {
+  content: ''; display: inline-block; width: 12px; height: 12px; margin-right: 6px;
+  background: #1B4F9C; border-radius: 50%; vertical-align: -1px;
+}
+.lang-bauhaus .ui-hero { position: relative; padding-right: 34%; min-height: 150px; }
+.lang-bauhaus .ui-hero::before {
+  content: ''; position: absolute; right: 4%; top: 0;
+  width: 110px; height: 110px; border-radius: 50%; background: #1B4F9C;
+}
+.lang-bauhaus .ui-hero::after {
+  content: ''; position: absolute; right: 22%; top: 56px;
+  width: 0; height: 0;
+  border-left: 48px solid transparent; border-right: 48px solid transparent; border-bottom: 84px solid #F2C12E;
+  filter: drop-shadow(-26px 26px 0 #D6281C);
+}
+.lang-bauhaus .ui-h1 { font-size: clamp(30px, 4vw, 44px); line-height: .95; position: relative; z-index: 1; }
+.lang-bauhaus .ui-eyebrow { background: #111; color: #F4EFE4; padding: 2px 8px; font-family: var(--ui-font-body); font-weight: 700; }
+.lang-bauhaus .ui-btn { text-transform: lowercase; font-weight: 700; }
+.lang-bauhaus .ui-btn--ghost { border-color: #111; background: #F2C12E; color: #111; }
+.lang-bauhaus .ui-card { border-width: 2px; border-color: #111; background: #fff; }
+.lang-bauhaus .ui-card:nth-child(1) { border-top: 12px solid #D6281C; }
+.lang-bauhaus .ui-card:nth-child(2) { border-top: 12px solid #F2C12E; }
+.lang-bauhaus .ui-card:nth-child(3) { border-top: 12px solid #1B4F9C; }
+.lang-bauhaus .ui-badge, .lang-bauhaus .ui-chip { border-radius: 0; }
+.lang-bauhaus .ui-chip { border-radius: 50%; width: 24px; height: 24px; justify-content: center; padding: 0; background: #1B4F9C; color: #fff; border: 0; }
+.lang-bauhaus .ui-input { border-width: 2px; }
+.lang-bauhaus .ui-tabs { border-radius: 0; border-width: 2px; background: #fff; }
+.lang-bauhaus .ui-tab { border-radius: 0; }
+.lang-bauhaus .ui-tab[aria-selected="true"] { background: #111; color: #F4EFE4; box-shadow: none; }
+.lang-bauhaus .ui-hero { padding-right: 0; min-height: 0; }
+.lang-bauhaus .ui-hero::before, .lang-bauhaus .ui-hero::after { content: none; }
+.lang-bauhaus .ui-media {
+  border: 2px solid #111; border-radius: 0;
+  background:
+    linear-gradient(#D6281C, #D6281C) 12% 78% / 34% 34% no-repeat,
+    linear-gradient(90deg, #111 0 100%) 0 58% / 100% 6px no-repeat,
+    #F4EFE4;
+}
+.lang-bauhaus .ui-media::before {
+  content: ''; position: absolute; right: 10%; top: 10%;
+  width: 46%; aspect-ratio: 1; border-radius: 50%; background: #1B4F9C;
+}
+.lang-bauhaus .ui-media::after {
+  content: ''; position: absolute; left: 38%; bottom: 12%;
+  width: 38%; aspect-ratio: 1.1; background: #F2C12E;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.lang-bauhaus .ui-media-cap { left: auto; right: 8px; top: 6px; bottom: auto; color: #111; font-weight: 700; }

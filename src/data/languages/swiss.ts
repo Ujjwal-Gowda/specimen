@@ -1,0 +1,132 @@
+import type { Language } from '../../types';
+
+const swiss: Language = {
+  id: 'swiss',
+  name: 'International Typographic Style',
+  aka: ['Swiss Style', 'Swiss Design', 'Swiss Modernism'],
+  category: 'Movement',
+  era: '1950s–60s, Zürich & Basel, Switzerland',
+  origin: 'Grew out of the Zürich School of Arts and Crafts and the Basel School of Design after the Second World War, building on Jan Tschichold’s "Die neue Typographie" (1928). Its codifiers were Josef Müller-Brockmann (whose "Grid Systems in Graphic Design", 1981, is still the standard text), Armin Hofmann and Emil Ruder in Basel, and Max Bill. Akzidenz-Grotesk was the early face; Neue Haas Grotesk (Max Miedinger & Eduard Hoffmann, 1957, renamed Helvetica in 1960) and Univers (Adrian Frutiger, 1957) became its signature. The journal "Neue Grafik" (1958–65) spread it worldwide, and it underpins most corporate identity and wayfinding systems since.',
+  summary: 'Objective, grid-driven design where typography does the work. Asymmetric layouts on a mathematical modular grid, a neo-grotesque sans set flush-left/ragged-right, and generous white space — information first, decoration never.',
+  identify: [
+    'A visible or strongly implied modular grid; elements snap to columns and baselines',
+    'Neo-grotesque sans (Helvetica, Akzidenz, Univers) set flush-left, ragged-right',
+    'Asymmetric composition with large type and lots of deliberate empty space',
+    'Flat colour, often black, white and one signal red',
+    'Photography or pure geometry instead of illustration',
+    'Numbers, rules and captions used as structure, not ornament',
+  ],
+  principles: [
+    'Clarity and objectivity over personal expression',
+    'The grid is the organising principle for every page',
+    'Hierarchy through size, weight and position — not colour or effects',
+    'Asymmetry creates tension and movement; centred layouts are avoided',
+    'Form follows content: every element must earn its place',
+  ],
+  color: {
+    strategy: 'Monochrome ground with one high-chroma signal colour used sparingly for emphasis.',
+    palette: [
+      { name: 'Paper White', hex: '#FFFFFF', role: 'background' },
+      { name: 'Process Black', hex: '#111111', role: 'text' },
+      { name: 'Swiss Red', hex: '#E30613', role: 'accent' },
+      { name: 'Concrete Grey', hex: '#F2F2F2', role: 'surface' },
+      { name: 'Graphite', hex: '#555555', role: 'muted' },
+    ],
+  },
+  typography: {
+    approach: 'One neo-grotesque family in a few weights. Big, tight headlines; small, well-leaded body; captions and numbers in the same family. Flush-left, ragged-right, never justified with rivers.',
+    display: ['neue-haas-grotesk', 'helvetica-neue', 'akzidenz-grotesk', 'univers', 'suisse-intl'],
+    body: ['inter', 'helvetica-neue', 'suisse-intl', 'univers'],
+    mono: ['ibm-plex-mono'],
+    scale: 'Perfect Fourth (1.333) or Golden Ratio (1.618) for posters',
+    notes: 'Commercial originals: Neue Haas Grotesk Display/Text (Font Bureau/Monotype), Helvetica Now, Suisse Int’l (Swiss Typefaces). Free stand-ins: Inter / Inter Tight, Archivo, Schibsted Grotesk.',
+  },
+  shape: {
+    radius: '0px — square corners throughout',
+    borders: 'Hairline and heavy rules (1px and 4–8px) as dividers and column markers',
+    elevation: 'None; depth comes from scale and overlap, never shadow',
+    texture: 'None. Flat ink on paper.',
+  },
+  layout: {
+    grid: '12-column modular grid with a baseline grid; content hangs from column lines, deliberate asymmetry',
+    layouts: ['modular-grid', 'twelve-col-grid', 'asymmetric-grid', 'magazine-multicolumn'],
+    density: 'balanced',
+  },
+  imagery: 'Black-and-white or duotone photography, cropped hard to the grid; abstract geometric forms; objective product photography. No illustration or decorative graphics.',
+  motion: {
+    character: 'Minimal and mechanical — things slide along grid lines, text reveals line by line. No bounce.',
+    animations: ['clip-path-reveal', 'split-text-reveal', 'fade-up-reveal', 'underline-slide', 'marquee-scroll'],
+    easing: 'cubic-bezier(0.65, 0, 0.35, 1) — easeInOutCubic',
+    duration: '300–600ms',
+  },
+  components: {
+    signature: ['navbar', 'hero', 'feature-grid', 'data-table', 'timeline', 'footer', 'divider'],
+    notes: 'Rules instead of cards. Numbered lists, index-style navigation, large numerals in stats bands.',
+  },
+  purposes: ['agency', 'portfolio', 'editorial-news', 'event', 'government', 'docs'],
+  avoidFor: ['kids', 'gaming'],
+  pairsWith: ['minimalism', 'editorial', 'kinetic-type', 'brutalism'],
+  dos: [
+    'Set up the grid first and align everything to it',
+    'Use one type family and build hierarchy with size and weight',
+    'Leave large, intentional areas of white space',
+    'Use red (or one colour) only for the most important element',
+  ],
+  donts: [
+    'Centre-align body copy or use justified text with rivers',
+    'Add drop shadows, gradients or rounded cards',
+    'Mix more than two type families',
+    'Decorate with icons or illustrations that carry no information',
+  ],
+  a11y: 'Naturally strong: high contrast and clear hierarchy. Watch small caption sizes (keep ≥ 12px) and make sure red is never the only signal for state.',
+  examples: [
+    { name: 'Swissted (Mike Joyce)', url: 'https://www.swissted.com' },
+    { name: 'Experimental Jetset', url: 'https://www.experimentaljetset.nl' },
+    { name: 'SBB (Swiss Federal Railways)', url: 'https://www.sbb.ch' },
+    { name: 'Lars Müller Publishers', url: 'https://www.lars-mueller-publishers.com' },
+  ],
+  references: [
+    {
+      label: 'Wikipedia — International Typographic Style',
+      url: 'https://en.wikipedia.org/wiki/International_Typographic_Style',
+    },
+    {
+      label: 'Book — Josef Müller-Brockmann, "Grid Systems in Graphic Design" (1981)',
+      url: 'https://en.wikipedia.org/wiki/Josef_M%C3%BCller-Brockmann',
+    },
+  ],
+  tokens: {
+    colors: {
+      bg: '#FFFFFF',
+      surface: '#F2F2F2',
+      text: '#111111',
+      muted: '#555555',
+      accent: '#E30613',
+      accentText: '#FFFFFF',
+      border: '#111111',
+    },
+    fonts: {
+      display: '"Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif',
+      body: '"Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif',
+      mono: '"IBM Plex Mono", ui-monospace, monospace',
+    },
+    googleFonts: 'family=Inter+Tight:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400',
+    radius: '0px',
+    radiusSm: '0px',
+    borderWidth: '1px',
+    shadow: 'none',
+    displayWeight: 700,
+    displayTracking: '-0.035em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Kunsthalle 58',
+    eyebrow: 'Exhibition 04 / 2026',
+    headline: 'Form follows the grid',
+    body: 'Posters, systems and signage from the Basel school, 1955–1970. Open daily except Monday.',
+    cta: 'Plan a visit',
+    media: 'Poster, Basel 1959',
+  },
+};
+
+export default swiss;

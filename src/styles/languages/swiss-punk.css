@@ -1,0 +1,33 @@
+/* swiss-punk — tokens, primitive overrides and media-slot art direction, scoped under .lang-swiss-punk */
+.lang-swiss-punk {
+  --ui-bg: #F1EEE6;
+  --ui-surface: #FFFFFF;
+  --ui-text: #121212;
+  --ui-muted: #55544F;
+  --ui-accent: #C4006B;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #121212;
+  --ui-radius: 0px;
+  --ui-radius-sm: 0px;
+  --ui-bw: 2px;
+  --ui-shadow: none;
+  --ui-font-display: "Inter Tight", "Helvetica Neue", Helvetica, sans-serif;
+  --ui-font-body: "Inter", "Helvetica Neue", sans-serif;
+  --ui-font-mono: "Space Mono", ui-monospace, monospace;
+  --ui-display-weight: 800;
+  --ui-display-tracking: 0.02em;
+  --ui-display-transform: none;
+}
+.lang-swiss-punk .ui-eyebrow { letter-spacing: .4em; text-transform: uppercase; }
+.lang-swiss-punk .ui-h1 { font-size: clamp(30px, 3.8vw, 46px); line-height: .95; transform: rotate(-3deg); transform-origin: 0 100%; }
+.lang-swiss-punk .ui-hero { border-left: 10px solid #121212; padding-left: 14px; }
+.lang-swiss-punk .ui-card { border-width: 0 0 0 6px; }
+.lang-swiss-punk .ui-card:nth-child(2) { transform: translateY(10px); border-left-color: #c4006b; }
+.lang-swiss-punk .ui-card:nth-child(3) { transform: translateY(-6px) rotate(1.5deg); }
+.lang-swiss-punk .ui-btn { box-shadow: 4px 4px 0 #00a0c6; }
+.lang-swiss-punk .ui-media { border: 0; background:
+  linear-gradient(-12deg, transparent 44%, #121212 44% 50%, transparent 50%),
+  radial-gradient(circle, #121212 1.2px, transparent 1.6px) 0 0 / 7px 7px,
+  linear-gradient(90deg, rgba(0,160,198,.85) 0 38%, transparent 38%),
+  linear-gradient(0deg, rgba(229,0,125,.8) 0 30%, transparent 30%), #f1eee6; mix-blend-mode: multiply; }
+.lang-swiss-punk .ui-media-cap { color: #121212; letter-spacing: .3em; }

@@ -1,0 +1,30 @@
+/* psychedelic — tokens, primitive overrides and media-slot art direction, scoped under .lang-psychedelic */
+.lang-psychedelic {
+  --ui-bg: #2A0E3A;
+  --ui-surface: #3A1650;
+  --ui-text: #FFF4E0;
+  --ui-muted: #E3C9F0;
+  --ui-accent: #FF6A13;
+  --ui-accent-text: #2A0E3A;
+  --ui-border: #FF3EA5;
+  --ui-radius: 28px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 3px;
+  --ui-shadow: none;
+  --ui-font-display: "Shrikhand", "Righteous", cursive;
+  --ui-font-body: "Outfit", system-ui, sans-serif;
+  --ui-font-mono: ui-monospace, monospace;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0em;
+  --ui-display-transform: none;
+}
+.lang-psychedelic { background: radial-gradient(circle at 85% 10%, #6b2fbf 0 20%, transparent 50%), #2a0e3a; }
+.lang-psychedelic .ui-h1 { font-size: clamp(30px, 4vw, 50px); line-height: .95; color: #ff6a13; text-shadow: 3px 3px 0 #ff3ea5, 6px 6px 0 #6b2fbf; }
+.lang-psychedelic .ui-eyebrow { color: #b6e800; }
+.lang-psychedelic .ui-btn { border-radius: 999px; box-shadow: 0 0 0 3px #2a0e3a, 0 0 0 6px #b6e800; }
+.lang-psychedelic .ui-btn--ghost { color: #fff4e0; border-color: #ff3ea5; }
+.lang-psychedelic .ui-card { border-radius: 30px 10px 30px 10px; background: #3a1650; }
+.lang-psychedelic .ui-media { border: 0; border-radius: 50% 40% 55% 45% / 45% 55% 45% 55%; background: repeating-radial-gradient(circle at 50% 55%, #ff6a13 0 9px, #ff3ea5 9px 18px, #6b2fbf 18px 27px, #b6e800 27px 36px); }
+.lang-psychedelic .ui-media-cap { color: #fff4e0; }
+@media (prefers-reduced-motion: no-preference) { .lang-psychedelic .ui-media { animation: lang-psychedelic-hue 8s linear infinite; } }
+@keyframes lang-psychedelic-hue { to { filter: hue-rotate(360deg); } }

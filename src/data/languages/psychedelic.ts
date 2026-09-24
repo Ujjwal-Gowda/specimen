@@ -1,0 +1,112 @@
+import type { Language } from '../../types';
+
+const psychedelic: Language = {
+  id: 'psychedelic',
+  name: 'Psychedelic',
+  aka: ['Psychedelic poster art', '60s psychedelia', 'Fillmore poster style'],
+  category: 'Movement',
+  era: '1966–1972, San Francisco & London',
+  origin: 'Born on concert posters for the Fillmore and Avalon Ballroom in San Francisco: Wes Wilson, Victor Moscoso, Rick Griffin, Stanley Mouse and Alton Kelley, and in London Martin Sharp and Hapshash and the Coloured Coat. Wilson borrowed the swelling lettering of Vienna Secession artist Alfred Roller and bent it to fill every shape; Moscoso used vibrating complementary colours (Op Art) to make posters that seemed to move.',
+  summary: 'Swirling, melting lettering that fills the shape, vibrating complementary colours, Op Art patterns and Art Nouveau curves. Loud, warped and hallucinatory.',
+  identify: [
+    'Lettering that bends and swells to fill a shape',
+    'Vibrating complementary colours (orange/blue, red/green, pink/green)',
+    'Swirls, concentric rings and Op Art patterns',
+    'Art Nouveau-derived curves and figures',
+    'Legibility deliberately challenged',
+  ],
+  principles: ['Colour that vibrates the eye', 'Lettering as image', 'Every surface is filled and flowing'],
+  color: {
+    strategy: 'Clashing, fully saturated complementary pairs placed side by side so the edges vibrate.',
+    palette: [
+      { name: 'Acid Orange', hex: '#FF6A13', role: 'accent' },
+      { name: 'Electric Violet', hex: '#6B2FBF', role: 'primary' },
+      { name: 'Day-Glo Pink', hex: '#FF3EA5', role: 'secondary' },
+      { name: 'Lime Trip', hex: '#B6E800', role: 'highlight' },
+      { name: 'Midnight Plum', hex: '#2A0E3A', role: 'text' },
+    ],
+  },
+  typography: {
+    approach: 'Swelling, soft display faces set big and warped; the body needs a very plain face to stay readable.',
+    display: ['shrikhand', 'righteous', 'monoton'],
+    body: ['outfit', 'dm-sans'],
+    mono: [],
+    scale: 'Golden Ratio (1.618)',
+    notes: 'Real psychedelic lettering was hand-drawn to fit each poster; CSS can mimic it with SVG textPath or variable-font axes.',
+  },
+  shape: {
+    radius: 'Organic blobs and circles',
+    borders: 'Thick wavy outlines',
+    elevation: 'Flat, layered colour',
+    texture: 'Concentric rings, marbling, Op Art stripes',
+  },
+  layout: {
+    grid: 'Centred, symmetrical poster compositions filled edge to edge.',
+    layouts: ['centered-hero', 'full-bleed-hero', 'broken-grid'],
+    density: 'dense',
+  },
+  imagery: 'Marbled and liquid-light patterns, swirling figures, eyes, flowers, mandalas.',
+  motion: {
+    character: 'Liquid and hypnotic: slow morphing blobs, hue cycling, rotating rings.',
+    animations: ['blob-morph', 'gradient-drift', 'svg-morph', 'marquee-scroll'],
+    easing: 'cubic-bezier(0.45, 0, 0.55, 1) — easeInOutQuad',
+    duration: '4–12s loops',
+  },
+  components: {
+    signature: ['hero', 'marquee-band', 'cta-band'],
+    notes: 'A poster-style hero; everything else should calm down.',
+  },
+  purposes: ['event', 'restaurant', 'personal-blog', 'agency'],
+  avoidFor: ['healthcare', 'fintech', 'government', 'saas'],
+  pairsWith: ['art-nouveau', 'maximalism', 'y2k'],
+  dos: [
+    'Warp display type into a shape',
+    'Put complementary colours side by side for vibration',
+    'Keep body text plain and high-contrast',
+  ],
+  donts: [
+    'Vibrate colours behind reading text',
+    'Animate fast hue flashing',
+    'Use it for trust-critical information',
+  ],
+  a11y: 'Vibrating colour pairs and moving patterns can trigger migraines — keep them away from text and stop loops under prefers-reduced-motion.',
+  examples: [],
+  references: [
+    { label: 'Psychedelic art (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Psychedelic_art' },
+    { label: 'Wes Wilson (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Wes_Wilson' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#2A0E3A',
+      surface: '#3A1650',
+      text: '#FFF4E0',
+      muted: '#E3C9F0',
+      accent: '#FF6A13',
+      accentText: '#2A0E3A',
+      border: '#FF3EA5',
+    },
+    fonts: {
+      display: '"Shrikhand", "Righteous", cursive',
+      body: '"Outfit", system-ui, sans-serif',
+      mono: 'ui-monospace, monospace',
+    },
+    googleFonts: 'family=Shrikhand&family=Outfit:wght@400;600',
+    radius: '28px',
+    radiusSm: '999px',
+    borderWidth: '3px',
+    shadow: 'none',
+    displayWeight: 400,
+    displayTracking: '0em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Fillmore',
+    eyebrow: 'One night only',
+    headline: 'Turn on, tune in',
+    body: 'Three bands, a liquid light show and dancing till the sun comes up.',
+    cta: 'Get tickets',
+    media: 'Liquid light',
+  },
+};
+
+export default psychedelic;

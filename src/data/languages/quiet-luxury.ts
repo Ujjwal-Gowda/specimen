@@ -1,0 +1,127 @@
+import type { Language } from '../../types';
+
+const quietLuxury: Language = {
+  id: 'quiet-luxury',
+  name: 'Quiet Luxury',
+  aka: ['Old Money minimal', 'Luxury minimal', 'Stealth wealth aesthetic'],
+  category: 'Aesthetic',
+  era: '2022–present; lineage in 1990s minimalist fashion (Jil Sander, Helmut Lang)',
+  origin: 'The phrases “quiet luxury” and “stealth wealth” spread through fashion coverage around 2022–2023, driven by brands like The Row, Loro Piana and Brunello Cucinelli, and by the TV series Succession. On the web the look translates to restraint: thin serifs or spare grotesks, tracked uppercase labels, stone and bone palettes, oceans of whitespace and large, calm photography. It descends from the 1990s minimalism of Jil Sander and Helmut Lang and from Aesop’s retail design.',
+  summary: 'Luxury signalled by what is left out: no logos shouting, no gradients, no badges. Hairline details, slow motion, generous margins and photography that does the selling.',
+  identify: [
+    'Very light serif or thin grotesk headlines at large sizes',
+    'Tiny uppercase labels with wide letter-spacing (0.2–0.3em)',
+    'Desaturated bone, stone, taupe and espresso palettes',
+    'Hairline-outlined or text-only buttons, never filled pills',
+    'Huge margins; products shown on plain backdrops',
+  ],
+  principles: [
+    'Restraint as the signal of quality',
+    'Material and craft are the story, told through photography',
+    'Slow pacing: fewer items per screen, unhurried motion',
+    'Consistency down to the smallest label',
+  ],
+  color: {
+    strategy: 'Near-monochrome warm neutrals with a single deep material accent (bronze, espresso or forest).',
+    palette: [
+      { name: 'Bone', hex: '#F3EFE7', role: 'background' },
+      { name: 'Linen', hex: '#FAF8F3', role: 'surface' },
+      { name: 'Espresso', hex: '#2B2723', role: 'text' },
+      { name: 'Taupe', hex: '#6E655B', role: 'muted text' },
+      { name: 'Bronze', hex: '#7A5C3E', role: 'accent' },
+      { name: 'Sand', hex: '#E0D9CC', role: 'border' },
+    ],
+  },
+  typography: {
+    approach: 'A light, elegant display serif (or an ultra-clean grotesk) paired with a quiet geometric or neo-grotesque for labels and body. Uppercase tracking does much of the branding.',
+    display: ['cormorant-garamond', 'canela', 'ogg', 'bodoni-moda', 'instrument-serif'],
+    body: ['jost', 'suisse-intl', 'neue-montreal', 'instrument-sans'],
+    mono: [],
+    scale: 'Golden Ratio (1.618)',
+    notes: 'Display weights of 300–400 only. Labels in uppercase at 10–12px with 0.2–0.32em tracking. Never bold the body.',
+  },
+  shape: {
+    radius: '0px',
+    borders: '1px hairlines in Sand or Espresso; outlined buttons',
+    elevation: 'None',
+    texture: 'Paper-toned backgrounds; tactile product photography',
+  },
+  layout: {
+    grid: 'Wide margins, 12-column grid used sparingly; big split-screen product/story pairs',
+    layouts: ['full-bleed-hero', 'split-screen', 'centered-hero', 'asymmetric-grid', 'single-column-longform'],
+    density: 'airy',
+  },
+  imagery: 'Large editorial product and lifestyle photography: natural light, neutral backdrops, close-ups of material and stitching. No illustration, no stock.',
+  motion: {
+    character: 'Slow, soft and cinematic: long fades, gentle image zooms, smooth scrolling.',
+    animations: ['fade-in', 'clip-path-reveal', 'ken-burns', 'smooth-scroll', 'underline-slide', 'image-reveal-hover'],
+    easing: 'cubic-bezier(0.25, 0.1, 0.25, 1) — ease (CSS default), stretched long',
+    duration: '800–1400ms',
+  },
+  components: {
+    signature: ['navbar', 'hero', 'product-card', 'gallery-masonry', 'carousel', 'link', 'newsletter-signup', 'footer'],
+    notes: 'Navigation is minimal (often a centred wordmark). Product cards show image, name and price with no badges. CTAs are underlined text links or hairline buttons.',
+  },
+  purposes: ['luxury-brand', 'real-estate', 'ecommerce', 'wellness', 'portfolio', 'restaurant'],
+  avoidFor: ['kids', 'gaming', 'devtool'],
+  pairsWith: ['editorial', 'minimalism', 'organic'],
+  dos: [
+    'Let whitespace and photography carry the page',
+    'Track uppercase labels generously',
+    'Use one accent colour at most',
+    'Keep motion slow and rare',
+  ],
+  donts: [
+    'Don’t add discount badges, countdowns or pop-ups',
+    'Don’t use bold weights or saturated colours',
+    'Don’t crowd products into dense grids',
+    'Don’t use emoji or playful illustration',
+  ],
+  a11y: 'Light type on light grounds is the main risk: keep body text at ≥ 4.5:1 (Taupe #6E655B on Bone passes) and avoid weights under 300 for text below 20px. Text-only CTAs need a visible focus state and an underline.',
+  examples: [
+    { name: 'Aesop', url: 'https://www.aesop.com' },
+    { name: 'The Row', url: 'https://www.therow.com' },
+    { name: 'Loro Piana', url: 'https://www.loropiana.com' },
+    { name: 'Brunello Cucinelli', url: 'https://www.brunellocucinelli.com' },
+  ],
+  references: [
+    { label: 'Quiet luxury — Wikipedia', url: 'https://en.wikipedia.org/wiki/Quiet_luxury' },
+    {
+      label: 'Cormorant Garamond — Google Fonts',
+      url: 'https://fonts.google.com/specimen/Cormorant+Garamond',
+    },
+  ],
+  tokens: {
+    colors: {
+      bg: '#F3EFE7',
+      surface: '#FAF8F3',
+      text: '#2B2723',
+      muted: '#6E655B',
+      accent: '#7A5C3E',
+      accentText: '#FFFFFF',
+      border: '#E0D9CC',
+    },
+    fonts: {
+      display: '"Cormorant Garamond", "Times New Roman", serif',
+      body: '"Jost", "Helvetica Neue", Arial, sans-serif',
+      mono: 'ui-monospace, monospace',
+    },
+    googleFonts: 'family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500',
+    radius: '0px',
+    radiusSm: '0px',
+    borderWidth: '1px',
+    shadow: 'none',
+    displayWeight: 300,
+    displayTracking: '-0.005em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Maison Élan',
+    eyebrow: 'Autumn / Winter 2026',
+    headline: 'Cashmere, cut with intention',
+    body: 'Undyed Mongolian cashmere, knitted in Biella in runs of forty pieces.',
+    cta: 'Discover',
+  },
+};
+
+export default quietLuxury;

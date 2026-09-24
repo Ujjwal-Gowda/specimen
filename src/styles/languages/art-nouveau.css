@@ -1,0 +1,32 @@
+/* art-nouveau — tokens, primitive overrides and media-slot art direction, scoped under .lang-art-nouveau */
+.lang-art-nouveau {
+  --ui-bg: #F3EAD7;
+  --ui-surface: #FBF5E8;
+  --ui-text: #3B2A1E;
+  --ui-muted: #6B5646;
+  --ui-accent: #5C6B3A;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #C49A3A;
+  --ui-radius: 18px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 1px;
+  --ui-shadow: none;
+  --ui-font-display: "Cormorant Garamond", Garamond, serif;
+  --ui-font-body: "EB Garamond", Garamond, serif;
+  --ui-font-mono: ui-monospace, monospace;
+  --ui-display-weight: 500;
+  --ui-display-tracking: 0em;
+  --ui-display-transform: none;
+}
+.lang-art-nouveau .ui-hero { padding: 10px 14px; border: 1px solid #c49a3a; border-radius: 120px 120px 4px 4px / 60px 60px 4px 4px; text-align: center; align-items: center; }
+.lang-art-nouveau .ui-h1 { font-style: italic; font-size: clamp(28px, 3.4vw, 42px); color: #5c6b3a; }
+.lang-art-nouveau .ui-eyebrow { font-family: var(--ui-font-body); letter-spacing: .2em; color: #9c6b7e; }
+.lang-art-nouveau .ui-btn { border-radius: 999px; }
+.lang-art-nouveau .ui-card { border: 1px solid #c49a3a; box-shadow: inset 0 0 0 4px #fbf5e8, inset 0 0 0 5px #c49a3a; border-radius: 40px 40px 6px 6px; }
+.lang-art-nouveau .ui-media { border: 2px solid #c49a3a; border-radius: 999px 999px 6px 6px; background:
+  radial-gradient(ellipse 20% 30% at 50% 36%, #9c6b7e 96%, transparent 100%),
+  radial-gradient(ellipse 12% 34% at 38% 44%, #5c6b3a 96%, transparent 100%),
+  radial-gradient(ellipse 12% 34% at 62% 44%, #5c6b3a 96%, transparent 100%),
+  linear-gradient(#5c6b3a, #5c6b3a) 50% 100% / 2% 50% no-repeat,
+  radial-gradient(circle at 50% 110%, #c49a3a 0 30%, transparent 31%), #fbf5e8; box-shadow: inset 0 0 0 6px #fbf5e8, inset 0 0 0 7px #c49a3a; }
+.lang-art-nouveau .ui-media-cap { left: 50%; transform: translateX(-50%); color: #6b5646; }

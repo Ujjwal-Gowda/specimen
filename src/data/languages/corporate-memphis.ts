@@ -1,0 +1,122 @@
+import type { Language } from '../../types';
+
+const corporateMemphis: Language = {
+  id: 'corporate-memphis',
+  name: 'Corporate Memphis',
+  aka: ['Alegria style', 'Big Tech art style', 'Flat human illustration'],
+  category: 'Aesthetic',
+  era: '2017–present',
+  origin: 'The flat, pastel illustration style of faceless people with small heads, oversized limbs and non-realistic skin tones. Its best-known source is Alegria, an illustration system created by the studio Buck for Facebook in 2017. It spread across tech onboarding screens and landing pages (Slack, Airbnb, Google and countless startups) and through free kits such as Pablo Stanley’s Humaaans (2018). Around 2020 the nickname “Corporate Memphis”, a nod to Memphis Design’s colours and shapes, became shorthand for, and a critique of, its ubiquity.',
+  summary: 'Friendly, inclusive-looking flat illustration of people at work and play, set on pastel blobs with rounded sans type: approachable, optimistic and deliberately neutral.',
+  identify: [
+    'Flat illustrated figures with tiny heads and long, bendy limbs',
+    'Skin in purples, blues and oranges rather than realistic tones',
+    'Pastel organic blobs behind illustrations and sections',
+    'Rounded geometric sans type, soft pill buttons',
+    'Lots of white or cream space; no photography',
+  ],
+  principles: [
+    'Approachability: nothing intimidating or technical',
+    'Inclusivity through abstraction',
+    'Soft shapes and pastel colour',
+    'Illustration explains abstract software',
+  ],
+  color: {
+    strategy: 'Cream ground, a strong indigo for actions, and a bouquet of pastels (lilac, peach, sunny, seafoam) for illustration and blobs.',
+    palette: [
+      { name: 'Cream', hex: '#FFF9F2', role: 'background' },
+      { name: 'Charcoal', hex: '#22223B', role: 'text' },
+      { name: 'Indigo', hex: '#4C3BCF', role: 'accent' },
+      { name: 'Lilac', hex: '#C9B6FF', role: 'illustration' },
+      { name: 'Peach', hex: '#FFB199', role: 'illustration' },
+      { name: 'Sunny', hex: '#FFD66B', role: 'illustration' },
+      { name: 'Seafoam', hex: '#7ED8C2', role: 'illustration' },
+    ],
+  },
+  typography: {
+    approach: 'Rounded geometric or friendly grotesk headlines; soft humanist or geometric body.',
+    display: ['poppins', 'plus-jakarta-sans', 'circular', 'gt-walsheim', 'nunito'],
+    body: ['nunito', 'dm-sans', 'figtree'],
+    mono: [],
+    scale: 'Major Third (1.25)',
+    notes: 'Semibold/bold headlines, sentence case, generous line height. Avoid condensed or high-contrast faces.',
+  },
+  shape: {
+    radius: '20–28px cards, full pills for buttons',
+    borders: 'Rare; separation through pastel fills',
+    elevation: 'Soft tinted shadows or none',
+    texture: 'Flat fills and organic blobs',
+  },
+  layout: {
+    grid: 'Alternating split sections (illustration / copy), feature card grids',
+    layouts: ['split-hero', 'z-pattern', 'card-grid', 'centered-hero'],
+    density: 'airy',
+  },
+  imagery: 'Commissioned or kit-based flat vector illustration of people, objects and abstract shapes. Lottie animations of the same characters.',
+  motion: {
+    character: 'Gentle and friendly: illustrations wave, blobs morph, cards lift.',
+    animations: ['fade-up-reveal', 'stagger-reveal', 'blob-morph', 'hover-lift', 'spring-press', 'draw-svg'],
+    easing: 'cubic-bezier(0.34, 1.3, 0.64, 1) — soft overshoot',
+    duration: '300–600ms',
+  },
+  components: {
+    signature: ['hero', 'feature-grid', 'testimonial', 'empty-state', 'pricing-table', 'faq-accordion', 'cta-band'],
+    notes: 'Empty states and onboarding are where the illustrations shine.',
+  },
+  purposes: ['saas', 'education', 'healthcare', 'nonprofit', 'wellness', 'fintech', 'kids'],
+  avoidFor: ['luxury-brand', 'editorial-news', 'agency'],
+  pairsWith: ['flat', 'material3', 'organic', 'memphis'],
+  dos: [
+    'Commission a distinct character style to avoid looking generic',
+    'Use illustration to explain, not decorate',
+    'Keep a single strong accent for actions',
+    'Tint blobs from the illustration palette',
+  ],
+  donts: [
+    'Don’t use off-the-shelf kits unmodified on a brand site',
+    'Don’t mix illustration styles',
+    'Don’t use it for premium or luxury positioning',
+    'Don’t let blobs sit behind body text',
+  ],
+  a11y: 'Decorative illustrations get empty alt text; explanatory ones need descriptive alt. Pastel fills need dark text (#22223B passes on all palette pastels).',
+  examples: [
+    { name: 'Humaaans (illustration kit)', url: 'https://www.humaaans.com' },
+  ],
+  references: [
+    { label: 'Corporate Memphis — Wikipedia', url: 'https://en.wikipedia.org/wiki/Corporate_Memphis' },
+    { label: 'Memphis Group — Wikipedia (the original)', url: 'https://en.wikipedia.org/wiki/Memphis_Group' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#FFF9F2',
+      surface: '#FFFFFF',
+      text: '#22223B',
+      muted: '#5C5C7A',
+      accent: '#4C3BCF',
+      accentText: '#FFFFFF',
+      border: '#EDE3D6',
+    },
+    fonts: {
+      display: '"Poppins", system-ui, sans-serif',
+      body: '"Nunito", system-ui, sans-serif',
+      mono: 'ui-monospace, monospace',
+    },
+    googleFonts: 'family=Poppins:wght@500;600;700&family=Nunito:wght@400;600;700',
+    radius: '24px',
+    radiusSm: '999px',
+    borderWidth: '1px',
+    shadow: '0 10px 30px -12px rgba(76, 59, 207, 0.25)',
+    displayWeight: 700,
+    displayTracking: '-0.02em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Teamly',
+    eyebrow: 'Work, together',
+    headline: 'Your whole team, finally in sync',
+    body: 'Chat, docs and tasks in one friendly place, so nothing slips through the cracks.',
+    cta: 'Try Teamly free',
+  },
+};
+
+export default corporateMemphis;

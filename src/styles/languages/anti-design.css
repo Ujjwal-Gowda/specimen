@@ -1,0 +1,34 @@
+/* anti-design — tokens, primitive overrides and media-slot art direction, scoped under .lang-anti-design */
+.lang-anti-design {
+  --ui-bg: #FFFFFF;
+  --ui-surface: #EFEFEF;
+  --ui-text: #000000;
+  --ui-muted: #444444;
+  --ui-accent: #0000EE;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #000000;
+  --ui-radius: 0px;
+  --ui-radius-sm: 0px;
+  --ui-bw: 2px;
+  --ui-shadow: 7px -5px 0 #00FF41;
+  --ui-font-display: "Times New Roman", Times, serif;
+  --ui-font-body: "Times New Roman", Times, serif;
+  --ui-font-mono: "Courier New", Courier, monospace;
+  --ui-display-weight: 400;
+  --ui-display-tracking: -0.04em;
+  --ui-display-transform: none;
+}
+.lang-anti-design .ui-nav { border-bottom: 3px double #000; }
+.lang-anti-design .ui-logo { font-family: "Syne", sans-serif; font-weight: 800; font-size: 20px; transform: skewX(-12deg); }
+.lang-anti-design .ui-link { color: #0000ee; text-decoration: underline; }
+.lang-anti-design .ui-h1 { font-size: clamp(32px, 4.6vw, 58px); line-height: .85; margin-left: -6px; }
+.lang-anti-design .ui-eyebrow { font-family: "Comic Sans MS", "Comic Neue", cursive; text-transform: none; letter-spacing: 0; color: #551a8b; }
+.lang-anti-design .ui-btn { background: #efefef; color: #000; border: 2px outset #fff; border-radius: 0; font-family: Arial, sans-serif; font-weight: 400; }
+.lang-anti-design .ui-btn--ghost { background: transparent; border: 0; color: #0000ee; text-decoration: underline; }
+.lang-anti-design .ui-card:nth-child(1) { transform: translate(8px, -6px); z-index: 1; }
+.lang-anti-design .ui-card:nth-child(2) { border-radius: 999px; background: #00ff41; }
+.lang-anti-design .ui-card:nth-child(3) { transform: rotate(-4deg); font-family: "Courier New", monospace; }
+.lang-anti-design .ui-media { border: 1px dashed #000; image-rendering: pixelated; background:
+  linear-gradient(90deg, #ff0000 0 20%, #00ff41 20% 40%, #0000ee 40% 60%, #ffff00 60% 80%, #ff00ff 80%) 0 0 / 100% 18% no-repeat,
+  repeating-conic-gradient(#ddd 0 25%, #fff 0 50%) 0 0 / 16px 16px; transform: rotate(2deg) translateX(10px); }
+.lang-anti-design .ui-media-cap { color: #0000ee; text-decoration: underline; text-transform: none; font-family: "Times New Roman", serif; font-size: 12px; }

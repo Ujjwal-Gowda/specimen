@@ -1,0 +1,30 @@
+/* retro-futurism — tokens, primitive overrides and media-slot art direction, scoped under .lang-retro-futurism */
+.lang-retro-futurism {
+  --ui-bg: #F2E8D5;
+  --ui-surface: #FBF5E9;
+  --ui-text: #14213D;
+  --ui-muted: #4A5468;
+  --ui-accent: #C9451F;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #14213D;
+  --ui-radius: 999px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 2px;
+  --ui-shadow: none;
+  --ui-font-display: "Michroma", "Orbitron", sans-serif;
+  --ui-font-body: "Jost", system-ui, sans-serif;
+  --ui-font-mono: "Space Mono", monospace;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0.04em;
+  --ui-display-transform: uppercase;
+}
+.lang-retro-futurism .ui-h1 { font-size: clamp(22px, 2.8vw, 34px); line-height: 1.1; }
+.lang-retro-futurism .ui-btn { border-radius: 999px; letter-spacing: .08em; text-transform: uppercase; }
+.lang-retro-futurism .ui-card { border-radius: 26px; border-width: 2px; }
+.lang-retro-futurism .ui-badge { border-radius: 999px; background: #c9451f; border-color: #c9451f; color: #fff; }
+.lang-retro-futurism .ui-media { border: 2px solid #14213d; background:
+  radial-gradient(circle at 60% 55%, #c9451f 0 16%, transparent 16.5%),
+  radial-gradient(ellipse 44% 13% at 60% 55%, transparent 88%, #f2e8d5 90% 95%, transparent 97%),
+  radial-gradient(circle, #f2e8d5 1px, transparent 1.6px) 0 0 / 22px 19px,
+  radial-gradient(circle at 20% 80%, #2a9d8f 0 9%, transparent 9.5%), #14213d; }
+.lang-retro-futurism .ui-media-cap { color: #f2e8d5; letter-spacing: .2em; }

@@ -1,0 +1,112 @@
+import type { Language } from '../../types';
+
+const material1: Language = {
+  id: 'material-1',
+  name: 'Material Design (2014)',
+  aka: ['Material Design 1', 'Classic Material', 'Paper & ink'],
+  category: 'Platform system',
+  era: '2014–2018, Google',
+  origin: 'Announced at Google I/O 2014 under Matías Duarte for Android 5.0 Lollipop. Its metaphor was "quantum paper": flat sheets of paper with real thickness (1dp) casting realistic shadows at defined elevations, bold primary/accent colour pairs, Roboto type, the floating action button, ripple ink feedback and meaningful motion. It was the most widely copied design system of the 2010s before Material 2 (2018) and Material You / M3 (2021).',
+  summary: 'The original Material: bold primary colour app bars, white paper cards on elevation shadows, a pink or amber accent, Roboto, the floating action button and ripple ink. Flat colour with physical depth.',
+  identify: [
+    'Coloured app bar (Indigo, Teal, Red…) with white Roboto title',
+    'White cards casting layered shadows at fixed elevations (2, 6, 8, 24dp)',
+    'Circular floating action button in the accent colour',
+    'Ripple "ink" spreading from each tap',
+    'Uppercase button labels with 2dp radius',
+  ],
+  principles: [
+    'Material is the metaphor: paper and ink with real thickness',
+    'Bold, graphic, intentional colour',
+    'Motion provides meaning',
+  ],
+  color: {
+    strategy: 'A primary colour (500) with dark (700) variant for status bar, plus a contrasting accent (A200) for FABs and highlights, on white/grey 50.',
+    palette: [
+      { name: 'Indigo 500', hex: '#3F51B5', role: 'primary' },
+      { name: 'Indigo 700', hex: '#303F9F', role: 'primary dark' },
+      { name: 'Pink A200', hex: '#FF4081', role: 'accent' },
+      { name: 'Grey 50', hex: '#FAFAFA', role: 'background' },
+      { name: 'Black 87%', hex: '#212121', role: 'text' },
+    ],
+  },
+  typography: {
+    approach: 'Roboto throughout: Display, Headline, Title, Subheading, Body, Caption, Button (uppercase, medium).',
+    display: ['roboto'],
+    body: ['roboto'],
+    mono: [],
+    scale: 'Material 2014 type scale (112/56/45/34/24/20/16/14/12)',
+    notes: 'Roboto Medium, uppercase and tracked for buttons is a tell-tale detail.',
+  },
+  shape: {
+    radius: '2px (buttons, cards); circles for FAB',
+    borders: 'Almost none — depth replaces borders',
+    elevation: 'Layered key + ambient shadows at 1–24dp',
+    texture: 'None',
+  },
+  layout: {
+    grid: '8dp baseline grid with 4dp for type; 16dp/24dp keylines.',
+    layouts: ['card-grid', 'dashboard-shell', 'twelve-col-grid'],
+    density: 'balanced',
+  },
+  imagery: 'Bold flat illustration with long shadows, full-bleed photography in cards.',
+  motion: {
+    character: 'Responsive and physical: ripples on touch, surfaces lift, shared elements transform.',
+    animations: ['ripple', 'shared-element-transition', 'fade-in', 'scale-in', 'spinner-rotate'],
+    easing: 'cubic-bezier(0.4, 0, 0.2, 1) — Material standard curve',
+    duration: '195–375ms',
+  },
+  components: {
+    signature: ['fab', 'card', 'navbar', 'button', 'tabs', 'toast', 'drawer'],
+    notes: 'The FAB and the snackbar (toast) were introduced by this system.',
+  },
+  purposes: ['saas', 'education', 'personal-blog', 'kids'],
+  avoidFor: ['luxury-brand', 'agency'],
+  pairsWith: ['flat', 'material3'],
+  dos: [
+    'Use one primary and one accent',
+    'Use elevation, not borders, to separate layers',
+    'Keep ripples on every tappable surface',
+  ],
+  donts: ['Mix elevations arbitrarily', 'Use the accent for large areas', 'Round cards beyond 2–4px'],
+  a11y: 'White text on the 500 colours passes for most hues but not all (e.g. Amber, Lime) — use the 700 shade or dark text there.',
+  examples: [],
+  references: [
+    { label: 'Material Design 1 (archived guidelines)', url: 'https://m1.material.io' },
+    { label: 'Material Design (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Material_Design' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#FAFAFA',
+      surface: '#FFFFFF',
+      text: '#212121',
+      muted: '#616161',
+      accent: '#3F51B5',
+      accentText: '#FFFFFF',
+      border: '#E0E0E0',
+    },
+    fonts: {
+      display: '"Roboto", system-ui, sans-serif',
+      body: '"Roboto", system-ui, sans-serif',
+      mono: '"Roboto Mono", ui-monospace, monospace',
+    },
+    googleFonts: 'family=Roboto:wght@300;400;500;700&family=Roboto+Mono',
+    radius: '2px',
+    radiusSm: '2px',
+    borderWidth: '0px',
+    shadow: '0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px rgba(0,0,0,.2)',
+    displayWeight: 400,
+    displayTracking: '0em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Keepsake',
+    eyebrow: 'New in Lollipop',
+    headline: 'Notes that feel like paper',
+    body: 'Cards you can stack, colour and swipe away — synced to every device.',
+    cta: 'Install',
+    media: 'Paper stack',
+  },
+};
+
+export default material1;

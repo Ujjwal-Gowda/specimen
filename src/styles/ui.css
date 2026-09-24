@@ -1,0 +1,260 @@
+/* =================================================================
+   .ui-* preview primitives
+   The same markup renders every design-language preview and every
+   component preview. This file draws it from tokens only; each
+   css/lang-*.css sets the tokens on .lang-<id> and may override
+   primitives, scoped under .lang-<id>, to add its signature.
+   The markup itself is built in js/preview.js (ATLAS.previewMarkup).
+   ================================================================= */
+
+.ui {
+  --ui-bg: #ffffff;
+  --ui-surface: #f4f4f5;
+  --ui-text: #111111;
+  --ui-muted: #6b6b70;
+  --ui-accent: #2f5bff;
+  --ui-accent-text: #ffffff;
+  --ui-border: #dcdce0;
+  --ui-radius: 12px;
+  --ui-radius-sm: 8px;
+  --ui-bw: 1px;
+  --ui-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+  --ui-font-display: system-ui, sans-serif;
+  --ui-font-body: system-ui, sans-serif;
+  --ui-font-mono: ui-monospace, monospace;
+  --ui-display-weight: 700;
+  --ui-display-tracking: -0.02em;
+  --ui-display-transform: none;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px 20px 22px;
+  background: var(--ui-bg);
+  color: var(--ui-text);
+  font-family: var(--ui-font-body);
+  font-size: 14px;
+  line-height: 1.45;
+  text-align: left;
+}
+.ui *, .ui *::before, .ui *::after { box-sizing: border-box; }
+/* zero-specificity reset so .ui-btn / .ui-input / language overrides always win */
+:where(.ui) button, :where(.ui) input { font: inherit; color: inherit; }
+
+/* nav */
+.ui-nav { display: flex; align-items: center; gap: 16px; }
+.ui-logo {
+  margin-right: auto;
+  font-family: var(--ui-font-display);
+  font-weight: var(--ui-display-weight);
+  letter-spacing: var(--ui-display-tracking);
+  text-transform: var(--ui-display-transform);
+  font-size: 15px;
+}
+.ui-link { color: var(--ui-muted); text-decoration: none; font-size: 13px; cursor: pointer; }
+.ui-link:hover { color: var(--ui-text); }
+
+/* type */
+.ui-hero { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.ui-eyebrow {
+  margin: 0;
+  font-family: var(--ui-font-mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ui-muted);
+}
+.ui-h1 {
+  margin: 0;
+  max-width: 18ch;
+  font-family: var(--ui-font-display);
+  font-weight: var(--ui-display-weight);
+  letter-spacing: var(--ui-display-tracking);
+  text-transform: var(--ui-display-transform);
+  font-size: clamp(26px, 3.2vw, 38px);
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.ui-h2 {
+  margin: 0;
+  font-family: var(--ui-font-display);
+  font-weight: var(--ui-display-weight);
+  letter-spacing: var(--ui-display-tracking);
+  text-transform: var(--ui-display-transform);
+  font-size: 16px;
+  line-height: 1.15;
+}
+.ui-p { margin: 0; max-width: 46ch; color: var(--ui-muted); }
+
+/* hero + art-directed image slot (drawn per language in CSS, never an image file) */
+.ui-hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 18px; align-items: center; }
+.ui-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  border-radius: var(--ui-radius);
+  border: var(--ui-bw) solid var(--ui-border);
+  background:
+    radial-gradient(60% 70% at 70% 30%, color-mix(in oklab, var(--ui-accent) 55%, transparent), transparent 70%),
+    linear-gradient(160deg, var(--ui-surface), color-mix(in oklab, var(--ui-accent) 30%, var(--ui-surface)));
+}
+.ui-media-cap {
+  position: absolute; left: 10px; bottom: 8px;
+  font-family: var(--ui-font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ui-muted);
+}
+@container (max-width: 460px) { .ui-hero-grid { grid-template-columns: 1fr; } .ui-media { aspect-ratio: 16 / 7; } }
+
+/* layout helpers */
+.ui-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.ui-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@container (max-width: 520px) { .ui-grid { grid-template-columns: 1fr; } }
+
+/* buttons */
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 0 16px;
+  border: var(--ui-bw) solid var(--ui-accent);
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-accent);
+  color: var(--ui-accent-text);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.ui-btn--ghost { background: transparent; color: var(--ui-text); border-color: var(--ui-border); }
+.ui-btn--sm { min-height: 30px; padding: 0 12px; font-size: 12px; }
+.ui-btn:focus-visible, .ui-input:focus-visible, .ui-tab:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 2px; }
+
+/* card */
+.ui-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 14px;
+  border: var(--ui-bw) solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  background: var(--ui-surface);
+  box-shadow: var(--ui-shadow);
+}
+
+/* small bits */
+.ui-badge, .ui-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: var(--ui-bw) solid var(--ui-border);
+  background: var(--ui-bg);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ui-text);
+}
+.ui-badge { background: var(--ui-accent); color: var(--ui-accent-text); border-color: var(--ui-accent); }
+
+.ui-input {
+  flex: 1 1 160px;
+  min-width: 0;
+  height: 38px;
+  padding: 0 12px;
+  border: var(--ui-bw) solid var(--ui-border);
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-bg);
+  color: var(--ui-text);
+}
+.ui-input::placeholder { color: var(--ui-muted); }
+
+.ui-switch { position: relative; display: inline-block; width: 40px; height: 24px; flex: none; }
+.ui-switch input { position: absolute; inset: 0; opacity: 0; cursor: pointer; margin: 0; }
+.ui-switch span {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--ui-border);
+  transition: background-color .2s ease;
+  pointer-events: none;
+}
+.ui-switch span::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ui-bg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  transition: transform .2s ease;
+}
+.ui-switch input:checked + span { background: var(--ui-accent); }
+.ui-switch input:checked + span::after { transform: translateX(16px); }
+.ui-switch input:focus-visible + span { outline: 2px solid var(--ui-accent); outline-offset: 2px; }
+
+.ui-tabs {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: var(--ui-bw) solid var(--ui-border);
+  border-radius: calc(var(--ui-radius-sm) + 3px);
+  background: var(--ui-surface);
+}
+.ui-tab {
+  padding: 5px 12px;
+  border: 0;
+  border-radius: var(--ui-radius-sm);
+  background: transparent;
+  color: var(--ui-muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ui-tab[aria-selected="true"] { background: var(--ui-bg); color: var(--ui-text); box-shadow: var(--ui-shadow); }
+
+.ui-avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--ui-accent);
+  color: var(--ui-accent-text);
+  font-size: 11px;
+  font-weight: 700;
+}
+.ui-stat { display: flex; flex-direction: column; gap: 2px; }
+.ui-stat-num {
+  font-family: var(--ui-font-display);
+  font-weight: var(--ui-display-weight);
+  letter-spacing: var(--ui-display-tracking);
+  font-size: 24px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.ui-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.ui-list li { display: flex; align-items: center; gap: 8px; }
+.ui-divider { height: 0; border: 0; border-top: var(--ui-bw) solid var(--ui-border); margin: 0; width: 100%; }
+.ui-kbd {
+  display: inline-block;
+  padding: 1px 6px;
+  border: 1px solid var(--ui-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  font-family: var(--ui-font-mono);
+  font-size: 11px;
+  color: var(--ui-muted);
+}
+.ui-progress { width: 100%; height: 6px; border-radius: 999px; background: var(--ui-border); overflow: hidden; }
+.ui-progress > i { display: block; height: 100%; width: var(--p, 60%); background: var(--ui-accent); border-radius: inherit; }

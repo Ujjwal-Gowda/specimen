@@ -1,0 +1,130 @@
+import type { Language } from '../../types';
+
+const flat: Language = {
+  id: 'flat',
+  name: 'Flat Design',
+  aka: ['Flat UI', 'Metro-style', 'Flat 2.0 (with subtle shadows)'],
+  category: 'Aesthetic',
+  era: '2010–2016; Microsoft Metro (2010) → iOS 7 (2013)',
+  origin: 'Microsoft’s Metro design language (Zune, Windows Phone 7 in 2010, Windows 8 in 2012) stripped away skeuomorphic texture in favour of typography (Segoe UI), solid colour tiles and content. Google Now cards and Apple’s iOS 7 (Jonathan Ive, 2013) made it the mainstream default, and Designmodo’s "Flat UI" kit (2013) gave the era its named palette (Turquoise, Peter River, Alizarin…). "Flat 2.0" later brought back subtle shadows for affordance after research showed flat buttons were less discoverable.',
+  summary: 'Solid colours, simple shapes and crisp icons with no gradients, textures or realistic shadows. Clear, colourful and fast — the default look of 2010s apps and dashboards.',
+  identify: [
+    'Solid fills with no gradients, bevels or texture',
+    'Bright, saturated named palette (Flat UI colours)',
+    'Simple line or glyph icons, often inside coloured circles',
+    'Minimal or no shadows (Flat 2.0 adds one soft level)',
+    'Friendly sans type at medium weights',
+  ],
+  principles: [
+    'Authentically digital — don’t imitate physical materials',
+    'Content over chrome',
+    'Colour and typography carry hierarchy',
+    'Simplicity that scales across screen sizes',
+  ],
+  color: {
+    strategy: 'Several saturated flat hues on white, each assigned a role; dark slate for text. Palette names from Designmodo Flat UI.',
+    palette: [
+      { name: 'Turquoise', hex: '#1ABC9C', role: 'success / highlight' },
+      { name: 'Peter River', hex: '#3498DB', role: 'primary hue' },
+      { name: 'Belize Hole', hex: '#2980B9', role: 'primary (dark)' },
+      { name: 'Alizarin', hex: '#E74C3C', role: 'danger' },
+      { name: 'Sun Flower', hex: '#F1C40F', role: 'warning' },
+      { name: 'Midnight Blue', hex: '#2C3E50', role: 'text' },
+      { name: 'Clouds', hex: '#ECF0F1', role: 'surface' },
+    ],
+  },
+  typography: {
+    approach: 'Friendly humanist or geometric sans at regular/bold; clear, legible, no ornament.',
+    display: ['lato', 'open-sans', 'montserrat', 'segoe-ui-variable'],
+    body: ['open-sans', 'lato', 'source-sans-3', 'roboto'],
+    mono: ['fira-code'],
+    scale: 'Major Third (1.25)',
+    notes: 'Metro used Segoe UI (Light and Semilight at very large sizes). Lato, Open Sans and Montserrat defined the web flat era.',
+  },
+  shape: {
+    radius: '3–6px',
+    borders: 'Rarely; colour blocks separate areas',
+    elevation: 'None (Flat 1.0) or one soft 0 2px 4px shadow (Flat 2.0)',
+    texture: 'None',
+  },
+  layout: {
+    grid: '12-column responsive grid with card and tile patterns',
+    layouts: ['card-grid', 'centered-hero', 'z-pattern', 'dashboard-shell'],
+    density: 'balanced',
+  },
+  imagery: 'Flat vector illustration, long-shadow icons (2013–14), simple geometric characters, solid-colour backgrounds.',
+  motion: {
+    character: 'Snappy, cheerful transitions: tiles flip and slide, icons pop.',
+    animations: ['scale-in', 'fade-up-reveal', 'hover-lift', 'ripple', 'count-up', 'bounce', 'pulse-ping'],
+    easing: 'cubic-bezier(0.34, 1.56, 0.64, 1) — easeOutBack (small overshoot)',
+    duration: '200–350ms',
+  },
+  components: {
+    signature: ['button', 'card', 'feature-grid', 'pricing-table', 'navbar', 'badge'],
+    notes: 'Solid buttons in role colours, icon + label feature grids, coloured tiles.',
+  },
+  purposes: ['education', 'saas', 'nonprofit', 'kids', 'healthcare'],
+  avoidFor: ['luxury-brand'],
+  pairsWith: ['material3', 'corporate-memphis', 'minimalism'],
+  dos: [
+    'Give every colour a job and keep it consistent',
+    'Use a slight shadow or border on buttons so they still look clickable (Flat 2.0)',
+    'Pair with clear iconography',
+  ],
+  donts: [
+    'Make buttons indistinguishable from labels',
+    'Use every palette colour on one screen',
+    'Put white text on the lighter flat hues (Peter River, Sun Flower)',
+  ],
+  a11y: 'Many classic flat hues (Peter River, Turquoise, Sun Flower) fail 4.5:1 with white text — use their darker shades for text-bearing buttons. Flat buttons need a visible affordance.',
+  examples: [
+    { name: 'Duolingo', url: 'https://www.duolingo.com' },
+    { name: 'Kurzgesagt', url: 'https://kurzgesagt.org' },
+    { name: 'Headspace', url: 'https://www.headspace.com' },
+  ],
+  references: [
+    { label: 'Wikipedia — Flat design', url: 'https://en.wikipedia.org/wiki/Flat_design' },
+    {
+      label: 'Wikipedia — Metro (design language)',
+      url: 'https://en.wikipedia.org/wiki/Metro_(design_language)',
+    },
+    {
+      label: 'Nielsen Norman Group — Flat UI Elements Attract Less Attention',
+      url: 'https://www.nngroup.com/articles/flat-ui-less-attention-cause-uncertainty/',
+    },
+  ],
+  tokens: {
+    colors: {
+      bg: '#FFFFFF',
+      surface: '#ECF0F1',
+      text: '#2C3E50',
+      muted: '#566573',
+      accent: '#2471A3',
+      accentText: '#FFFFFF',
+      border: '#D5DBDB',
+    },
+    fonts: {
+      display: '"Lato", "Segoe UI", sans-serif',
+      body: '"Open Sans", "Segoe UI", sans-serif',
+      mono: '"Fira Code", ui-monospace, monospace',
+    },
+    googleFonts: 'family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600&family=Fira+Code',
+    radius: '6px',
+    radiusSm: '4px',
+    borderWidth: '0px',
+    shadow: 'none',
+    displayWeight: 900,
+    displayTracking: '-0.01em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Taskly',
+    eyebrow: 'For busy classrooms',
+    headline: 'Homework, sorted in seconds',
+    body: 'Assign, collect and grade in one colourful dashboard your students actually like opening.',
+    cta: 'Try it free',
+    media: 'Illustration kit',
+  },
+};
+
+export default flat;

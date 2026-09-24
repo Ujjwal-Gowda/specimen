@@ -1,0 +1,33 @@
+/* scandinavian — tokens, primitive overrides and media-slot art direction, scoped under .lang-scandinavian */
+.lang-scandinavian {
+  --ui-bg: #F7F5F1;
+  --ui-surface: #FFFFFF;
+  --ui-text: #2B2B2B;
+  --ui-muted: #6A665F;
+  --ui-accent: #4A6275;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #E0D8CC;
+  --ui-radius: 8px;
+  --ui-radius-sm: 4px;
+  --ui-bw: 1px;
+  --ui-shadow: none;
+  --ui-font-display: "DM Sans", system-ui, sans-serif;
+  --ui-font-body: "DM Sans", system-ui, sans-serif;
+  --ui-font-mono: "IBM Plex Mono", monospace;
+  --ui-display-weight: 500;
+  --ui-display-tracking: -0.02em;
+  --ui-display-transform: none;
+}
+.lang-scandinavian .ui-h1 { font-size: clamp(26px, 3.2vw, 40px); font-weight: 500; }
+.lang-scandinavian .ui-eyebrow { text-transform: none; letter-spacing: 0; color: #6a665f; }
+.lang-scandinavian .ui-btn { border-radius: 999px; }
+.lang-scandinavian .ui-card { border: 0; background: #efe9df; }
+.lang-scandinavian .ui-card:nth-child(2) { background: #e3e8df; }
+.lang-scandinavian .ui-card:nth-child(3) { background: #e6e9ee; }
+.lang-scandinavian .ui-badge { background: #a3b09a; border-color: #a3b09a; color: #1f2a1a; }
+.lang-scandinavian .ui-media { border: 0; background:
+  linear-gradient(#c8876b, #c8876b) 64% 52% / 26% 30% no-repeat,
+  linear-gradient(#d9c6a8, #d9c6a8) 58% 82% / 44% 7% no-repeat,
+  radial-gradient(ellipse 12% 22% at 26% 40%, #a3b09a 96%, transparent 100%),
+  linear-gradient(#8a7a5e, #8a7a5e) 25.5% 72% / 1.2% 26% no-repeat,
+  linear-gradient(180deg, #f7f5f1 0 72%, #e8dfd2 72%); }

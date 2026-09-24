@@ -1,0 +1,104 @@
+/* vaporwave — tokens, primitive overrides and media-slot art direction, scoped under .lang-vaporwave */
+.lang-vaporwave {
+  --ui-bg: #1A0B36;
+  --ui-surface: #2A1450;
+  --ui-text: #FDF6FF;
+  --ui-muted: #D3B8F0;
+  --ui-accent: #FF71CE;
+  --ui-accent-text: #1A0B36;
+  --ui-border: #7A4FD0;
+  --ui-radius: 0px;
+  --ui-radius-sm: 0px;
+  --ui-bw: 2px;
+  --ui-shadow: 4px 4px 0 #01CDFE;
+  --ui-font-display: "Audiowide", "Arial Black", sans-serif;
+  --ui-font-body: "Space Grotesk", system-ui, sans-serif;
+  --ui-font-mono: "VT323", ui-monospace, monospace;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0.03em;
+  --ui-display-transform: uppercase;
+  background: linear-gradient(180deg, #1A0B36 0%, #2A1450 55%, #5B1C7A 100%);
+}
+.lang-vaporwave::before {
+  content: '';
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  bottom: -6%;
+  height: 52%;
+  z-index: -1;
+  background:
+    repeating-linear-gradient(90deg, rgba(1, 205, 254, .6) 0 2px, transparent 2px 46px),
+    repeating-linear-gradient(0deg, rgba(1, 205, 254, .6) 0 2px, transparent 2px 30px);
+  transform: perspective(300px) rotateX(62deg);
+  transform-origin: 50% 100%;
+  -webkit-mask-image: linear-gradient(to top, #000 25%, transparent);
+  mask-image: linear-gradient(to top, #000 25%, transparent);
+}
+.lang-vaporwave::after {
+  content: '';
+  position: absolute;
+  top: 12%;
+  right: 7%;
+  width: 150px;
+  height: 150px;
+  z-index: -1;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #FFFB96 0%, #FF71CE 70%);
+  -webkit-mask-image: repeating-linear-gradient(180deg, #000 0 12px, transparent 12px 16px);
+  mask-image: repeating-linear-gradient(180deg, #000 0 12px, transparent 12px 16px);
+  opacity: .85;
+}
+.lang-vaporwave .ui-logo { font-family: var(--ui-font-mono); font-size: 22px; letter-spacing: .22em; color: #01CDFE; text-shadow: 2px 2px 0 #FF71CE; }
+.lang-vaporwave .ui-link { font-family: var(--ui-font-mono); font-size: 17px; color: var(--ui-muted); }
+.lang-vaporwave .ui-eyebrow { font-family: var(--ui-font-mono); font-size: 17px; letter-spacing: .08em; text-transform: none; color: #05FFA1; }
+.lang-vaporwave .ui-h1 {
+  font-style: italic;
+  color: var(--ui-accent);
+  background: linear-gradient(180deg, #FFFB96 0%, #FF71CE 55%, #B967FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 0 #01CDFE);
+}
+.lang-vaporwave .ui-btn,
+.lang-vaporwave .ui-card,
+.lang-vaporwave .ui-tabs {
+  border: 2px solid;
+  border-color: #FFFFFF #404040 #404040 #FFFFFF;
+  background: #C0C0C0;
+  color: #000000;
+}
+.lang-vaporwave .ui-btn { box-shadow: 1px 1px 0 #000000; font-family: var(--ui-font-body); font-weight: 700; }
+.lang-vaporwave .ui-btn:active { border-color: #404040 #FFFFFF #FFFFFF #404040; }
+.lang-vaporwave .ui-card { position: relative; padding: 28px 10px 10px; box-shadow: 3px 3px 0 #01CDFE; }
+.lang-vaporwave .ui-card::before {
+  content: 'window.exe';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  height: 18px;
+  padding-left: 6px;
+  background: linear-gradient(90deg, #000080, #1084D0);
+  color: #FFFFFF;
+  font: 16px/18px "VT323", ui-monospace, monospace;
+}
+.lang-vaporwave .ui-card .ui-h2 { color: #000000; font-style: normal; text-transform: none; letter-spacing: 0; }
+.lang-vaporwave .ui-card .ui-p { color: #202020; }
+.lang-vaporwave .ui-badge { border-color: var(--ui-accent); background: var(--ui-accent); color: #1A0B36; }
+.lang-vaporwave .ui-chip { border: 0; background: #000080; color: #FFFFFF; }
+.lang-vaporwave .ui-input { border: 2px solid; border-color: #404040 #FFFFFF #FFFFFF #404040; background: #FFFFFF; color: #000000; }
+.lang-vaporwave .ui-input::placeholder { color: #555555; }
+.lang-vaporwave .ui-tab { color: #000000; }
+.lang-vaporwave .ui-tab[aria-selected="true"] { background: #FFFFFF; color: #000000; box-shadow: inset 1px 1px 0 #404040; }
+.lang-vaporwave .ui-switch span { border-radius: 0; background: #404040; }
+.lang-vaporwave .ui-switch span::after { border-radius: 0; background: #C0C0C0; }
+
+.lang-vaporwave .ui-media { border: 0; background:
+  repeating-linear-gradient(0deg, transparent 0 6%, #1a0b36 6% 8%) 50% 42% / 44% 30% no-repeat,
+  radial-gradient(circle at 50% 42%, #fffb96 0 12%, #ff71ce 21%, transparent 21.5%),
+  linear-gradient(transparent 60%, rgba(1,205,254,.8) 60% 61%, transparent 61%),
+  repeating-linear-gradient(90deg, transparent 0 22px, rgba(255,113,206,.7) 22px 23px) 0 100% / 100% 40% no-repeat,
+  linear-gradient(180deg, #1a0b36, #b967ff 60%, #1a0b36 60%); }
+.lang-vaporwave .ui-media-cap { color: #05ffa1; }

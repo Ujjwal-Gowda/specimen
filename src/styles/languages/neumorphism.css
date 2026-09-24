@@ -1,0 +1,57 @@
+/* neumorphism — tokens, primitive overrides and media-slot art direction, scoped under .lang-neumorphism */
+.lang-neumorphism {
+  --ui-bg: #E0E5EC; --ui-surface: #E0E5EC; --ui-text: #2F3A4A; --ui-muted: #5A6475;
+  --ui-accent: #3D56B2; --ui-accent-text: #FFFFFF; --ui-border: transparent;
+  --ui-radius: 22px; --ui-radius-sm: 14px; --ui-bw: 0px;
+  --ui-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.55);
+  --ui-font-display: "Nunito", "Varela Round", system-ui, sans-serif;
+  --ui-font-body: "Nunito", system-ui, sans-serif;
+  --ui-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --ui-display-weight: 800; --ui-display-tracking: -0.01em; --ui-display-transform: none;
+  padding: 22px 24px 26px;
+  gap: 22px;
+}
+.lang-neumorphism .ui-nav { padding: 8px 8px 8px 18px; border-radius: 18px; box-shadow: var(--ui-shadow); }
+.lang-neumorphism .ui-link { color: #5A6475; font-weight: 600; }
+.lang-neumorphism .ui-eyebrow { font-family: var(--ui-font-body); font-weight: 700; color: #3D56B2; }
+.lang-neumorphism .ui-btn,
+.lang-neumorphism .ui-btn--ghost {
+  border: 0; background: #E0E5EC; color: #3D56B2; font-weight: 800;
+  box-shadow: 6px 6px 12px rgba(163, 177, 198, .65), -6px -6px 12px rgba(255, 255, 255, .6);
+}
+.lang-neumorphism .ui-btn:active,
+.lang-neumorphism .ui-btn--ghost:active {
+  box-shadow: inset 5px 5px 10px rgba(163, 177, 198, .65), inset -5px -5px 10px rgba(255, 255, 255, .6);
+}
+.lang-neumorphism .ui-hero .ui-btn:not(.ui-btn--ghost) { background: #3D56B2; color: #fff; box-shadow: 6px 6px 12px rgba(163, 177, 198, .8), -6px -6px 12px rgba(255, 255, 255, .6); }
+.lang-neumorphism .ui-btn--ghost { color: #2F3A4A; }
+.lang-neumorphism .ui-card { border: 0; }
+.lang-neumorphism .ui-badge { background: #3D56B2; border: 0; }
+.lang-neumorphism .ui-chip { border: 0; background: #E0E5EC; box-shadow: inset 3px 3px 6px rgba(163, 177, 198, .6), inset -3px -3px 6px rgba(255, 255, 255, .6); }
+.lang-neumorphism .ui-input,
+.lang-neumorphism .ui-tabs {
+  border: 0; background: #E0E5EC;
+  box-shadow: inset 5px 5px 10px rgba(163, 177, 198, .6), inset -5px -5px 10px rgba(255, 255, 255, .6);
+}
+.lang-neumorphism .ui-input { border-radius: 14px; }
+.lang-neumorphism .ui-tabs { border-radius: 16px; padding: 4px; }
+.lang-neumorphism .ui-tab { border-radius: 12px; }
+.lang-neumorphism .ui-tab[aria-selected="true"] { background: #E0E5EC; color: #3D56B2; box-shadow: 4px 4px 8px rgba(163, 177, 198, .6), -4px -4px 8px rgba(255, 255, 255, .6); }
+.lang-neumorphism .ui-switch { width: 48px; height: 26px; }
+.lang-neumorphism .ui-switch span { background: #E0E5EC; box-shadow: inset 3px 3px 6px rgba(163, 177, 198, .7), inset -3px -3px 6px rgba(255, 255, 255, .7); }
+.lang-neumorphism .ui-switch span::after { background: #E0E5EC; box-shadow: 2px 2px 4px rgba(163, 177, 198, .8), -2px -2px 4px rgba(255, 255, 255, .8); top: 4px; left: 4px; }
+.lang-neumorphism .ui-switch input:checked + span { background: #E0E5EC; }
+.lang-neumorphism .ui-switch input:checked + span::after { transform: translateX(22px); background: #3D56B2; }
+.lang-neumorphism .ui-media { border: 0; border-radius: 24px; background: #E0E5EC; box-shadow: inset 6px 6px 12px #A3B1C6, inset -6px -6px 12px #FFFFFF; }
+.lang-neumorphism .ui-media::before {
+  content: '21°'; position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%);
+  display: grid; place-items: center; width: 52%; aspect-ratio: 1; border-radius: 50%;
+  background: #E0E5EC; box-shadow: 9px 9px 16px #A3B1C6, -9px -9px 16px #FFFFFF;
+  font: 700 22px/1 var(--ui-font-display); color: #2F3A4A;
+}
+.lang-neumorphism .ui-media::after {
+  content: ''; position: absolute; left: 50%; top: 20%; transform: translateX(-50%);
+  width: 8px; height: 8px; border-radius: 50%; background: #3D56B2;
+  box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
+}
+.lang-neumorphism .ui-media-cap { color: #5A6475; }

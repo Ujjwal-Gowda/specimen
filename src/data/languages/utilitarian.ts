@@ -1,0 +1,115 @@
+import type { Language } from '../../types';
+
+const utilitarian: Language = {
+  id: 'utilitarian',
+  name: 'Utilitarian',
+  aka: ['Industrial design UI', 'Teenage Engineering style', 'Dieter Rams style'],
+  category: 'Aesthetic',
+  era: 'Braun 1950s–70s → consumer tech 2010s–present',
+  origin: 'Rooted in Dieter Rams’s work at Braun (1955–1995) and his "Ten principles for good design" ("as little design as possible"), carried forward by Teenage Engineering (OP-1, 2011), Nothing (2020) and Playdate. On the web it looks like a product manual or instrument panel: monospaced and grotesk labels, grids of spec data, dot-matrix type, a single signal orange, and generous greys.',
+  summary: 'Honest, instrument-like design: light greys, a single signal orange, monospaced labels and spec tables, dot-matrix numerals, modular panels and precise hairlines. Every element labelled, nothing decorative.',
+  identify: [
+    'Neutral light-grey or off-white panels like a device chassis',
+    'One signal colour — orange or red — for the key control',
+    'Monospaced or technical labels, often lowercase or tiny caps',
+    'Spec tables, part numbers and diagrams',
+    'Dot-matrix or LED-style numerals',
+  ],
+  principles: [
+    'As little design as possible',
+    'Form follows function; label everything',
+    'Honest materials and visible structure',
+  ],
+  color: {
+    strategy: 'Neutral greys and off-white with one signal orange; black for text and details.',
+    palette: [
+      { name: 'Chassis Grey', hex: '#E6E6E3', role: 'background' },
+      { name: 'Panel White', hex: '#F7F7F5', role: 'surface' },
+      { name: 'Graphite', hex: '#1A1A1A', role: 'text' },
+      { name: 'Signal Orange', hex: '#FF5A1F', role: 'accent' },
+      { name: 'Label Grey', hex: '#6E6E6A', role: 'muted' },
+    ],
+  },
+  typography: {
+    approach: 'A precise grotesk plus a monospace for labels, specs and numbers; small sizes, careful spacing.',
+    display: ['geist', 'space-grotesk', 'inter'],
+    body: ['geist', 'inter'],
+    mono: ['geist-mono', 'jetbrains-mono', 'space-mono'],
+    scale: 'Major Second (1.125)',
+    notes: 'Nothing’s dot-matrix "Ndot" and Teenage Engineering’s custom type are proprietary; a monospace carries the feel.',
+  },
+  shape: {
+    radius: '4–12px, like machined corners',
+    borders: '1px hairlines and panel seams',
+    elevation: 'Flat; recessed wells for inputs',
+    texture: 'Matte plastic, anodised aluminium',
+  },
+  layout: {
+    grid: 'Strict modular panels, like a device face or manual page.',
+    layouts: ['modular-grid', 'bento-layout', 'dashboard-shell'],
+    density: 'balanced',
+  },
+  imagery: 'Product shots on grey, exploded diagrams, line drawings with callouts.',
+  motion: {
+    character: 'Mechanical and precise: toggles click, counters tick.',
+    animations: ['count-up', 'spring-press', 'typewriter', 'progress-fill'],
+    easing: 'cubic-bezier(0.2, 0, 0, 1) — sharp ease-out',
+    duration: '120–250ms',
+  },
+  components: {
+    signature: ['toggle-group', 'switch', 'slider', 'data-table', 'kbd', 'stats-band'],
+    notes: 'Controls look like physical switches and sliders; specs sit in tables.',
+  },
+  purposes: ['devtool', 'ecommerce', 'saas', 'ai-product', 'portfolio'],
+  avoidFor: ['kids', 'wellness'],
+  pairsWith: ['swiss', 'minimalism', 'terminal'],
+  dos: [
+    'Label every control and value',
+    'Use one signal colour for the primary action',
+    'Show real specs and numbers',
+  ],
+  donts: ['Decorate', 'Use more than one accent colour', 'Hide structure behind effects'],
+  a11y: 'Tiny labels are the risk — keep them ≥ 12px with 4.5:1 contrast; orange on grey fails as text.',
+  examples: [
+    { name: 'Teenage Engineering', url: 'https://teenage.engineering' },
+    { name: 'Nothing', url: 'https://nothing.tech' },
+  ],
+  references: [
+    { label: 'Vitsœ — Dieter Rams: ten principles', url: 'https://www.vitsoe.com/us/about/good-design' },
+    { label: 'Dieter Rams (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Dieter_Rams' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#E6E6E3',
+      surface: '#F7F7F5',
+      text: '#1A1A1A',
+      muted: '#5E5E5A',
+      accent: '#FF5A1F',
+      accentText: '#1A1A1A',
+      border: '#C9C9C4',
+    },
+    fonts: {
+      display: '"Geist", "Inter", system-ui, sans-serif',
+      body: '"Geist", "Inter", system-ui, sans-serif',
+      mono: '"Geist Mono", ui-monospace, monospace',
+    },
+    googleFonts: 'family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500',
+    radius: '10px',
+    radiusSm: '6px',
+    borderWidth: '1px',
+    shadow: 'none',
+    displayWeight: 500,
+    displayTracking: '-0.03em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'unit/07',
+    eyebrow: 'model tx-6 · field mixer',
+    headline: 'Six channels. Pocket-sized.',
+    body: 'Machined aluminium, 32-bit audio and a battery that lasts the whole gig.',
+    cta: 'Order — €1,199',
+    media: 'fig. 01',
+  },
+};
+
+export default utilitarian;

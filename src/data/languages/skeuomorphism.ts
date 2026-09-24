@@ -1,0 +1,121 @@
+import type { Language } from '../../types';
+
+const skeuomorphism: Language = {
+  id: 'skeuomorphism',
+  name: 'Skeuomorphism',
+  aka: ['Skeuomorphic design', 'Realism UI', 'Rich/textured UI'],
+  category: 'Surface style',
+  era: '1980s GUIs → peak 2007–2012 (iPhone OS, Mac OS X); revived in "neo-skeuo" 2020s',
+  origin: 'A skeuomorph is a design that keeps ornamental cues from its physical predecessor. Apple’s Macintosh desktop (1984), Mac OS X Aqua (2000) and especially early iPhone OS under Steve Jobs and Scott Forstall (leather-stitched Calendar, felt Game Center, wooden iBooks shelf) made it the dominant digital style until iOS 7 replaced it in 2013. It lives on in audio plug-ins, pro tools and the "tactile" revival in product and game UI.',
+  summary: 'Interfaces that imitate real materials and objects — leather, paper, brushed metal, glossy glass buttons, stitching and realistic lighting — so functions feel instantly familiar.',
+  identify: [
+    'Realistic textures: leather, linen, wood, paper, brushed aluminium',
+    'Glossy, bevelled buttons with gradients and highlights',
+    'Embossed/debossed text with text-shadow',
+    'Stitching, torn paper edges, rivets, dials and knobs',
+    'Strong lighting model with inner highlights and cast shadows',
+  ],
+  principles: [
+    'Familiarity: mirror the physical object so functions are obvious',
+    'Consistent light source and material logic',
+    'Rich detail signals craftsmanship',
+    'Controls should look touchable',
+  ],
+  color: {
+    strategy: 'Material-derived colours: linen and paper neutrals, leather browns, Aqua-style glossy blue for actions.',
+    palette: [
+      { name: 'Linen', hex: '#D9D3C7', role: 'background' },
+      { name: 'Notepad Paper', hex: '#F4EFE3', role: 'surface' },
+      { name: 'Saddle Leather', hex: '#6B4226', role: 'secondary' },
+      { name: 'Aqua Blue', hex: '#2F6FD0', role: 'accent' },
+      { name: 'Walnut Ink', hex: '#2A2118', role: 'text' },
+      { name: 'Brushed Steel', hex: '#B8BCC2', role: 'hardware' },
+    ],
+  },
+  typography: {
+    approach: 'Helvetica/Lucida-era system sans with emboss (text-shadow 0 1px 0 white), plus object-specific faces (Marker Felt, typewriter, serif for books).',
+    display: ['helvetica-neue', 'archivo', 'libre-baskerville'],
+    body: ['helvetica-neue', 'open-sans', 'lora'],
+    mono: ['courier-prime'],
+    scale: 'Minor Third (1.2)',
+    notes: 'iOS 6 used Helvetica Neue; Mac OS X used Lucida Grande. Emboss with a 1px light text-shadow below dark text.',
+  },
+  shape: {
+    radius: '6–12px with bevels',
+    borders: 'Dark outer border + light inner highlight (bevel); stitched dashed borders',
+    elevation: 'Realistic drop shadows, inner shadows for inset wells',
+    texture: 'Gradient-built textures: linen, leather grain, brushed metal, paper lines',
+  },
+  layout: {
+    grid: 'Object metaphors: notebooks, shelves, control panels, desks',
+    layouts: ['centered-hero', 'card-grid', 'dashboard-shell'],
+    density: 'balanced',
+  },
+  imagery: 'Photoreal objects, product renders, textures and hardware details.',
+  motion: {
+    character: 'Physical: page curls, knobs turn, switches flip with weight.',
+    animations: ['spring-press', 'flip-layout', 'ken-burns', 'shine-sweep', 'card-flip'],
+    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94) — easeOutQuad',
+    duration: '250–500ms',
+  },
+  components: {
+    signature: ['button', 'switch', 'slider', 'card', 'toggle-group', 'navbar', 'toolbar', 'menubar'],
+    notes: 'Glossy capsule buttons, leather-bound nav bars, paper cards, metal toggles.',
+  },
+  purposes: ['gaming', 'portfolio', 'restaurant', 'kids'],
+  avoidFor: ['government', 'docs', 'saas'],
+  pairsWith: ['neumorphism', 'y2k', 'claymorphism'],
+  dos: [
+    'Pick one material story and stay consistent',
+    'Keep a single light direction for every highlight and shadow',
+    'Use realism where it clarifies function (dials, switches)',
+  ],
+  donts: [
+    'Stack unrelated materials (wood + leather + chrome) on one screen',
+    'Let textures reduce text legibility',
+    'Ship huge texture images — build them with CSS gradients',
+  ],
+  a11y: 'Textures behind text lower contrast; keep text on smooth surfaces. Embossed text must still meet 4.5:1 without the shadow.',
+  examples: [
+    { name: 'teenage engineering', url: 'https://teenage.engineering' },
+    { name: 'Native Instruments', url: 'https://www.native-instruments.com' },
+    { name: 'Universal Audio', url: 'https://www.uaudio.com' },
+  ],
+  references: [
+    { label: 'Wikipedia — Skeuomorph', url: 'https://en.wikipedia.org/wiki/Skeuomorph' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#D9D3C7',
+      surface: '#F4EFE3',
+      text: '#2A2118',
+      muted: '#5C5042',
+      accent: '#2F6FD0',
+      accentText: '#FFFFFF',
+      border: '#9C8F7A',
+    },
+    fonts: {
+      display: '"Helvetica Neue", "Archivo", Helvetica, Arial, sans-serif',
+      body: '"Helvetica Neue", "Archivo", Helvetica, Arial, sans-serif',
+      mono: '"Courier Prime", "Courier New", monospace',
+    },
+    googleFonts: 'family=Archivo:wght@400;600;700&family=Courier+Prime',
+    radius: '10px',
+    radiusSm: '8px',
+    borderWidth: '1px',
+    shadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 2px 5px rgba(0, 0, 0, 0.35)',
+    displayWeight: 700,
+    displayTracking: '-0.01em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Studio Deck',
+    eyebrow: 'Analog feel, digital brain',
+    headline: 'A mixer you can almost touch',
+    body: 'Eight channels, real VU meters and knobs that turn the way your fingers expect.',
+    cta: 'Buy the plug-in',
+    media: 'Leather & brass',
+  },
+};
+
+export default skeuomorphism;

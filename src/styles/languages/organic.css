@@ -1,0 +1,59 @@
+/* organic — tokens, primitive overrides and media-slot art direction, scoped under .lang-organic */
+.lang-organic {
+  --ui-bg: #F2EADF;
+  --ui-surface: #FBF6EF;
+  --ui-text: #2F2A22;
+  --ui-muted: #6B6255;
+  --ui-accent: #B5532E;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #D6C7B2;
+  --ui-radius: 28px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 1px;
+  --ui-shadow: none;
+  --ui-font-display: "Fraunces", Georgia, serif;
+  --ui-font-body: "DM Sans", system-ui, sans-serif;
+  --ui-display-weight: 500;
+  --ui-display-tracking: -0.02em;
+  --ui-display-transform: none;
+}
+.lang-organic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .5;
+  background-image: radial-gradient(rgba(47, 42, 34, .16) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+.lang-organic::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: -44px;
+  width: 190px;
+  height: 170px;
+  z-index: -1;
+  border-radius: 58% 42% 63% 37% / 45% 55% 45% 55%;
+  background: #9CAF88;
+  opacity: .55;
+}
+.lang-organic .ui-logo { font-size: 18px; font-style: italic; font-weight: 600; }
+.lang-organic .ui-eyebrow { font-family: var(--ui-font-body); font-weight: 700; letter-spacing: .14em; color: #56613F; }
+.lang-organic .ui-h1 { font-size: clamp(28px, 3.4vw, 42px); font-variation-settings: "SOFT" 100, "WONK" 1; }
+.lang-organic .ui-h2 { font-size: 18px; font-variation-settings: "SOFT" 100; }
+.lang-organic .ui-btn { padding: 0 20px; border-radius: 999px; }
+.lang-organic .ui-btn--ghost { border-color: var(--ui-text); }
+.lang-organic .ui-card:nth-child(1) { border-radius: 28px 28px 28px 8px; }
+.lang-organic .ui-card:nth-child(2) { border-radius: 8px 28px 28px 28px; background: #EDE3D3; }
+.lang-organic .ui-card:nth-child(3) { border-radius: 28px 8px 28px 28px; background: #E4E9DA; }
+.lang-organic .ui-badge { border-color: #9CAF88; background: #9CAF88; color: #1F2A14; }
+.lang-organic .ui-chip { background: transparent; }
+.lang-organic .ui-input { border-radius: 999px; background: var(--ui-surface); }
+.lang-organic .ui-tabs { border: 0; border-radius: 999px; background: #E7D8C6; }
+.lang-organic .ui-tab { border-radius: 999px; }
+.lang-organic .ui-tab[aria-selected="true"] { background: var(--ui-surface); }
+
+.lang-organic .ui-media { border: 0; border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%; background:
+  radial-gradient(ellipse 30% 40% at 40% 60%, #9caf88 96%, transparent 100%),
+  radial-gradient(circle at 68% 32%, #b5532e 0 14%, transparent 14.5%), #e7d8c6; }

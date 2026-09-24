@@ -1,0 +1,112 @@
+import type { Language } from '../../types';
+
+const constructivism: Language = {
+  id: 'constructivism',
+  name: 'Russian Constructivism',
+  aka: ['Constructivism', 'Soviet avant-garde'],
+  category: 'Movement',
+  era: '1915–1930s, Soviet Russia',
+  origin: 'An art and design movement that rejected "art for art’s sake" in favour of art in service of society. Alexander Rodchenko, Varvara Stepanova, El Lissitzky, Gustav Klutsis and the Stenberg brothers made posters, books and photomontage with diagonal compositions, bold sans lettering and red and black on paper. Lissitzky’s "Beat the Whites with the Red Wedge" (1919) and Rodchenko’s 1924 Lengiz "Books!" poster are its icons. It deeply influenced Bauhaus and later Swiss design.',
+  summary: 'Dynamic diagonals, red and black on cream, heavy condensed sans lettering, photomontage and geometric blocks. Propaganda-poster energy: urgent, directional and graphic.',
+  identify: [
+    'Strong diagonals and angled text',
+    'Red, black and cream (sometimes a little grey)',
+    'Heavy condensed sans capitals',
+    'Photomontage with cut-out figures',
+    'Circles, bars and wedges as composition',
+  ],
+  principles: [
+    'Design is a tool for society, not decoration',
+    'Diagonals create movement and urgency',
+    'Type, photo and geometry combine into one message',
+  ],
+  color: {
+    strategy: 'Revolutionary red and black on aged paper; nothing else.',
+    palette: [
+      { name: 'Constructivist Red', hex: '#C8102E', role: 'accent' },
+      { name: 'Ink Black', hex: '#141414', role: 'text' },
+      { name: 'Aged Paper', hex: '#EFE6D2', role: 'background' },
+      { name: 'Print Grey', hex: '#7A746A', role: 'muted' },
+    ],
+  },
+  typography: {
+    approach: 'Heavy, condensed, all-caps sans lettering — often hand-drawn originally — set on diagonals and stacked.',
+    display: ['bebas-neue', 'oswald', 'russo-one'],
+    body: ['archivo', 'futura'],
+    mono: ['space-mono'],
+    scale: 'Augmented Fourth (1.414)',
+    notes: 'Original lettering was drawn by hand; condensed grotesques are the modern stand-in.',
+  },
+  shape: {
+    radius: '0px',
+    borders: 'Thick bars and wedges',
+    elevation: 'Flat, overlapping planes',
+    texture: 'Paper grain, halftone photomontage',
+  },
+  layout: {
+    grid: 'Diagonal axes (often 15–45°) across a simple grid.',
+    layouts: ['asymmetric-grid', 'broken-grid', 'full-bleed-hero'],
+    density: 'balanced',
+  },
+  imagery: 'Black-and-white photomontage of workers, crowds and machines; geometric shapes.',
+  motion: {
+    character: 'Forceful and directional: elements slide in on diagonals.',
+    animations: ['clip-path-reveal', 'fade-up-reveal', 'kinetic-type-anim', 'marquee-scroll'],
+    easing: 'cubic-bezier(0.7, 0, 0.2, 1)',
+    duration: '400–700ms',
+  },
+  components: {
+    signature: ['hero', 'cta-band', 'stats-band', 'marquee-band'],
+    notes: 'Best as a hero or campaign treatment; keep forms and tables upright and plain.',
+  },
+  purposes: ['event', 'agency', 'nonprofit', 'editorial-news'],
+  avoidFor: ['healthcare', 'kids', 'wellness'],
+  pairsWith: ['bauhaus', 'swiss-punk', 'brutalism'],
+  dos: ['Commit to one strong diagonal', 'Keep to red, black and paper', 'Use photomontage with hard cut edges'],
+  donts: [
+    'Rotate body copy or buttons',
+    'Add gradients or soft shadows',
+    'Use it where the political connotation hurts the brand',
+  ],
+  a11y: 'Keep diagonal type decorative; body text and controls stay horizontal. Red on black fails contrast — use red on paper.',
+  examples: [],
+  references: [
+    { label: 'Constructivism (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Constructivism_(art)' },
+    { label: 'El Lissitzky (Wikipedia)', url: 'https://en.wikipedia.org/wiki/El_Lissitzky' },
+    { label: 'Alexander Rodchenko (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Alexander_Rodchenko' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#EFE6D2',
+      surface: '#F8F2E4',
+      text: '#141414',
+      muted: '#4E4A43',
+      accent: '#C8102E',
+      accentText: '#FFFFFF',
+      border: '#141414',
+    },
+    fonts: {
+      display: '"Bebas Neue", "Oswald", Impact, sans-serif',
+      body: '"Archivo", "Futura", system-ui, sans-serif',
+      mono: '"Space Mono", monospace',
+    },
+    googleFonts: 'family=Bebas+Neue&family=Archivo:wght@400;700&family=Space+Mono',
+    radius: '0px',
+    radiusSm: '0px',
+    borderWidth: '3px',
+    shadow: 'none',
+    displayWeight: 400,
+    displayTracking: '0.02em',
+    displayTransform: 'uppercase',
+  },
+  sample: {
+    brand: 'ZAVOD',
+    eyebrow: 'Five-year plan',
+    headline: 'Build the future. Now.',
+    body: 'Every hand, every machine, every idea — pointed in one direction.',
+    cta: 'Join the works',
+    media: 'Photomontage',
+  },
+};
+
+export default constructivism;

@@ -1,0 +1,106 @@
+/* art-deco — tokens, primitive overrides and media-slot art direction, scoped under .lang-art-deco */
+.lang-art-deco {
+  --ui-bg: #0E0E10;
+  --ui-surface: #17171A;
+  --ui-text: #F4EBD0;
+  --ui-muted: #B9A56E;
+  --ui-accent: #D4AF37;
+  --ui-accent-text: #0E0E10;
+  --ui-border: #5C4B22;
+  --ui-radius: 0px;
+  --ui-radius-sm: 0px;
+  --ui-bw: 1px;
+  --ui-shadow: none;
+  --ui-font-display: "Limelight", "Poiret One", Georgia, serif;
+  --ui-font-body: "Josefin Sans", "Futura", sans-serif;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0.06em;
+  --ui-display-transform: uppercase;
+  background:
+    repeating-conic-gradient(from 0deg at 50% 118%, rgba(212, 175, 55, .09) 0 3deg, transparent 3deg 9deg),
+    var(--ui-bg);
+  /* double gold frame */
+  box-shadow:
+    inset 0 0 0 6px var(--ui-bg),
+    inset 0 0 0 7px #D4AF37,
+    inset 0 0 0 10px var(--ui-bg),
+    inset 0 0 0 11px #5C4B22;
+  padding: 24px 26px 28px;
+}
+.lang-art-deco .ui-nav { padding-bottom: 10px; border-bottom: 1px solid var(--ui-border); }
+.lang-art-deco .ui-logo { font-family: "Poiret One", var(--ui-font-display); font-size: 14px; font-weight: 400; letter-spacing: .3em; color: var(--ui-accent); }
+.lang-art-deco .ui-link { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
+.lang-art-deco .ui-hero { align-items: center; text-align: center; }
+.lang-art-deco .ui-hero .ui-row { justify-content: center; }
+.lang-art-deco .ui-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poiret One", var(--ui-font-body);
+  font-size: 12px;
+  letter-spacing: .36em;
+  color: var(--ui-accent);
+}
+.lang-art-deco .ui-eyebrow::before,
+.lang-art-deco .ui-eyebrow::after {
+  content: '';
+  width: 28px;
+  height: 4px;
+  border-top: 1px solid var(--ui-accent);
+  border-bottom: 1px solid var(--ui-accent);
+}
+.lang-art-deco .ui-h1 {
+  max-width: 20ch;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.12;
+  color: var(--ui-accent);
+  background: linear-gradient(180deg, #F7E7B4 0%, #D4AF37 55%, #9C7A2B 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lang-art-deco .ui-hero .ui-p { text-align: center; }
+.lang-art-deco .ui-btn {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 3px var(--ui-bg), 0 0 0 4px var(--ui-accent);
+}
+.lang-art-deco .ui-nav .ui-btn { box-shadow: none; }
+.lang-art-deco .ui-btn--ghost { background: transparent; color: var(--ui-accent); border-color: var(--ui-accent); }
+.lang-art-deco .ui-card {
+  align-items: center;
+  text-align: center;
+  background: var(--ui-surface);
+  clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px);
+}
+.lang-art-deco .ui-card::before {
+  content: '';
+  width: 24px;
+  height: 11px;
+  background: var(--ui-accent);
+  clip-path: polygon(0 0, 50% 100%, 100% 0, 84% 0, 50% 64%, 16% 0);
+}
+.lang-art-deco .ui-h2 { font-size: 14px; letter-spacing: .14em; color: var(--ui-accent); }
+.lang-art-deco .ui-badge,
+.lang-art-deco .ui-chip {
+  border-color: var(--ui-accent);
+  background: transparent;
+  color: var(--ui-accent);
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+.lang-art-deco .ui-input { border: 0; border-bottom: 1px solid var(--ui-accent); background: transparent; letter-spacing: .08em; }
+.lang-art-deco .ui-tabs { background: transparent; }
+.lang-art-deco .ui-tab { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+.lang-art-deco .ui-tab[aria-selected="true"] { background: var(--ui-accent); color: var(--ui-accent-text); box-shadow: none; }
+.lang-art-deco .ui-switch span { border-radius: 0; }
+.lang-art-deco .ui-switch span::after { border-radius: 0; background: var(--ui-text); }
+
+.lang-art-deco .ui-media { border: 1px solid #d4af37; background:
+  repeating-conic-gradient(from -30deg at 50% 100%, #d4af37 0 3deg, transparent 3deg 12deg) 50% 100% / 100% 100% no-repeat,
+  radial-gradient(circle at 50% 100%, #0f5c4d 0 30%, #d4af37 30.5% 32%, transparent 32.5%),
+  linear-gradient(#17171a, #0e0e10); box-shadow: inset 0 0 0 5px #0e0e10, inset 0 0 0 6px #b9a56e; }
+.lang-art-deco .ui-media-cap { color: #d4af37; letter-spacing: .3em; left: 50%; transform: translateX(-50%); }

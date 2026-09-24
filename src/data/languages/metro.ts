@@ -1,0 +1,116 @@
+import type { Language } from '../../types';
+
+const metro: Language = {
+  id: 'metro',
+  name: 'Metro',
+  aka: ['Microsoft design language', 'Modern UI', 'Windows Phone UI'],
+  category: 'Platform system',
+  era: '2010–2015, Microsoft',
+  origin: 'Microsoft’s typography-first design language, launched with Windows Phone 7 (2010) and carried into Windows 8, Xbox and Outlook.com. Inspired by transit wayfinding signage and Swiss design, it dropped chrome, gradients and skeuomorphism for flat coloured "Live Tiles", huge lowercase Segoe headings bleeding off-screen and "content not chrome". It prefigured the industry’s move to flat design and evolved into Fluent (2017).',
+  summary: 'Flat, bold and typographic: solid-colour square Live Tiles, huge light-weight Segoe headings (often lowercase and cropped at the edge), no chrome, no gradients. Content over chrome.',
+  identify: [
+    'Solid-colour square and rectangular tiles in a grid',
+    'Very large, light Segoe UI headings, often lowercase',
+    'Panorama/pivot headings that run off the screen edge',
+    'No rounded corners, gradients or shadows',
+    'White monochrome glyph icons',
+  ],
+  principles: [
+    'Content, not chrome',
+    'Typography is the interface',
+    'Authentically digital — no imitation of physical materials',
+    'Alive in motion',
+  ],
+  color: {
+    strategy: 'Black or white base with one user-chosen accent from a fixed set; tiles in solid accent colours.',
+    palette: [
+      { name: 'Cobalt', hex: '#0050EF', role: 'accent' },
+      { name: 'Emerald', hex: '#008A00', role: 'tile' },
+      { name: 'Crimson', hex: '#A20025', role: 'tile' },
+      { name: 'Mango', hex: '#F09609', role: 'tile' },
+      { name: 'Metro Black', hex: '#1D1D1D', role: 'background' },
+      { name: 'White', hex: '#FFFFFF', role: 'text' },
+    ],
+  },
+  typography: {
+    approach: 'Segoe UI (Light and Semilight for display, Regular for body), large sizes, lowercase headings, generous left alignment.',
+    display: ['segoe-ui-variable', 'open-sans'],
+    body: ['segoe-ui-variable', 'open-sans'],
+    mono: [],
+    scale: 'Metro type ramp (42/20/15/11pt), roughly Perfect Fifth (1.5)',
+    notes: 'Open Sans Light is a close free stand-in for Segoe UI Light.',
+  },
+  shape: {
+    radius: '0px',
+    borders: 'None; tiles separated by small gaps',
+    elevation: 'None — completely flat',
+    texture: 'None',
+  },
+  layout: {
+    grid: 'Tile grid with 10–12px gutters; horizontally panning hubs.',
+    layouts: ['bento-layout', 'horizontal-scroll-layout', 'modular-grid'],
+    density: 'balanced',
+  },
+  imagery: 'Full-bleed photos inside tiles; monochrome line icons.',
+  motion: {
+    character: 'Kinetic and physical: tiles flip, pages turnstile, headings slide in parallax.',
+    animations: ['card-flip', 'stagger-reveal', 'horizontal-scroll', 'page-transition'],
+    easing: 'cubic-bezier(0.1, 0.9, 0.2, 1) — exponential out',
+    duration: '250–400ms',
+  },
+  components: {
+    signature: ['bento-grid', 'tabs', 'navbar', 'toggle-group', 'switch'],
+    notes: 'Live Tiles and the "pivot" tab control (big lowercase tab labels) define it.',
+  },
+  purposes: ['event', 'education', 'personal-blog', 'nonprofit'],
+  avoidFor: ['luxury-brand', 'wellness'],
+  pairsWith: ['flat', 'swiss', 'fluent2'],
+  dos: ['Use big, light, lowercase headings', 'Keep tiles solid and square', 'Let headings bleed off the edge'],
+  donts: [
+    'Add gradients, shadows or rounded corners',
+    'Use more than a few tile colours at once',
+    'Put long text in tiles',
+  ],
+  a11y: 'Light-weight type needs large sizes; white on Mango or Lime fails contrast — use dark text there.',
+  examples: [],
+  references: [
+    {
+      label: 'Metro (design language) — Wikipedia',
+      url: 'https://en.wikipedia.org/wiki/Metro_(design_language)',
+    },
+  ],
+  tokens: {
+    colors: {
+      bg: '#1D1D1D',
+      surface: '#2B2B2B',
+      text: '#FFFFFF',
+      muted: '#BDBDBD',
+      accent: '#0050EF',
+      accentText: '#FFFFFF',
+      border: '#3A3A3A',
+    },
+    fonts: {
+      display: '"Segoe UI", "Open Sans", system-ui, sans-serif',
+      body: '"Segoe UI", "Open Sans", system-ui, sans-serif',
+      mono: 'Consolas, ui-monospace, monospace',
+    },
+    googleFonts: 'family=Open+Sans:wght@300;400;600',
+    radius: '0px',
+    radiusSm: '0px',
+    borderWidth: '0px',
+    shadow: 'none',
+    displayWeight: 300,
+    displayTracking: '-0.01em',
+    displayTransform: 'lowercase',
+  },
+  sample: {
+    brand: 'people',
+    eyebrow: 'what’s new',
+    headline: 'your world, at a glance',
+    body: 'Live tiles bring messages, photos and plans to the start screen as they happen.',
+    cta: 'pin to start',
+    media: 'live tiles',
+  },
+};
+
+export default metro;

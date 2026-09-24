@@ -1,0 +1,49 @@
+/* material3 — tokens, primitive overrides and media-slot art direction, scoped under .lang-material3 */
+.lang-material3 {
+  --ui-bg: #FEF7FF; --ui-surface: #F3EDF7; --ui-text: #1D1B20; --ui-muted: #49454F;
+  --ui-accent: #6750A4; --ui-accent-text: #FFFFFF; --ui-border: #CAC4D0;
+  --ui-radius: 16px; --ui-radius-sm: 999px; --ui-bw: 1px; --ui-shadow: none;
+  --ui-font-display: "Roboto", "Google Sans", system-ui, sans-serif;
+  --ui-font-body: "Roboto", system-ui, sans-serif;
+  --ui-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --ui-display-weight: 400; --ui-display-tracking: 0em; --ui-display-transform: none;
+}
+.lang-material3 .ui-nav { background: #F3EDF7; margin: -18px -20px 0; padding: 10px 20px; }
+.lang-material3 .ui-link { font-weight: 500; color: #49454F; }
+.lang-material3 .ui-h1 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.12; }
+.lang-material3 .ui-eyebrow { font-family: var(--ui-font-body); font-weight: 500; letter-spacing: .01em; text-transform: none; font-size: 12px; color: #6750A4; }
+.lang-material3 .ui-btn { position: relative; overflow: hidden; font-weight: 500; letter-spacing: .01em; padding: 0 24px; min-height: 40px; }
+.lang-material3 .ui-btn::after { content: ''; position: absolute; inset: 0; background: currentColor; opacity: 0; transition: opacity .2s cubic-bezier(0.2, 0, 0, 1); }
+.lang-material3 .ui-btn:hover::after { opacity: .08; }
+.lang-material3 .ui-btn:active::after { opacity: .12; }
+.lang-material3 .ui-btn--ghost { background: #E8DEF8; color: #1D192B; border-color: #E8DEF8; }
+.lang-material3 .ui-card { border: 0; background: #F3EDF7; border-radius: 12px; }
+.lang-material3 .ui-card:nth-child(1) { background: #EADDFF; }
+.lang-material3 .ui-h2 { font-weight: 500; font-size: 16px; }
+.lang-material3 .ui-badge { background: #6750A4; }
+.lang-material3 .ui-chip { border-radius: 8px; border-color: #79747E; background: transparent; font-weight: 500; }
+.lang-material3 .ui-input { border-radius: 4px 4px 0 0; border: 0; border-bottom: 1px solid #49454F; background: #E6E0E9; height: 44px; }
+.lang-material3 .ui-tabs { border-radius: 999px; border: 1px solid #79747E; padding: 0; gap: 0; background: transparent; overflow: hidden; }
+.lang-material3 .ui-tab { border-radius: 0; padding: 7px 16px; border-right: 1px solid #79747E; }
+.lang-material3 .ui-tab:last-child { border-right: 0; }
+.lang-material3 .ui-tab[aria-selected="true"] { background: #E8DEF8; color: #1D192B; box-shadow: none; }
+.lang-material3 .ui-switch { width: 52px; height: 32px; }
+.lang-material3 .ui-switch span { background: #E6E0E9; box-shadow: inset 0 0 0 2px #79747E; }
+.lang-material3 .ui-switch span::after { top: 8px; left: 8px; width: 16px; height: 16px; background: #79747E; box-shadow: none; }
+.lang-material3 .ui-switch input:checked + span { background: #6750A4; box-shadow: none; }
+.lang-material3 .ui-switch input:checked + span::after { transform: translateX(20px) scale(1.5); background: #fff; }
+.lang-material3 .ui-media {
+  border: 0; border-radius: 28px;
+  background:
+    radial-gradient(circle at 30% 70%, #D0BCFF 0 22%, transparent 22.5%),
+    radial-gradient(circle at 72% 34%, #EFB8C8 0 18%, transparent 18.5%),
+    #EADDFF;
+}
+.lang-material3 .ui-media::before {
+  content: ''; position: absolute; right: 12%; bottom: 14%;
+  width: 36%; aspect-ratio: 1; border-radius: 30% 70% 60% 40% / 40% 40% 60% 60%; background: #6750A4;
+}
+.lang-material3 .ui-media-cap {
+  left: 10px; bottom: 10px; padding: 4px 10px; border-radius: 8px;
+  background: #E8DEF8; color: #1D192B; font-family: var(--ui-font-body); text-transform: none; letter-spacing: 0; font-weight: 600;
+}

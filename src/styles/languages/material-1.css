@@ -1,0 +1,32 @@
+/* material-1 — tokens, primitive overrides and media-slot art direction, scoped under .lang-material-1 */
+.lang-material-1 {
+  --ui-bg: #FAFAFA;
+  --ui-surface: #FFFFFF;
+  --ui-text: #212121;
+  --ui-muted: #616161;
+  --ui-accent: #3F51B5;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #E0E0E0;
+  --ui-radius: 2px;
+  --ui-radius-sm: 2px;
+  --ui-bw: 0px;
+  --ui-shadow: 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px rgba(0,0,0,.2);
+  --ui-font-display: "Roboto", system-ui, sans-serif;
+  --ui-font-body: "Roboto", system-ui, sans-serif;
+  --ui-font-mono: "Roboto Mono", ui-monospace, monospace;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0em;
+  --ui-display-transform: none;
+}
+.lang-material-1 .ui-nav { margin: -18px -20px 0; padding: 0 16px; height: 52px; background: #3f51b5; color: #fff; border: 0; box-shadow: 0 2px 4px rgba(0,0,0,.24); }
+.lang-material-1 .ui-nav .ui-link { color: rgba(255,255,255,.8); }
+.lang-material-1 .ui-nav .ui-btn { background: #ff4081; }
+.lang-material-1 .ui-btn { text-transform: uppercase; letter-spacing: .05em; font-weight: 500; }
+.lang-material-1 .ui-btn--ghost { background: transparent; border: 0; color: #3f51b5; box-shadow: none; }
+.lang-material-1 .ui-card { border: 0; box-shadow: 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px rgba(0,0,0,.2); }
+.lang-material-1 .ui-badge { background: #ff4081; border-color: #ff4081; }
+.lang-material-1 .ui-tabs { border: 0; background: none; }
+.lang-material-1 .ui-tab[aria-selected="true"] { background: none; box-shadow: inset 0 -2px 0 #ff4081; }
+.lang-material-1 .ui-media { border: 0; overflow: visible; background: linear-gradient(135deg, #7986cb, #3f51b5); box-shadow: 0 8px 10px rgba(0,0,0,.14), 0 3px 14px rgba(0,0,0,.12); }
+.lang-material-1 .ui-media::after { content: '+'; position: absolute; right: 16px; bottom: -22px; width: 48px; height: 48px; border-radius: 50%; background: #ff4081; color: #fff; display: grid; place-items: center; font: 400 26px/1 var(--ui-font-body); box-shadow: 0 6px 10px rgba(0,0,0,.25); }
+.lang-material-1 .ui-media-cap { color: #fff; }

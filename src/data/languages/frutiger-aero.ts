@@ -1,0 +1,112 @@
+import type { Language } from '../../types';
+
+const frutigerAero: Language = {
+  id: 'frutiger-aero',
+  name: 'Frutiger Aero',
+  aka: ['Web 2.0 gloss', 'Aero', 'Vista-era aesthetic'],
+  category: 'Aesthetic',
+  era: 'c. 2004–2013; revived 2020s',
+  origin: 'A name coined in 2017 by Sofi Lee of the Consumer Aesthetics Research Institute for the optimistic look of mid-2000s tech: Windows Vista and 7’s Aero glass, the Wii and early iPhone, glossy "Web 2.0" buttons, skies, bubbles, water droplets, fish and green fields. The name nods to the Frutiger typeface (Adrian Frutiger, 1976) and its lookalikes that dominated the era’s interfaces and signage. It resurfaced online in the 2020s as a nostalgic, eco-futurist mood.',
+  summary: 'Glossy, optimistic Web 2.0: sky-blue gradients, glass and water, bubbles and green nature, humanist sans type and reflective pill buttons. Technology as clean, bright and friendly.',
+  identify: [
+    'Sky-blue and grass-green gradients, often with a white horizon glow',
+    'Glassy, reflective buttons with a bright top highlight',
+    'Bubbles, water droplets, lens flares, fish and leaves',
+    'Humanist sans (Frutiger, Segoe, Myriad) in white or dark blue',
+    'Soft drop shadows and reflections under objects',
+  ],
+  principles: [
+    'Optimism: technology and nature in harmony',
+    'Everything is shiny, clean and translucent',
+    'Depth through gloss and reflection rather than flat colour',
+  ],
+  color: {
+    strategy: 'Luminous sky blues and fresh greens with white highlights; saturated but clean.',
+    palette: [
+      { name: 'Aero Sky', hex: '#3AA8E8', role: 'accent' },
+      { name: 'Deep Water', hex: '#0B4F8A', role: 'text' },
+      { name: 'Fresh Grass', hex: '#6CC24A', role: 'secondary' },
+      { name: 'Cloud', hex: '#F4FAFF', role: 'background' },
+      { name: 'Glass Highlight', hex: '#FFFFFF', role: 'gloss' },
+    ],
+  },
+  typography: {
+    approach: 'Humanist sans throughout — friendly, clear, slightly rounded — in dark blue on light or white on glossy blue.',
+    display: ['frutiger', 'segoe-ui-variable'],
+    body: ['open-sans', 'segoe-ui-variable'],
+    mono: ['jetbrains-mono'],
+    scale: 'Major Second (1.125)',
+    notes: 'Myriad and Segoe UI were the era’s workhorses; Open Sans is the closest free choice.',
+  },
+  shape: {
+    radius: '8–999px; glossy pill buttons',
+    borders: '1px light borders with inner white highlights',
+    elevation: 'Soft drop shadows plus reflections',
+    texture: 'Gloss highlights, bubbles, lens flare, water',
+  },
+  layout: {
+    grid: 'Centred 960px layouts typical of Web 2.0; rounded content panels.',
+    layouts: ['centered-hero', 'card-grid', 'split-hero'],
+    density: 'balanced',
+  },
+  imagery: 'Blue skies with clouds, green hills, water droplets, bubbles, aquariums, glossy 3D icons.',
+  motion: {
+    character: 'Gentle, floaty and glowing: bubbles drift, highlights sweep.',
+    animations: ['shine-sweep', 'gradient-drift', 'fade-in', 'scale-in', 'particles'],
+    easing: 'cubic-bezier(0.25, 0.1, 0.25, 1) — ease',
+    duration: '300–600ms',
+  },
+  components: {
+    signature: ['button', 'navbar', 'card', 'search-bar', 'progress-bar'],
+    notes: 'The glossy capsule button and glass toolbar are the icons of the style.',
+  },
+  purposes: ['kids', 'wellness', 'gaming', 'personal-blog'],
+  avoidFor: ['luxury-brand', 'government', 'fintech'],
+  pairsWith: ['skeuomorphism', 'y2k', 'glassmorphism'],
+  dos: [
+    'Use a bright top highlight on buttons',
+    'Mix sky, water and nature imagery',
+    'Keep text dark blue on light backgrounds for contrast',
+  ],
+  donts: ['Put small white text on light gloss', 'Overuse lens flares', 'Pair with flat, brutal layouts'],
+  a11y: 'Gloss and gradients reduce contrast; test white-on-blue text and keep body copy on solid light panels.',
+  examples: [],
+  references: [
+    { label: 'CARI — Frutiger Aero', url: 'https://cari.institute/aesthetics/frutiger-aero' },
+    { label: 'Windows Aero (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Windows_Aero' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#EAF6FF',
+      surface: '#FFFFFF',
+      text: '#0B3D6B',
+      muted: '#3E6788',
+      accent: '#1479C9',
+      accentText: '#FFFFFF',
+      border: '#A9D3F2',
+    },
+    fonts: {
+      display: '"Open Sans", "Segoe UI", Frutiger, sans-serif',
+      body: '"Open Sans", "Segoe UI", sans-serif',
+      mono: '"JetBrains Mono", ui-monospace, monospace',
+    },
+    googleFonts: 'family=Open+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400',
+    radius: '14px',
+    radiusSm: '999px',
+    borderWidth: '1px',
+    shadow: '0 6px 18px rgba(20,121,201,.25)',
+    displayWeight: 700,
+    displayTracking: '-0.01em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'AquaSync',
+    eyebrow: 'Now with cloud backup',
+    headline: 'Your world, perfectly in sync',
+    body: 'Photos, music and contacts float safely between every device you own.',
+    cta: 'Download free',
+    media: 'Clear skies',
+  },
+};
+
+export default frutigerAero;

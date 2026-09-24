@@ -1,0 +1,33 @@
+/* risograph — tokens, primitive overrides and media-slot art direction, scoped under .lang-risograph */
+.lang-risograph {
+  --ui-bg: #F5F0E6;
+  --ui-surface: #FFFDF7;
+  --ui-text: #26315A;
+  --ui-muted: #55607F;
+  --ui-accent: #0078BF;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #26315A;
+  --ui-radius: 6px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 2px;
+  --ui-shadow: none;
+  --ui-font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --ui-font-body: "Work Sans", system-ui, sans-serif;
+  --ui-font-mono: "Space Mono", monospace;
+  --ui-display-weight: 800;
+  --ui-display-tracking: -0.02em;
+  --ui-display-transform: none;
+}
+.lang-risograph { background-image: radial-gradient(rgba(38,49,90,.12) 1px, transparent 1.3px); background-size: 3px 3px; }
+.lang-risograph .ui-h1 { font-size: clamp(30px, 3.8vw, 46px); line-height: .95; color: #0078bf; text-shadow: 2px 2px 0 rgba(255,72,176,.85); }
+.lang-risograph .ui-eyebrow { color: #ff48b0; }
+.lang-risograph .ui-btn { box-shadow: 3px 3px 0 #ff48b0; }
+.lang-risograph .ui-card:nth-child(1) { background: #ffe800; }
+.lang-risograph .ui-card:nth-child(2) { background: #ffd1ea; }
+.lang-risograph .ui-card:nth-child(3) { background: #cfe6f5; }
+.lang-risograph .ui-badge { background: #ff48b0; border-color: #ff48b0; color: #26315a; }
+.lang-risograph .ui-media { border: 0; background:
+  radial-gradient(circle at 42% 46%, rgba(255,72,176,.85) 0 28%, transparent 28.5%),
+  radial-gradient(circle at 58% 56%, rgba(0,120,191,.85) 0 28%, transparent 28.5%),
+  radial-gradient(circle, rgba(38,49,90,.3) 1px, transparent 1.4px) 0 0 / 4px 4px,
+  #ffe800; background-blend-mode: multiply; }

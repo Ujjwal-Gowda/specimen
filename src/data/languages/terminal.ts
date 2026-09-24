@@ -1,0 +1,128 @@
+import type { Language } from '../../types';
+
+const terminal: Language = {
+  id: 'terminal',
+  name: 'Terminal / CLI Aesthetic',
+  aka: ['Hacker UI', 'Command-line aesthetic', 'Phosphor terminal'],
+  category: 'Aesthetic',
+  era: 'Roots in 1970s–80s video terminals (DEC VT100, 1978); web revival 2010s–present',
+  origin: 'Evokes text terminals like the DEC VT100 (1978) and phosphor CRT monitors (green P1 and amber P3 phosphor), plus MS-DOS and Unix shells. On the web it shows up in developer tools, AI agents and personal sites: monospace everything, prompt glyphs ($, >, ❯), blinking block cursors, ASCII art and bracketed commands. Warp, Charm and many CLI-first products use it to signal “built for developers”.',
+  summary: 'The interface pretends to be a terminal: monospace type, prompt glyphs, blinking cursors, phosphor colours and scanlines, signalling speed, power and developer credibility.',
+  identify: [
+    'Monospace type for everything, including headlines',
+    'Prompt glyphs ($ ❯ >), blinking block cursor, typed-out text',
+    'Green or amber phosphor on black; optional scanlines/CRT glow',
+    'Bracketed or underscored buttons: [ Run ] or run_',
+    'ASCII art, box-drawing characters, dashed borders',
+  ],
+  principles: [
+    'Function signalled through form: text is the UI',
+    'Keyboard-first and copy-pasteable',
+    'Honest, unadorned, fast',
+    'One accent colour, like a terminal theme',
+  ],
+  color: {
+    strategy: 'Phosphor-black ground with one terminal colour (green or amber) for text and actions, plus a dim variant for comments.',
+    palette: [
+      { name: 'Phosphor Black', hex: '#0C0F0A', role: 'background' },
+      { name: 'CRT Glass', hex: '#11160F', role: 'surface' },
+      { name: 'P1 Green', hex: '#33FF66', role: 'accent' },
+      { name: 'Soft Phosphor', hex: '#C8F7C5', role: 'text' },
+      { name: 'Comment Green', hex: '#7FB386', role: 'muted text' },
+      { name: 'P3 Amber', hex: '#FFB000', role: 'secondary' },
+      { name: 'Grid Line', hex: '#24452A', role: 'border' },
+    ],
+  },
+  typography: {
+    approach: 'Monospace throughout. Use a bitmap-style mono (VT323) for retro display, or a modern coding face for clarity.',
+    display: ['vt323', 'jetbrains-mono', 'ibm-plex-mono', 'berkeley-mono'],
+    body: ['jetbrains-mono', 'ibm-plex-mono', 'fira-code'],
+    mono: ['jetbrains-mono', 'geist-mono', 'space-mono'],
+    scale: 'Minor Third (1.2)',
+    notes: 'Enable coding ligatures (Fira Code, JetBrains Mono) only in code, not prose. Keep line length ≤ 80ch, the terminal convention.',
+  },
+  shape: {
+    radius: '0px',
+    borders: '1px solid or dashed lines; box-drawing characters',
+    elevation: 'Phosphor glow (text-shadow) instead of shadows',
+    texture: 'Scanlines, slight CRT vignette',
+  },
+  layout: {
+    grid: 'Single column at ~80ch or split panes like a terminal multiplexer',
+    layouts: ['single-column-longform', 'sidebar-docs', 'dashboard-shell', 'holy-grail'],
+    density: 'dense',
+  },
+  imagery: 'ASCII art, terminal recordings (asciinema), screenshots of CLI output. No photography.',
+  motion: {
+    character: 'Typed, stepped and glitchy: typewriter text, blinking cursors, scramble effects.',
+    animations: ['typewriter', 'text-scramble', 'glitch', 'noise-grain', 'neon-flicker', 'count-up'],
+    easing: 'steps(n) for typing and blinking; linear',
+    duration: '30–60ms per character; 1s cursor blink',
+  },
+  components: {
+    signature: ['code-block', 'kbd', 'command-palette', 'navbar', 'data-table', 'progress-bar', 'alert-banner'],
+    notes: 'The install command in a copyable code block is often the primary CTA.',
+  },
+  purposes: ['devtool', 'ai-product', 'docs', 'personal-blog', 'web3', 'gaming'],
+  avoidFor: ['luxury-brand', 'kids', 'wellness', 'restaurant', 'healthcare'],
+  pairsWith: ['dark-saas', 'pixel', 'brutalism', 'vaporwave'],
+  dos: [
+    'Make install commands copyable with one click',
+    'Keep a readable modern mono for body text',
+    'Use the blinking cursor once, not everywhere',
+    'Offer a light theme for long reading',
+  ],
+  donts: [
+    'Don’t typewriter-animate important content that users must wait for',
+    'Don’t use pure #00FF00 on #000000 for long text (it vibrates)',
+    'Don’t overdo scanlines: they reduce legibility',
+    'Don’t fake commands that don’t work',
+  ],
+  a11y: 'Typed-out text must be present in the DOM (or aria-live) immediately. Screen readers should not wait for animation. Blinking must stop after 5 seconds or honour reduced motion (WCAG 2.2.2). Pure green on black can cause halation, so soften it (#C8F7C5 for body).',
+  examples: [
+    { name: 'Warp', url: 'https://www.warp.dev' },
+    { name: 'Charm', url: 'https://charm.sh' },
+  ],
+  references: [
+    { label: 'Warp DESIGN.md (getdesign.md)', url: 'https://getdesign.md/warp/design-md' },
+    { label: 'Ollama DESIGN.md (getdesign.md)', url: 'https://getdesign.md/ollama/design-md' },
+    { label: 'VT100 — Wikipedia', url: 'https://en.wikipedia.org/wiki/VT100' },
+    {
+      label: 'WCAG 2.2.2 Pause, Stop, Hide',
+      url: 'https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html',
+    },
+  ],
+  tokens: {
+    colors: {
+      bg: '#0C0F0A',
+      surface: '#11160F',
+      text: '#C8F7C5',
+      muted: '#7FB386',
+      accent: '#33FF66',
+      accentText: '#0C0F0A',
+      border: '#24452A',
+    },
+    fonts: {
+      display: '"VT323", "JetBrains Mono", ui-monospace, monospace',
+      body: '"JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace',
+      mono: '"JetBrains Mono", ui-monospace, monospace',
+    },
+    googleFonts: 'family=JetBrains+Mono:wght@400;500;700&family=VT323',
+    radius: '0px',
+    radiusSm: '0px',
+    borderWidth: '1px',
+    shadow: '0 0 12px rgba(51, 255, 102, 0.2)',
+    displayWeight: 400,
+    displayTracking: '0em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'shipit',
+    eyebrow: '$ curl -fsSL shipit.sh | sh',
+    headline: 'Deploy from your terminal',
+    body: 'One binary. Zero YAML. Push to production with a single command and roll back with another.',
+    cta: 'Copy install',
+  },
+};
+
+export default terminal;

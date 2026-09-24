@@ -1,0 +1,122 @@
+import type { Language } from '../../types';
+
+const memphis: Language = {
+  id: 'memphis',
+  name: 'Memphis Design',
+  aka: ['Memphis Group style', 'Memphis Milano'],
+  category: 'Movement',
+  era: '1981–1987, Milan; web revival 2010s–present',
+  origin: 'The Memphis Group was founded by Ettore Sottsass in Milan in December 1980 with designers including Michele De Lucchi, Martine Bedin, Nathalie Du Pasquier, George Sowden, Aldo Cibic and Matteo Thun. It debuted at the Milan furniture fair in September 1981 and took its name from Bob Dylan’s “Stuck Inside of Mobile with the Memphis Blues Again”, which was playing at the founding meeting. It rejected “good taste” modernism in favour of clashing colours, plastic laminates (Sottsass’s “Bacterio” pattern), squiggles, terrazzo and primitive geometric forms. The group disbanded in 1987–88.',
+  summary: 'Loud, joyful anti-modernism: clashing brights and pastels, black outlines, squiggles, dots, zigzags and floating geometric shapes.',
+  identify: [
+    'Primary geometric shapes (circles, triangles, half-moons) scattered around content',
+    'Squiggles, zigzags, confetti and dot patterns',
+    'Clashing pastels and brights (canary, flamingo, teal, cobalt) with black',
+    'Thick black outlines and solid offset shadows',
+    'Tilted labels and stickers',
+  ],
+  principles: [
+    'Anti-“good taste”: surprise over harmony',
+    'Pattern and colour as structure',
+    'Play: nothing too serious or too aligned',
+    'Bold outline to hold the chaos together',
+  ],
+  color: {
+    strategy: 'Four or five clashing brights on a warm paper ground, tied together with black outlines.',
+    palette: [
+      { name: 'Paper', hex: '#FFFBF1', role: 'background' },
+      { name: 'Ink', hex: '#111111', role: 'text / outline' },
+      { name: 'Canary', hex: '#FFD23F', role: 'shape' },
+      { name: 'Flamingo', hex: '#FF5D8F', role: 'shape' },
+      { name: 'Teal Pop', hex: '#1AC8DB', role: 'shape' },
+      { name: 'Cobalt', hex: '#2D46B9', role: 'accent' },
+      { name: 'Mint Wash', hex: '#BDF2D5', role: 'surface' },
+    ],
+  },
+  typography: {
+    approach: 'Chunky, quirky display faces (fat scripts, stencils, geometric caps) with a friendly geometric sans for body.',
+    display: ['shrikhand', 'bungee', 'righteous', 'rubik-mono-one', 'poppins'],
+    body: ['dm-sans', 'poppins', 'work-sans'],
+    mono: [],
+    scale: 'Perfect Fourth (1.333)',
+    notes: 'Headlines can take a coloured offset text-shadow. Mix no more than two display faces.',
+  },
+  shape: {
+    radius: 'Mixed on purpose: pills, circles and hard corners side by side',
+    borders: '2–3px solid black',
+    elevation: 'Solid offset shadows (4–6px) in black',
+    texture: 'Dot grids, zigzags, squiggles, terrazzo',
+  },
+  layout: {
+    grid: 'Loose, playful grids with shapes breaking out of containers',
+    layouts: ['broken-grid', 'asymmetric-grid', 'card-grid', 'centered-hero'],
+    density: 'balanced',
+  },
+  imagery: 'Flat geometric illustration, cut-out photography with patterned backgrounds, confetti shapes.',
+  motion: {
+    character: 'Springy and playful: bouncing shapes, wobbly hovers, confetti bursts.',
+    animations: ['spring-press', 'hover-lift', 'blob-morph', 'marquee-scroll', 'confetti', 'tilt-3d'],
+    easing: 'cubic-bezier(0.34, 1.56, 0.64, 1) — easeOutBack',
+    duration: '250–500ms',
+  },
+  components: {
+    signature: ['hero', 'card', 'badge', 'button', 'cta-band', 'marquee-band', 'team-grid'],
+    notes: 'Cards rotate slightly and use different fills. Badges look like stickers.',
+  },
+  purposes: ['event', 'kids', 'agency', 'portfolio', 'education', 'restaurant'],
+  avoidFor: ['fintech', 'government', 'healthcare', 'luxury-brand'],
+  pairsWith: ['maximalism', 'neobrutalism', 'corporate-memphis', 'bauhaus'],
+  dos: [
+    'Use black outlines to unify clashing colours',
+    'Scatter shapes in the margins, not over text',
+    'Vary card fills from the palette',
+    'Keep body text on plain paper',
+  ],
+  donts: [
+    'Don’t put patterns behind paragraphs',
+    'Don’t use gradients or glass effects',
+    'Don’t align everything perfectly',
+    'Don’t use more than five hues',
+  ],
+  a11y: 'Busy patterns can overwhelm readers with cognitive or visual impairments, so keep them out of reading areas. Check text on each pastel card fill, and don’t rely on colour alone to distinguish items.',
+  examples: [
+    { name: 'Memphis Milano (official)', url: 'https://www.memphis-milano.com' },
+  ],
+  references: [
+    { label: 'Memphis Group — Wikipedia', url: 'https://en.wikipedia.org/wiki/Memphis_Group' },
+    { label: 'Ettore Sottsass — Wikipedia', url: 'https://en.wikipedia.org/wiki/Ettore_Sottsass' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#FFFBF1',
+      surface: '#FFFFFF',
+      text: '#111111',
+      muted: '#3D3D3D',
+      accent: '#2D46B9',
+      accentText: '#FFFFFF',
+      border: '#111111',
+    },
+    fonts: {
+      display: '"Shrikhand", "Arial Black", cursive',
+      body: '"DM Sans", system-ui, sans-serif',
+      mono: 'ui-monospace, monospace',
+    },
+    googleFonts: 'family=Shrikhand&family=DM+Sans:wght@400;500;700',
+    radius: '14px',
+    radiusSm: '999px',
+    borderWidth: '2px',
+    shadow: '5px 5px 0 #111111',
+    displayWeight: 400,
+    displayTracking: '0em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Squiggle Studio',
+    eyebrow: 'Milano spirit · est. 1981',
+    headline: 'Loud shapes for louder ideas',
+    body: 'A design studio for brands that would rather be remembered than blend in.',
+    cta: 'Say hello',
+  },
+};
+
+export default memphis;

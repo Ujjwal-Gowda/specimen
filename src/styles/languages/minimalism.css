@@ -1,0 +1,47 @@
+/* minimalism — tokens, primitive overrides and media-slot art direction, scoped under .lang-minimalism */
+.lang-minimalism {
+  --ui-bg: #FAFAF8; --ui-surface: #FFFFFF; --ui-text: #1A1A1A; --ui-muted: #6E6E6A;
+  --ui-accent: #1A1A1A; --ui-accent-text: #FAFAF8; --ui-border: #E6E6E1;
+  --ui-radius: 2px; --ui-radius-sm: 2px; --ui-bw: 1px; --ui-shadow: none;
+  --ui-font-display: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --ui-font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --ui-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --ui-display-weight: 500; --ui-display-tracking: -0.025em; --ui-display-transform: none;
+  gap: 30px; padding: 26px 30px 32px;
+}
+.lang-minimalism .ui-logo { font-weight: 500; letter-spacing: .02em; }
+.lang-minimalism .ui-nav .ui-btn { background: transparent; color: #1A1A1A; border-color: transparent; text-decoration: underline; text-underline-offset: 3px; padding: 0; }
+.lang-minimalism .ui-hero { align-items: center; text-align: center; padding: 18px 0; }
+.lang-minimalism .ui-h1 { font-size: clamp(26px, 3.2vw, 38px); max-width: 16ch; line-height: 1.1; }
+.lang-minimalism .ui-p { text-align: center; }
+.lang-minimalism .ui-eyebrow { font-family: var(--ui-font-body); letter-spacing: .14em; font-size: 10px; }
+.lang-minimalism .ui-btn { font-weight: 500; letter-spacing: .01em; }
+.lang-minimalism .ui-btn--ghost { border-color: transparent; text-decoration: underline; text-underline-offset: 4px; }
+.lang-minimalism .ui-grid { gap: 0; border-top: 1px solid #E6E6E1; }
+.lang-minimalism .ui-card { background: transparent; border: 0; border-right: 1px solid #E6E6E1; border-radius: 0; padding: 16px 16px 0; }
+.lang-minimalism .ui-card:last-child { border-right: 0; }
+.lang-minimalism .ui-badge { background: transparent; color: #3D5A40; border-color: #3D5A40; font-weight: 500; }
+.lang-minimalism .ui-chip { border: 0; background: none; color: #6E6E6A; font-weight: 400; padding: 0; }
+.lang-minimalism .ui-h2 { font-weight: 500; }
+.lang-minimalism .ui-input { border: 0; border-bottom: 1px solid #1A1A1A; border-radius: 0; background: transparent; padding-left: 0; }
+.lang-minimalism .ui-tabs { background: transparent; border: 0; padding: 0; gap: 14px; }
+.lang-minimalism .ui-tab { padding: 4px 0; border-radius: 0; font-weight: 500; }
+.lang-minimalism .ui-tab[aria-selected="true"] { background: none; box-shadow: inset 0 -1px 0 #1A1A1A; }
+.lang-minimalism .ui-switch span::after { box-shadow: none; }
+.lang-minimalism .ui-hero { align-items: flex-start; text-align: left; }
+.lang-minimalism .ui-media {
+  border: 0; border-radius: 2px;
+  background: linear-gradient(180deg, #F1EFEA 0 72%, #E7E4DD 72% 100%);
+}
+.lang-minimalism .ui-media::before {
+  content: ''; position: absolute; left: 50%; bottom: 22%;
+  width: 26%; height: 52%; transform: translateX(-50%);
+  border-radius: 44% 44% 18% 18% / 30% 30% 14% 14%;
+  background: linear-gradient(90deg, #C9C3B8, #DDD8CF 45%, #BDB6AA);
+}
+.lang-minimalism .ui-media::after {
+  content: ''; position: absolute; left: 50%; bottom: 17%;
+  width: 40%; height: 9%; transform: translateX(-50%);
+  border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,.18), transparent);
+}
+.lang-minimalism .ui-media-cap { color: #8A8A84; }

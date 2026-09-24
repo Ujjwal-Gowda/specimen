@@ -1,0 +1,69 @@
+/* liquid-glass — tokens, primitive overrides and media-slot art direction, scoped under .lang-liquid-glass */
+.lang-liquid-glass {
+  --ui-bg: #E9ECF2; --ui-surface: rgba(255, 255, 255, 0.42); --ui-text: #1D1D1F; --ui-muted: #48484A;
+  --ui-accent: #0071E3; --ui-accent-text: #FFFFFF; --ui-border: rgba(255, 255, 255, 0.7);
+  --ui-radius: 28px; --ui-radius-sm: 999px; --ui-bw: 1px; --ui-shadow: 0 10px 30px rgba(20, 30, 60, 0.14);
+  --ui-font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+  --ui-font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+  --ui-font-mono: "Geist Mono", ui-monospace, "SF Mono", monospace;
+  --ui-display-weight: 700; --ui-display-tracking: -0.03em; --ui-display-transform: none;
+  /* vivid "wallpaper" so the glass has something to refract */
+  background:
+    radial-gradient(40% 55% at 12% 18%, #FF9F6B 0%, transparent 70%),
+    radial-gradient(45% 60% at 88% 10%, #7AB8FF 0%, transparent 70%),
+    radial-gradient(55% 60% at 70% 95%, #C8A2FF 0%, transparent 70%),
+    radial-gradient(40% 50% at 20% 90%, #7FE3C4 0%, transparent 70%),
+    #E9ECF2;
+}
+.lang-liquid-glass .ui-nav,
+.lang-liquid-glass .ui-card,
+.lang-liquid-glass .ui-tabs,
+.lang-liquid-glass .ui-input,
+.lang-liquid-glass .ui-btn--ghost {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, .28));
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, .7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .95), inset 0 -1px 0 rgba(255, 255, 255, .25), 0 10px 30px rgba(20, 30, 60, .14);
+}
+.lang-liquid-glass .ui-nav { border-radius: 999px; padding: 6px 6px 6px 18px; }
+.lang-liquid-glass .ui-link { color: #1D1D1F; font-weight: 500; }
+.lang-liquid-glass .ui-h1 { font-size: clamp(28px, 3.8vw, 42px); }
+.lang-liquid-glass .ui-eyebrow { font-family: var(--ui-font-body); text-transform: none; letter-spacing: 0; font-weight: 600; color: #1D1D1F; font-size: 12px; }
+.lang-liquid-glass .ui-btn { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 6px 16px rgba(0, 113, 227, .35); }
+.lang-liquid-glass .ui-btn:active { transform: scale(.96); }
+.lang-liquid-glass .ui-card { border-radius: 26px; }
+.lang-liquid-glass .ui-input { border-radius: 999px; padding: 0 16px; }
+.lang-liquid-glass .ui-tabs { border-radius: 999px; }
+.lang-liquid-glass .ui-tab { border-radius: 999px; }
+.lang-liquid-glass .ui-tab[aria-selected="true"] { background: rgba(255, 255, 255, .85); box-shadow: 0 2px 8px rgba(20, 30, 60, .15); }
+.lang-liquid-glass .ui-switch { width: 50px; height: 30px; }
+.lang-liquid-glass .ui-switch span { background: rgba(120, 120, 128, .3); }
+.lang-liquid-glass .ui-switch span::after { width: 24px; height: 24px; }
+.lang-liquid-glass .ui-switch input:checked + span { background: #34C759; }
+.lang-liquid-glass .ui-switch input:checked + span::after { transform: translateX(20px); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .lang-liquid-glass .ui-card, .lang-liquid-glass .ui-nav { background: rgba(255, 255, 255, .85); }
+}
+.lang-liquid-glass .ui-media {
+  border: 1px solid rgba(255,255,255,.7); border-radius: 26px;
+  background:
+    radial-gradient(60% 80% at 20% 20%, #FF9F0A, transparent 60%),
+    radial-gradient(60% 80% at 80% 30%, #FF375F, transparent 60%),
+    radial-gradient(70% 80% at 50% 100%, #0A84FF, transparent 65%),
+    #5E5CE6;
+}
+.lang-liquid-glass .ui-media::before {
+  content: ''; position: absolute; left: 50%; top: 50%;
+  width: 52%; aspect-ratio: 1; transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(255,255,255,.14);
+  -webkit-backdrop-filter: blur(6px) saturate(1.9) brightness(1.08);
+  backdrop-filter: blur(6px) saturate(1.9) brightness(1.08);
+  box-shadow: inset 0 2px 1px rgba(255,255,255,.85), inset 0 -8px 16px rgba(255,255,255,.25), 0 10px 30px rgba(0,0,0,.2);
+}
+.lang-liquid-glass .ui-media-cap { color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lang-liquid-glass .ui-media::before { transition: none; }
+}

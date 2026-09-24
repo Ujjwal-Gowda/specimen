@@ -1,0 +1,39 @@
+/* ibm-carbon — tokens, primitive overrides and media-slot art direction, scoped under .lang-ibm-carbon */
+.lang-ibm-carbon {
+  --ui-bg: #FFFFFF;
+  --ui-surface: #F4F4F4;
+  --ui-text: #161616;
+  --ui-muted: #525252;
+  --ui-accent: #0F62FE;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #C6C6C6;
+  --ui-radius: 0px;
+  --ui-radius-sm: 0px;
+  --ui-bw: 1px;
+  --ui-shadow: none;
+  --ui-font-display: "IBM Plex Sans", system-ui, sans-serif;
+  --ui-font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --ui-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --ui-display-weight: 300;
+  --ui-display-tracking: 0em;
+  --ui-display-transform: none;
+}
+.lang-ibm-carbon .ui-nav { margin: -18px -20px 0; padding: 0 16px; height: 44px; background: #161616; color: #f4f4f4; border-bottom: 0; }
+.lang-ibm-carbon .ui-nav .ui-link { color: #c6c6c6; }
+.lang-ibm-carbon .ui-nav .ui-btn { height: 44px; margin-right: -16px; }
+.lang-ibm-carbon .ui-h1 { font-weight: 300; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; }
+.lang-ibm-carbon .ui-eyebrow { font-family: var(--ui-font-mono); text-transform: none; letter-spacing: .32px; color: #525252; }
+.lang-ibm-carbon .ui-btn { justify-content: flex-start; min-width: 150px; padding: 0 64px 0 16px; font-weight: 400; }
+.lang-ibm-carbon .ui-btn--ghost { color: #0f62fe; border-color: #0f62fe; }
+.lang-ibm-carbon .ui-card { background: #f4f4f4; border: 0; }
+.lang-ibm-carbon .ui-card:hover { background: #e8e8e8; }
+.lang-ibm-carbon .ui-input { background: #f4f4f4; border: 0; border-bottom: 1px solid #8d8d8d; }
+.lang-ibm-carbon .ui-input:focus { outline: 2px solid #0f62fe; outline-offset: -2px; }
+.lang-ibm-carbon .ui-tabs { border: 0; border-bottom: 2px solid #e0e0e0; background: none; }
+.lang-ibm-carbon .ui-tab[aria-selected="true"] { background: none; box-shadow: inset 0 -2px 0 #0f62fe; font-weight: 600; }
+.lang-ibm-carbon .ui-badge { border-radius: 24px; background: #d0e2ff; color: #0043ce; border-color: #d0e2ff; }
+.lang-ibm-carbon .ui-media { border: 0; background:
+  linear-gradient(#0f62fe, #0f62fe) 12% 88% / 10% 38% no-repeat, linear-gradient(#0f62fe, #0f62fe) 26% 88% / 10% 58% no-repeat,
+  linear-gradient(#4589ff, #4589ff) 40% 88% / 10% 30% no-repeat, linear-gradient(#0f62fe, #0f62fe) 54% 88% / 10% 70% no-repeat,
+  linear-gradient(#a6c8ff, #a6c8ff) 68% 88% / 10% 46% no-repeat, linear-gradient(#0f62fe, #0f62fe) 82% 88% / 10% 64% no-repeat,
+  repeating-linear-gradient(to bottom, transparent 0 23px, #e0e0e0 23px 24px), #f4f4f4; }

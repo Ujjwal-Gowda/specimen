@@ -1,0 +1,110 @@
+import type { Language } from '../../types';
+
+const cyberpunk: Language = {
+  id: 'cyberpunk',
+  name: 'Cyberpunk',
+  aka: ['Cyberpunk UI', 'Neon noir', 'Techwear UI'],
+  category: 'Aesthetic',
+  era: '1980s fiction → 2020s interfaces',
+  origin: 'From William Gibson’s "Neuromancer" (1984), Ridley Scott’s "Blade Runner" (1982) and "Ghost in the Shell" (1995) — "high tech, low life". Its interface language — neon on black, angular clipped panels, glitching HUD text, hazard yellow and Japanese signage — was codified for games by "Deus Ex" and CD Projekt Red’s "Cyberpunk 2077" (2020), whose yellow-and-cyan UI is the modern reference.',
+  summary: 'Neon on near-black: cyan, magenta and hazard yellow, clipped-corner panels, HUD readouts, scanlines and glitches, with squared techno type. Dense, electric and slightly hostile.',
+  identify: [
+    'Near-black backgrounds with neon cyan, magenta or hazard yellow',
+    'Panels with 45° clipped corners and thin outline frames',
+    'HUD details: coordinates, IDs, barcodes, tick marks',
+    'Squared or condensed techno type, often uppercase',
+    'Glitch, scanline and chromatic-aberration effects',
+  ],
+  principles: [
+    'Information overload is the atmosphere',
+    'Light comes from the interface itself — neon glows on dark',
+    'Angular, industrial geometry over soft curves',
+  ],
+  color: {
+    strategy: 'Near-black base with one dominant neon and one clashing secondary; glow via shadows.',
+    palette: [
+      { name: 'Night City Black', hex: '#0A0A12', role: 'background' },
+      { name: 'Hazard Yellow', hex: '#FCEE0A', role: 'accent' },
+      { name: 'Neon Cyan', hex: '#00F0FF', role: 'secondary' },
+      { name: 'Hot Magenta', hex: '#FF2A6D', role: 'alert' },
+      { name: 'Steel', hex: '#9AA0B4', role: 'muted' },
+    ],
+  },
+  typography: {
+    approach: 'Squared, wide or condensed techno sans for headings (uppercase, tracked), a monospace for readouts.',
+    display: ['rajdhani', 'orbitron', 'russo-one', 'audiowide'],
+    body: ['rajdhani', 'share-tech-mono'],
+    mono: ['share-tech-mono', 'jetbrains-mono'],
+    scale: 'Perfect Fourth (1.333)',
+    notes: 'Rajdhani is readable enough for body text; keep Orbitron to short headings.',
+  },
+  shape: {
+    radius: '0px with clip-path corner cuts',
+    borders: '1px neon outlines, notched corners',
+    elevation: 'Glow (coloured box-shadow) instead of shadow',
+    texture: 'Scanlines, noise, chromatic aberration',
+  },
+  layout: {
+    grid: 'Dense HUD-style panels; asymmetric modules with data readouts.',
+    layouts: ['dashboard-shell', 'broken-grid', 'bento-layout'],
+    density: 'dense',
+  },
+  imagery: 'Night cityscapes, rain and neon signs, chrome and implants, glitch art.',
+  motion: {
+    character: 'Snappy and electric: glitches, flickers, text scrambles and scanning lines.',
+    animations: ['glitch', 'text-scramble', 'neon-flicker', 'border-beam', 'typewriter'],
+    easing: 'steps(4) or cubic-bezier(0.9, 0, 0.1, 1)',
+    duration: '80–300ms',
+  },
+  components: {
+    signature: ['navbar', 'card', 'progress-bar', 'data-table', 'badge', 'command-palette'],
+    notes: 'Clip-path corners on buttons and cards are the fastest way to the look.',
+  },
+  purposes: ['gaming', 'web3', 'event', 'devtool'],
+  avoidFor: ['healthcare', 'wellness', 'kids', 'government'],
+  pairsWith: ['terminal', 'vaporwave', 'dark-saas'],
+  dos: ['Keep one dominant neon', 'Use clip-path corners and thin outlines', 'Put real data in the HUD details'],
+  donts: ['Glitch body text', 'Put yellow on cyan', 'Let glow reduce text contrast'],
+  a11y: 'Neon on black passes contrast easily; the risk is flicker and glitch — stop all of it under prefers-reduced-motion and avoid flashes above 3 per second.',
+  examples: [
+    { name: 'Cyberpunk 2077', url: 'https://www.cyberpunk.net' },
+  ],
+  references: [
+    { label: 'Cyberpunk (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Cyberpunk' },
+    { label: 'CARI — Cyberpunk', url: 'https://cari.institute/aesthetics/cyberpunk' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#0A0A12',
+      surface: '#12121E',
+      text: '#E8ECF4',
+      muted: '#9AA0B4',
+      accent: '#FCEE0A',
+      accentText: '#0A0A12',
+      border: '#00F0FF',
+    },
+    fonts: {
+      display: '"Rajdhani", "Orbitron", sans-serif',
+      body: '"Rajdhani", system-ui, sans-serif',
+      mono: '"Share Tech Mono", ui-monospace, monospace',
+    },
+    googleFonts: 'family=Rajdhani:wght@500;700&family=Share+Tech+Mono&family=Orbitron:wght@700',
+    radius: '0px',
+    radiusSm: '0px',
+    borderWidth: '1px',
+    shadow: '0 0 18px rgba(0,240,255,.35)',
+    displayWeight: 700,
+    displayTracking: '0.06em',
+    displayTransform: 'uppercase',
+  },
+  sample: {
+    brand: 'ARASAKA//NET',
+    eyebrow: 'SYS.ONLINE — NODE 7',
+    headline: 'Jack in. Stay ahead.',
+    body: 'Zero-latency neural uplink for runners who can’t afford to lag.',
+    cta: 'Initialize',
+    media: 'Night City',
+  },
+};
+
+export default cyberpunk;

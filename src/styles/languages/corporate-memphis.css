@@ -1,0 +1,78 @@
+/* corporate-memphis — tokens, primitive overrides and media-slot art direction, scoped under .lang-corporate-memphis */
+.lang-corporate-memphis {
+  --ui-bg: #FFF9F2;
+  --ui-surface: #FFFFFF;
+  --ui-text: #22223B;
+  --ui-muted: #5C5C7A;
+  --ui-accent: #4C3BCF;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #EDE3D6;
+  --ui-radius: 24px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 1px;
+  --ui-shadow: 0 10px 30px -12px rgba(76, 59, 207, .25);
+  --ui-font-display: "Poppins", system-ui, sans-serif;
+  --ui-font-body: "Nunito", system-ui, sans-serif;
+  --ui-display-weight: 700;
+  --ui-display-tracking: -0.02em;
+  --ui-display-transform: none;
+}
+.lang-corporate-memphis::before,
+.lang-corporate-memphis::after { content: ''; position: absolute; z-index: -1; }
+.lang-corporate-memphis::before {
+  top: -60px;
+  right: -50px;
+  width: 240px;
+  height: 200px;
+  border-radius: 62% 38% 54% 46% / 49% 58% 42% 51%;
+  background: #C9B6FF;
+  opacity: .7;
+}
+.lang-corporate-memphis::after {
+  left: -60px;
+  bottom: -50px;
+  width: 220px;
+  height: 170px;
+  border-radius: 40% 60% 38% 62% / 55% 45% 55% 45%;
+  background: #FFB199;
+  opacity: .6;
+}
+.lang-corporate-memphis .ui-hero { position: relative; padding-right: 96px; }
+.lang-corporate-memphis .ui-hero::before,
+.lang-corporate-memphis .ui-hero::after { content: ''; position: absolute; }
+.lang-corporate-memphis .ui-hero::before {
+  top: 2px;
+  right: 40px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #7A4B37;
+}
+.lang-corporate-memphis .ui-hero::after {
+  top: 26px;
+  right: 14px;
+  width: 74px;
+  height: 96px;
+  border-radius: 38px 38px 14px 14px;
+  background: #4C3BCF;
+  box-shadow: -40px 30px 0 -28px #FFB199, 34px 58px 0 -26px #FFD66B;
+}
+.lang-corporate-memphis .ui-eyebrow { font-family: var(--ui-font-body); font-weight: 700; letter-spacing: .04em; text-transform: none; color: var(--ui-accent); font-size: 13px; }
+.lang-corporate-memphis .ui-btn { padding: 0 20px; border-radius: 999px; }
+.lang-corporate-memphis .ui-btn--ghost { background: #FFFFFF; border-color: #FFFFFF; box-shadow: var(--ui-shadow); }
+.lang-corporate-memphis .ui-card { border: 0; }
+.lang-corporate-memphis .ui-card:nth-child(1) { background: #EFE9FF; }
+.lang-corporate-memphis .ui-card:nth-child(2) { background: #FFEDE6; }
+.lang-corporate-memphis .ui-card:nth-child(3) { background: #E6F7F2; }
+.lang-corporate-memphis .ui-badge { border-color: #FFD66B; background: #FFD66B; color: #22223B; }
+.lang-corporate-memphis .ui-chip { border-color: transparent; background: #FFFFFF; }
+.lang-corporate-memphis .ui-input { border-color: #E3D7C8; border-radius: 999px; }
+.lang-corporate-memphis .ui-tabs { border: 0; border-radius: 999px; background: #EFE9FF; }
+.lang-corporate-memphis .ui-tab { border-radius: 999px; }
+
+.lang-corporate-memphis .ui-media { border: 0; background:
+  radial-gradient(circle at 50% 28%, #ffb199 0 9%, transparent 9.5%),
+  radial-gradient(ellipse 16% 26% at 50% 60%, #4c3bcf 96%, transparent 100%),
+  linear-gradient(-30deg, transparent 46%, #ffb199 46% 52%, transparent 52%) 70% 45% / 40% 40% no-repeat,
+  radial-gradient(ellipse 40% 12% at 50% 92%, #c9b6ff 96%, transparent 100%),
+  radial-gradient(circle at 84% 20%, #ffd66b 0 11%, transparent 11.5%), #fff9f2; }

@@ -1,0 +1,120 @@
+import type { Language } from '../../types';
+
+const claymorphism: Language = {
+  id: 'claymorphism',
+  name: 'Claymorphism',
+  aka: ['Clay UI', 'Inflated 3D', 'Puffy UI'],
+  category: 'Surface style',
+  era: '2021–present; named by Michal Malewicz (Hype4), 2021',
+  origin: 'A soft, toy-like evolution of neumorphism described by Michal Malewicz (Hype4) in 2021, inspired by the popularity of 3D clay renders from tools like Blender and Spline. Elements look inflated or moulded from clay: a large outer shadow plus two inner shadows (light top-left, dark bottom-right) create a puffy volume, and it pairs naturally with pastel colours and 3D illustrations.',
+  summary: 'Puffy, rounded, pastel UI that looks moulded from clay or inflated like a toy. Big radii, double inner shadows and soft outer drop shadows — friendly, tactile, playful.',
+  identify: [
+    'Very large corner radii (24–40px) and pill buttons',
+    'Inner highlight top-left and inner shade bottom-right',
+    'Soft, coloured outer drop shadow that lifts the element',
+    'Pastel palettes (lavender, peach, mint, baby blue)',
+    '3D clay-style illustrations and characters',
+  ],
+  principles: [
+    'Friendly and approachable over serious',
+    'Volume from inner + outer shadows',
+    'Unlike neumorphism, elements float above a different-coloured background',
+    'Pair with 3D illustration for cohesion',
+  ],
+  color: {
+    strategy: 'Pastel background and surfaces with a saturated but soft primary; shadows tinted with the primary hue instead of grey.',
+    palette: [
+      { name: 'Lavender Mist', hex: '#EDE7FB', role: 'background' },
+      { name: 'Clay Violet', hex: '#6A45F0', role: 'accent' },
+      { name: 'Peach Puff', hex: '#FFD6C2', role: 'secondary surface' },
+      { name: 'Mint Dough', hex: '#C9F2DF', role: 'tertiary surface' },
+      { name: 'Plum Ink', hex: '#2B1B4D', role: 'text' },
+    ],
+  },
+  typography: {
+    approach: 'Round, bouncy sans at semibold/bold; generous sizes; nothing sharp.',
+    display: ['fredoka', 'baloo-2', 'nunito', 'quicksand'],
+    body: ['nunito', 'dm-sans', 'varela-round'],
+    mono: ['space-mono'],
+    scale: 'Major Third (1.25)',
+    notes: 'Fredoka and Baloo 2 give instant clay energy; pair with Nunito for readable body.',
+  },
+  shape: {
+    radius: '28–40px cards, full pill buttons',
+    borders: 'None',
+    elevation: 'Outer: 8px 8px 16px hue-tinted shadow; inner: inset -6px -6px 12px shade + inset 6px 6px 12px white',
+    texture: 'Matte; 3D clay renders provide texture',
+  },
+  layout: {
+    grid: 'Chunky card grids and centred feature blocks, lots of breathing room',
+    layouts: ['card-grid', 'centered-hero', 'bento-layout'],
+    density: 'airy',
+  },
+  imagery: '3D clay renders (Spline, Blender), toy-like characters and emoji, pastel 3D icons.',
+  motion: {
+    character: 'Squishy and springy — elements squash on press and bounce back.',
+    animations: ['spring-press', 'scale-in', 'blob-morph', 'confetti', 'hover-lift', 'bounce'],
+    easing: 'cubic-bezier(0.34, 1.56, 0.64, 1) — easeOutBack',
+    duration: '200–400ms',
+  },
+  components: {
+    signature: ['button', 'card', 'feature-grid', 'pricing-table', 'avatar', 'chip'],
+    notes: 'Inflated pricing tiers, big pill CTAs, soft icon tiles.',
+  },
+  purposes: ['kids', 'education', 'wellness', 'gaming', 'ai-product'],
+  avoidFor: ['government', 'fintech', 'luxury-brand', 'editorial-news'],
+  pairsWith: ['neumorphism', 'memphis', 'corporate-memphis', 'bento'],
+  dos: [
+    'Tint shadows with the brand hue, never plain grey',
+    'Pair with 3D clay illustrations or icons',
+    'Keep text dark enough on pastel surfaces',
+  ],
+  donts: [
+    'Apply it to dense data UI',
+    'Mix sharp corners with clay elements',
+    'Overdo pastels until nothing stands out',
+  ],
+  a11y: 'Pastel on pastel is a contrast trap — keep text and primary actions strong; don’t rely on the puffy volume alone to show interactivity.',
+  examples: [
+    { name: 'Hype4 Academy (Michal Malewicz)', url: 'https://hype4.academy' },
+    { name: 'Spline (3D clay-style tools)', url: 'https://spline.design' },
+    { name: 'Dribbble — claymorphism tag', url: 'https://dribbble.com/tags/claymorphism' },
+  ],
+  references: [
+    { label: 'Hype4 — design articles by Michal Malewicz', url: 'https://hype4.academy' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#EDE7FB',
+      surface: '#FFFFFF',
+      text: '#2B1B4D',
+      muted: '#5B4E77',
+      accent: '#6A45F0',
+      accentText: '#FFFFFF',
+      border: 'transparent',
+    },
+    fonts: {
+      display: '"Fredoka", "Baloo 2", system-ui, sans-serif',
+      body: '"Nunito", system-ui, sans-serif',
+      mono: '"Space Mono", ui-monospace, monospace',
+    },
+    googleFonts: 'family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&family=Space+Mono',
+    radius: '32px',
+    radiusSm: '999px',
+    borderWidth: '0px',
+    shadow: '8px 10px 20px rgba(76, 44, 160, 0.22), inset -6px -6px 12px rgba(76, 44, 160, 0.14), inset 6px 6px 12px rgba(255, 255, 255, 0.9)',
+    displayWeight: 600,
+    displayTracking: '-0.01em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'Doughbo',
+    eyebrow: 'Learning, but squishy',
+    headline: 'Math that feels like play',
+    body: 'Bite-size lessons, friendly characters and streaks your kids will actually want to keep.',
+    cta: 'Start free',
+    media: 'Buddy avatar',
+  },
+};
+
+export default claymorphism;

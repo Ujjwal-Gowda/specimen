@@ -1,0 +1,32 @@
+/* wabi-sabi — tokens, primitive overrides and media-slot art direction, scoped under .lang-wabi-sabi */
+.lang-wabi-sabi {
+  --ui-bg: #F1ECE3;
+  --ui-surface: #F8F5EF;
+  --ui-text: #2C2A27;
+  --ui-muted: #625C53;
+  --ui-accent: #8A5A40;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #CFC8BC;
+  --ui-radius: 14px 18px 12px 20px;
+  --ui-radius-sm: 10px 12px 9px 13px;
+  --ui-bw: 1px;
+  --ui-shadow: none;
+  --ui-font-display: "Cormorant Garamond", Garamond, serif;
+  --ui-font-body: "Hanken Grotesk", system-ui, sans-serif;
+  --ui-font-mono: ui-monospace, monospace;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0.01em;
+  --ui-display-transform: none;
+}
+.lang-wabi-sabi .ui-h1 { font-size: clamp(24px, 2.8vw, 34px); font-weight: 400; line-height: 1.2; }
+.lang-wabi-sabi .ui-eyebrow { text-transform: none; letter-spacing: .08em; font-size: 12px; }
+.lang-wabi-sabi .ui-hero { padding-top: 16px; }
+.lang-wabi-sabi .ui-btn { background: transparent; color: var(--ui-text); border-color: var(--ui-text); font-weight: 400; }
+.lang-wabi-sabi .ui-btn--ghost { border-color: transparent; text-decoration: underline; text-underline-offset: 4px; }
+.lang-wabi-sabi .ui-card { background: transparent; border-width: 0 0 1px; border-radius: 0; }
+.lang-wabi-sabi .ui-badge { background: transparent; color: #8a5a40; border-color: #8a5a40; }
+.lang-wabi-sabi .ui-media { border: 0; background:
+  radial-gradient(ellipse 30% 24% at 52% 62%, #8a5a40 0 88%, transparent 92%),
+  radial-gradient(ellipse 32% 6% at 52% 44%, #6b4430 0 80%, transparent 90%),
+  radial-gradient(rgba(44,42,39,.07) 1px, transparent 1.4px) 0 0 / 5px 5px,
+  linear-gradient(180deg, #e9e3d8 0 70%, #d9d1c3 70%); border-radius: 24px 30px 20px 34px; }

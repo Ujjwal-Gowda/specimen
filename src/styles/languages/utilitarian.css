@@ -1,0 +1,36 @@
+/* utilitarian — tokens, primitive overrides and media-slot art direction, scoped under .lang-utilitarian */
+.lang-utilitarian {
+  --ui-bg: #E6E6E3;
+  --ui-surface: #F7F7F5;
+  --ui-text: #1A1A1A;
+  --ui-muted: #5E5E5A;
+  --ui-accent: #FF5A1F;
+  --ui-accent-text: #1A1A1A;
+  --ui-border: #C9C9C4;
+  --ui-radius: 10px;
+  --ui-radius-sm: 6px;
+  --ui-bw: 1px;
+  --ui-shadow: none;
+  --ui-font-display: "Geist", "Inter", system-ui, sans-serif;
+  --ui-font-body: "Geist", "Inter", system-ui, sans-serif;
+  --ui-font-mono: "Geist Mono", ui-monospace, monospace;
+  --ui-display-weight: 500;
+  --ui-display-tracking: -0.03em;
+  --ui-display-transform: none;
+}
+.lang-utilitarian .ui-nav { font-family: var(--ui-font-mono); font-size: 12px; }
+.lang-utilitarian .ui-eyebrow { font-family: var(--ui-font-mono); text-transform: lowercase; letter-spacing: 0; }
+.lang-utilitarian .ui-h1 { font-size: clamp(26px, 3.2vw, 40px); }
+.lang-utilitarian .ui-btn { font-family: var(--ui-font-mono); font-size: 13px; font-weight: 500; }
+.lang-utilitarian .ui-btn--ghost { background: #f7f7f5; }
+.lang-utilitarian .ui-card { background: #f7f7f5; }
+.lang-utilitarian .ui-card::after { content: 'fig. 0' counter(card); counter-increment: card; position: absolute; right: 10px; top: 8px; font: 500 10px var(--ui-font-mono); color: #5e5e5a; }
+.lang-utilitarian .ui-grid { counter-reset: card; }
+.lang-utilitarian .ui-card { position: relative; }
+.lang-utilitarian .ui-badge, .lang-utilitarian .ui-chip { font-family: var(--ui-font-mono); border-radius: 4px; }
+.lang-utilitarian .ui-media { background:
+  radial-gradient(circle at 30% 50%, #1a1a1a 0 11%, #3a3a3a 11.5% 13%, transparent 13.5%),
+  radial-gradient(circle at 30% 50%, #d4d4cf 0 20%, transparent 20.5%),
+  radial-gradient(circle at 70% 36%, #ff5a1f 0 7%, transparent 7.5%),
+  linear-gradient(#1a1a1a, #1a1a1a) 70% 72% / 30% 4% no-repeat, linear-gradient(#1a1a1a, #1a1a1a) 62% 72% / 3% 16% no-repeat,
+  radial-gradient(circle, #bdbdb7 1px, transparent 1.5px) 0 0 / 8px 8px, #f7f7f5; }

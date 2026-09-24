@@ -1,0 +1,115 @@
+import type { Language } from '../../types';
+
+const midCenturyModern: Language = {
+  id: 'mid-century-modern',
+  name: 'Mid-century Modern',
+  aka: ['MCM', 'Atomic Age design', 'Mid-century graphic design'],
+  category: 'Movement',
+  era: 'c. 1945–1969, USA & Europe',
+  origin: 'Post-war American and European modernism: Charles and Ray Eames, George Nelson and Herman Miller furniture; Saul Bass’s film titles; Paul Rand’s IBM and ABC logos; Alvin Lustig’s book covers; Blue Note record sleeves by Reid Miles. It blended Bauhaus rigour with optimism, playful geometry, organic "boomerang" and atomic shapes, textured print colour and a new consumer culture.',
+  summary: 'Warm, optimistic modernism: mustard, teal, orange and olive on cream, cut-paper geometric shapes, atomic starbursts, playful hand-cut layouts and friendly geometric type. Saul Bass meets Eames.',
+  identify: [
+    'Mustard, burnt orange, teal and olive on cream',
+    'Cut-paper shapes, boomerangs and atomic starbursts',
+    'Off-register, slightly textured print colour',
+    'Geometric sans headlines, often lowercase',
+    'Playful asymmetric compositions with lots of air',
+  ],
+  principles: [
+    'Good design for everyday life',
+    'Playful geometry within modernist order',
+    'Warm colour and texture make modernism human',
+  ],
+  color: {
+    strategy: 'Warm earthy brights (mustard, orange, teal, olive) on a cream ground, flat with print texture.',
+    palette: [
+      { name: 'Cream', hex: '#F4ECDC', role: 'background' },
+      { name: 'Mustard', hex: '#E0A526', role: 'accent' },
+      { name: 'Teal', hex: '#1F6F6B', role: 'primary' },
+      { name: 'Burnt Orange', hex: '#C8552B', role: 'secondary' },
+      { name: 'Walnut', hex: '#3A2A20', role: 'text' },
+    ],
+  },
+  typography: {
+    approach: 'Geometric sans (Futura is the canonical choice) for headlines, often lowercase; a clean sans or book serif for text.',
+    display: ['futura', 'jost', 'josefin-sans'],
+    body: ['jost', 'lora'],
+    mono: [],
+    scale: 'Perfect Fourth (1.333)',
+    notes: 'Jost is a free Futura-alike with a variable weight axis.',
+  },
+  shape: {
+    radius: 'Circles and organic blobs; 0–4px on boxes',
+    borders: 'Few; shape and colour separate areas',
+    elevation: 'Flat, layered paper cut-outs',
+    texture: 'Print grain, off-register edges',
+  },
+  layout: {
+    grid: 'Loose modernist grid with generous white space and a single playful focal shape.',
+    layouts: ['asymmetric-grid', 'split-hero', 'card-grid'],
+    density: 'airy',
+  },
+  imagery: 'Cut-paper illustration, Eames-era furniture, starbursts, simple figures and film-title graphics.',
+  motion: {
+    character: 'Title-sequence playfulness: shapes slide, spin and assemble like Saul Bass credits.',
+    animations: ['stagger-reveal', 'clip-path-reveal', 'blob-morph', 'kinetic-type-anim'],
+    easing: 'cubic-bezier(0.34, 1.56, 0.64, 1) — easeOutBack',
+    duration: '400–800ms',
+  },
+  components: {
+    signature: ['hero', 'feature-grid', 'product-card', 'cta-band'],
+    notes: 'A single bold shape behind the hero headline does most of the work.',
+  },
+  purposes: ['restaurant', 'ecommerce', 'agency', 'real-estate', 'event'],
+  avoidFor: ['devtool', 'fintech'],
+  pairsWith: ['bauhaus', 'scandinavian', 'retro-futurism'],
+  dos: [
+    'Use three or four warm colours on cream',
+    'Cut shapes, don’t draw outlines',
+    'Leave generous air around the focal shape',
+  ],
+  donts: ['Use pure white or black', 'Add gradients or glossy shadows', 'Fill every space'],
+  a11y: 'Mustard and orange fail as text on cream; keep text in walnut or teal.',
+  examples: [
+    { name: 'Herman Miller', url: 'https://www.hermanmiller.com' },
+    { name: 'Eames Office', url: 'https://www.eamesoffice.com' },
+  ],
+  references: [
+    { label: 'Mid-century modern (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Mid-century_modern' },
+    { label: 'Saul Bass (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Saul_Bass' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#F4ECDC',
+      surface: '#FBF6EA',
+      text: '#3A2A20',
+      muted: '#6B5A4B',
+      accent: '#1F6F6B',
+      accentText: '#FFFFFF',
+      border: '#D9C9AC',
+    },
+    fonts: {
+      display: '"Jost", Futura, system-ui, sans-serif',
+      body: '"Jost", system-ui, sans-serif',
+      mono: 'ui-monospace, monospace',
+    },
+    googleFonts: 'family=Jost:wght@400;500;700',
+    radius: '4px',
+    radiusSm: '999px',
+    borderWidth: '0px',
+    shadow: 'none',
+    displayWeight: 500,
+    displayTracking: '-0.01em',
+    displayTransform: 'lowercase',
+  },
+  sample: {
+    brand: 'atomic',
+    eyebrow: 'est. 1956',
+    headline: 'good design for everyday living',
+    body: 'Walnut, wool and bright ideas for homes that like to host.',
+    cta: 'See the catalogue',
+    media: 'Starburst',
+  },
+};
+
+export default midCenturyModern;

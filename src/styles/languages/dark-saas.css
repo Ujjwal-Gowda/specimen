@@ -1,0 +1,90 @@
+/* dark-saas — tokens, primitive overrides and media-slot art direction, scoped under .lang-dark-saas */
+.lang-dark-saas {
+  --ui-bg: #08090A;
+  --ui-surface: #121316;
+  --ui-text: #F7F8F8;
+  --ui-muted: #8A8F98;
+  --ui-accent: #5E6AD2;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #23252A;
+  --ui-radius: 12px;
+  --ui-radius-sm: 8px;
+  --ui-bw: 1px;
+  --ui-shadow: 0 0 0 1px rgba(255, 255, 255, .04), 0 8px 24px rgba(0, 0, 0, .45);
+  --ui-font-display: "Inter", system-ui, sans-serif;
+  --ui-font-body: "Inter", system-ui, sans-serif;
+  --ui-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --ui-display-weight: 600;
+  --ui-display-tracking: -0.04em;
+  --ui-display-transform: none;
+  background:
+    radial-gradient(60% 45% at 50% -8%, rgba(94, 106, 210, .38), transparent 70%),
+    var(--ui-bg);
+}
+.lang-dark-saas .ui-nav {
+  padding: 6px 6px 6px 14px;
+  border: 1px solid var(--ui-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .025);
+}
+.lang-dark-saas .ui-logo { font-weight: 600; letter-spacing: -.02em; }
+.lang-dark-saas .ui-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 10px;
+  border: 1px solid var(--ui-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .03);
+  font-family: var(--ui-font-body);
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.lang-dark-saas .ui-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ui-accent);
+  box-shadow: 0 0 8px var(--ui-accent);
+}
+.lang-dark-saas .ui-h1 {
+  color: var(--ui-text);
+  background: linear-gradient(180deg, #FFFFFF 30%, rgba(255, 255, 255, .55));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lang-dark-saas .ui-btn { font-weight: 500; box-shadow: 0 0 0 1px rgba(255, 255, 255, .08) inset, 0 6px 18px -6px rgba(94, 106, 210, .7); }
+.lang-dark-saas .ui-btn--ghost { background: rgba(255, 255, 255, .04); border-color: var(--ui-border); box-shadow: none; }
+.lang-dark-saas .ui-nav .ui-btn { border-radius: 999px; }
+.lang-dark-saas .ui-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .045), rgba(255, 255, 255, .01));
+}
+.lang-dark-saas .ui-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .22), transparent 45%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.lang-dark-saas .ui-badge { border-color: rgba(94, 106, 210, .45); background: rgba(94, 106, 210, .18); color: #C3C9FF; }
+.lang-dark-saas .ui-chip { background: transparent; color: var(--ui-muted); font-family: var(--ui-font-mono); font-weight: 400; }
+.lang-dark-saas .ui-input { background: rgba(255, 255, 255, .03); }
+.lang-dark-saas .ui-tabs { background: rgba(255, 255, 255, .03); }
+.lang-dark-saas .ui-tab[aria-selected="true"] { background: rgba(255, 255, 255, .08); box-shadow: inset 0 0 0 1px var(--ui-border); }
+.lang-dark-saas .ui-switch span::after { background: var(--ui-text); }
+
+.lang-dark-saas .ui-media { background:
+  linear-gradient(#23252a, #23252a) 0 16% / 100% 1px no-repeat,
+  radial-gradient(circle at 8% 8%, #ff5f57 0 2.2%, transparent 2.6%), radial-gradient(circle at 13% 8%, #febc2e 0 2.2%, transparent 2.6%), radial-gradient(circle at 18% 8%, #28c840 0 2.2%, transparent 2.6%),
+  linear-gradient(#5e6ad2, #5e6ad2) 28% 34% / 50% 5% no-repeat, linear-gradient(#2a2d33, #2a2d33) 28% 48% / 62% 4% no-repeat,
+  linear-gradient(#2a2d33, #2a2d33) 28% 60% / 44% 4% no-repeat, linear-gradient(#1a1c20, #1a1c20) 6% 100% / 16% 84% no-repeat,
+  radial-gradient(80% 60% at 70% 110%, rgba(94,106,210,.35), transparent 70%), #121316; border-color: #23252a; }

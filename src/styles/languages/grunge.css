@@ -1,0 +1,34 @@
+/* grunge — tokens, primitive overrides and media-slot art direction, scoped under .lang-grunge */
+.lang-grunge {
+  --ui-bg: #D8CDB6;
+  --ui-surface: #ECE6D8;
+  --ui-text: #1B1A17;
+  --ui-muted: #4F4A40;
+  --ui-accent: #B8400F;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #1B1A17;
+  --ui-radius: 0px;
+  --ui-radius-sm: 0px;
+  --ui-bw: 2px;
+  --ui-shadow: 4px 5px 0 rgba(27,26,23,.35);
+  --ui-font-display: "Special Elite", "Courier New", monospace;
+  --ui-font-body: "Courier Prime", "Courier New", monospace;
+  --ui-font-mono: "Courier Prime", monospace;
+  --ui-display-weight: 400;
+  --ui-display-tracking: 0em;
+  --ui-display-transform: uppercase;
+}
+.lang-grunge { background-image: radial-gradient(rgba(27,26,23,.18) 1px, transparent 1.4px), radial-gradient(rgba(27,26,23,.08) 1px, transparent 1.4px); background-size: 4px 4px, 7px 7px; background-position: 0 0, 2px 3px; }
+.lang-grunge .ui-h1 { font-size: clamp(28px, 3.6vw, 44px); line-height: .95; transform: rotate(-1.5deg); text-shadow: 2px 1px 0 rgba(184,64,15,.45); }
+.lang-grunge .ui-eyebrow { font-family: var(--ui-font-mono); text-transform: lowercase; background: #1b1a17; color: #ece6d8; padding: 2px 6px; width: max-content; transform: rotate(1deg); }
+.lang-grunge .ui-card { transform: rotate(-.8deg); }
+.lang-grunge .ui-card:nth-child(2) { transform: rotate(1.2deg); }
+.lang-grunge .ui-card::before { content: ''; position: absolute; top: -8px; left: 40%; width: 56px; height: 16px; background: rgba(236,230,216,.8); transform: rotate(-4deg); box-shadow: 0 1px 2px rgba(0,0,0,.2); }
+.lang-grunge .ui-card { position: relative; }
+.lang-grunge .ui-btn { text-transform: uppercase; font-family: var(--ui-font-display); letter-spacing: .06em; }
+.lang-grunge .ui-media { filter: contrast(1.2); background:
+  repeating-linear-gradient(93deg, rgba(0,0,0,.08) 0 2px, transparent 2px 9px),
+  radial-gradient(circle at 30% 40%, #1b1a17 0 22%, transparent 23%),
+  radial-gradient(circle at 64% 62%, rgba(184,64,15,.85) 0 18%, transparent 19%),
+  radial-gradient(ellipse at 50% 50%, #ece6d8 30%, #b9ad94 100%); transform: rotate(1.5deg); }
+.lang-grunge .ui-media-cap { background: #1b1a17; color: #ece6d8; padding: 2px 6px; }

@@ -1,0 +1,78 @@
+/* maximalism — tokens, primitive overrides and media-slot art direction, scoped under .lang-maximalism */
+.lang-maximalism {
+  --ui-bg: #FFF4D6;
+  --ui-surface: #C6FF00;
+  --ui-text: #140A1F;
+  --ui-muted: #3B2A4D;
+  --ui-accent: #FF2E88;
+  --ui-accent-text: #140A1F;
+  --ui-border: #140A1F;
+  --ui-radius: 18px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 3px;
+  --ui-shadow: 6px 6px 0 #140A1F;
+  --ui-font-display: "Bricolage Grotesque", "Arial Black", sans-serif;
+  --ui-font-body: "Bricolage Grotesque", system-ui, sans-serif;
+  --ui-font-mono: "Space Mono", ui-monospace, monospace;
+  --ui-display-weight: 800;
+  --ui-display-tracking: -0.045em;
+  --ui-display-transform: none;
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 46, 136, .11) 0 12px, transparent 12px 24px),
+    var(--ui-bg);
+}
+.lang-maximalism .ui-hero { position: relative; padding-right: 84px; }
+.lang-maximalism .ui-hero::after {
+  content: 'NEW!';
+  position: absolute;
+  top: -4px;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  background: #C6FF00;
+  color: #140A1F;
+  font: 800 15px/1 "Bricolage Grotesque", sans-serif;
+  clip-path: polygon(50% 0, 61% 18%, 82% 10%, 80% 32%, 100% 38%, 86% 55%, 98% 75%, 76% 76%, 70% 98%, 52% 84%, 32% 100%, 27% 78%, 5% 80%, 14% 60%, 0 42%, 18% 32%, 14% 10%, 36% 17%);
+  transform: rotate(12deg);
+}
+.lang-maximalism .ui-logo { font-family: "Shrikhand", var(--ui-font-display); font-size: 20px; font-weight: 400; letter-spacing: 0; color: #2B59FF; text-shadow: 2px 2px 0 #FF2E88; }
+.lang-maximalism .ui-link { color: var(--ui-text); font-weight: 700; text-decoration: underline wavy #FF7A00; text-underline-offset: 4px; }
+.lang-maximalism .ui-eyebrow {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 3px solid #140A1F;
+  background: #2B59FF;
+  color: #FFF4D6;
+  font-weight: 700;
+  transform: rotate(-3deg);
+}
+.lang-maximalism .ui-h1 {
+  font-size: clamp(30px, 3.8vw, 46px);
+  line-height: .92;
+  text-shadow: 3px 3px 0 #FF2E88, 6px 6px 0 #C6FF00;
+}
+.lang-maximalism .ui-btn { border-color: #140A1F; border-radius: 999px; box-shadow: 4px 4px 0 #140A1F; font-weight: 800; transform: rotate(-1.5deg); }
+.lang-maximalism .ui-btn--ghost { background: #C6FF00; color: #140A1F; transform: rotate(1.5deg); }
+.lang-maximalism .ui-nav .ui-btn { transform: none; }
+.lang-maximalism .ui-card:nth-child(1) { background: #C6FF00; transform: rotate(-1.5deg); }
+.lang-maximalism .ui-card:nth-child(2) { background: #FF7A00; transform: rotate(1deg); }
+.lang-maximalism .ui-card:nth-child(3) { background: #2B59FF; }
+.lang-maximalism .ui-card:nth-child(3) .ui-h2,
+.lang-maximalism .ui-card:nth-child(3) .ui-p { color: #FFF4D6; }
+.lang-maximalism .ui-card:nth-child(2) .ui-p { color: #140A1F; }
+.lang-maximalism .ui-badge { border-color: #140A1F; background: #FF2E88; color: #140A1F; }
+.lang-maximalism .ui-chip { border-color: #140A1F; background: #FFF4D6; }
+.lang-maximalism .ui-input { border-radius: 999px; box-shadow: 3px 3px 0 #140A1F; background: #FFFFFF; }
+.lang-maximalism .ui-tabs { border-radius: 999px; background: #FFF4D6; }
+.lang-maximalism .ui-tab { border-radius: 999px; color: #140A1F; }
+.lang-maximalism .ui-tab[aria-selected="true"] { background: #FF2E88; color: #140A1F; box-shadow: none; }
+.lang-maximalism .ui-switch span { border: 3px solid #140A1F; }
+.lang-maximalism .ui-switch span::after { top: 0; left: 0; background: #FFF4D6; border: 3px solid #140A1F; box-shadow: none; }
+
+.lang-maximalism .ui-media { border: 3px solid #140a1f; background:
+  radial-gradient(circle at 30% 35%, #ff2e88 0 18%, transparent 18.5%),
+  radial-gradient(circle at 70% 65%, #2b59ff 0 20%, transparent 20.5%),
+  conic-gradient(from 45deg at 50% 50%, #c6ff00 0 25%, #ff7a00 0 50%, #c6ff00 0 75%, #ff7a00 0) 0 0 / 24px 24px; }
+.lang-maximalism .ui-media-cap { background: #140a1f; color: #fff4d6; padding: 2px 6px; }

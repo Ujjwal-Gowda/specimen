@@ -1,0 +1,58 @@
+/* fluent2 — tokens, primitive overrides and media-slot art direction, scoped under .lang-fluent2 */
+.lang-fluent2 {
+  --ui-bg: #FAFAFA; --ui-surface: #FFFFFF; --ui-text: #242424; --ui-muted: #616161;
+  --ui-accent: #0F6CBD; --ui-accent-text: #FFFFFF; --ui-border: #D1D1D1;
+  --ui-radius: 8px; --ui-radius-sm: 4px; --ui-bw: 1px; --ui-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14);
+  --ui-font-display: "Segoe UI Variable Display", "Segoe UI", "Open Sans", system-ui, sans-serif;
+  --ui-font-body: "Segoe UI Variable Text", "Segoe UI", "Open Sans", system-ui, sans-serif;
+  --ui-font-mono: "Cascadia Code", "Fira Code", ui-monospace, monospace;
+  --ui-display-weight: 600; --ui-display-tracking: -0.01em; --ui-display-transform: none;
+  /* Mica-like tint */
+  background: linear-gradient(135deg, #F3F6FB 0%, #FAFAFA 45%, #F7F3F8 100%);
+}
+.lang-fluent2 .ui-nav { background: rgba(255, 255, 255, .7); -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px); margin: -18px -20px 0; padding: 8px 20px; border-bottom: 1px solid #E0E0E0; }
+.lang-fluent2 .ui-logo::before { content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px; border-radius: 3px; background: linear-gradient(135deg, #0F6CBD, #5AB0F7); }
+.lang-fluent2 .ui-link { color: #424242; }
+.lang-fluent2 .ui-eyebrow { font-family: var(--ui-font-body); text-transform: none; letter-spacing: 0; font-size: 12px; font-weight: 600; color: #0F6CBD; }
+.lang-fluent2 .ui-h1 { font-size: clamp(26px, 3.2vw, 34px); line-height: 1.2; }
+.lang-fluent2 .ui-btn { min-height: 32px; font-weight: 600; font-size: 13px; }
+.lang-fluent2 .ui-btn:hover { background: #115EA3; border-color: #115EA3; }
+.lang-fluent2 .ui-btn--ghost { background: #fff; color: #242424; border-color: #D1D1D1; }
+.lang-fluent2 .ui-btn--ghost:hover { background: #F5F5F5; border-color: #C7C7C7; }
+.lang-fluent2 .ui-card { border-color: #E0E0E0; }
+.lang-fluent2 .ui-badge { border-radius: 4px; }
+.lang-fluent2 .ui-chip { border-radius: 4px; background: #F5F5F5; border-color: #E0E0E0; color: #424242; }
+.lang-fluent2 .ui-input { height: 32px; border-color: #D1D1D1; border-bottom: 1px solid #616161; border-radius: 4px; }
+.lang-fluent2 .ui-input:focus { outline: none; border-bottom: 2px solid #0F6CBD; }
+.lang-fluent2 .ui-tabs { border: 0; background: transparent; padding: 0; gap: 4px; }
+.lang-fluent2 .ui-tab { position: relative; border-radius: 4px; color: #424242; }
+.lang-fluent2 .ui-tab[aria-selected="true"] { background: transparent; box-shadow: none; color: #242424; }
+.lang-fluent2 .ui-tab[aria-selected="true"]::after { content: ''; position: absolute; left: 12px; right: 12px; bottom: 0; height: 3px; border-radius: 2px; background: #0F6CBD; }
+.lang-fluent2 .ui-switch { width: 40px; height: 20px; }
+.lang-fluent2 .ui-switch span { background: #fff; box-shadow: inset 0 0 0 1px #616161; }
+.lang-fluent2 .ui-switch span::after { top: 4px; left: 4px; width: 12px; height: 12px; background: #616161; box-shadow: none; }
+.lang-fluent2 .ui-switch input:checked + span { background: #0F6CBD; box-shadow: none; }
+.lang-fluent2 .ui-switch input:checked + span::after { transform: translateX(20px); background: #fff; }
+.lang-fluent2 .ui-media {
+  border-radius: 8px;
+  background:
+    radial-gradient(70% 90% at 15% 10%, #9FD89F, transparent 60%),
+    radial-gradient(80% 90% at 90% 90%, #B4A0FF, transparent 60%),
+    #CFE4FA;
+}
+.lang-fluent2 .ui-media::before {
+  content: ''; position: absolute; inset: 18% 14% 22% 14%;
+  border-radius: 8px;
+  background:
+    linear-gradient(#0F6CBD, #0F6CBD) 12px 12px / 36% 8px no-repeat,
+    linear-gradient(#C7C7C7, #C7C7C7) 12px 28px / 60% 6px no-repeat,
+    linear-gradient(#C7C7C7, #C7C7C7) 12px 40px / 48% 6px no-repeat,
+    rgba(255,255,255,.62);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4); backdrop-filter: blur(20px) saturate(1.4);
+  box-shadow: 0 8px 16px rgba(0,0,0,.14), 0 0 2px rgba(0,0,0,.12);
+}
+.lang-fluent2 .ui-media-cap { color: #242424; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lang-fluent2 .ui-media::before { transition: none; }
+}

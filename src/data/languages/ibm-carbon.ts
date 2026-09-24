@@ -1,0 +1,126 @@
+import type { Language } from '../../types';
+
+const ibmCarbon: Language = {
+  id: 'ibm-carbon',
+  name: 'IBM Carbon',
+  aka: ['Carbon Design System', 'IBM Design Language'],
+  category: 'Platform system',
+  era: '2017–present, IBM',
+  origin: 'Carbon is IBM’s open-source design system, launched in 2017 to unify IBM’s software products under the IBM Design Language. It inherits the "2x Grid" and the IBM Plex type family (Mike Abbink with Bold Monday, 2017), which replaced Helvetica across IBM. Carbon ships React, Web Components, Angular and Vue implementations, and is known for its rigorous data-dense enterprise components, four themes (White, Gray 10, Gray 90, Gray 100) and its expressive-versus-productive type sets.',
+  summary: 'IBM’s enterprise design system: square corners, a strict 2x grid, IBM Plex everywhere and a restrained blue-60 accent. Built for dense, data-heavy software that must stay calm and legible for hours.',
+  identify: [
+    'Square corners on almost everything; buttons flush to container edges',
+    'IBM Plex Sans / Mono / Serif throughout',
+    'Blue 60 (#0F62FE) as the one interactive colour on neutral greys',
+    'Bottom-border text inputs on a light grey fill',
+    'Dense data tables, tiles and side navigation with thin dividers',
+  ],
+  principles: [
+    'Productive before expressive: clarity for repeated daily use',
+    'The 2x Grid — every dimension is a multiple of 8 (with 2 and 4 for fine detail)',
+    'Colour is functional: status and interaction, not decoration',
+    'Accessible by default (WCAG 2.1 AA across components)',
+  ],
+  color: {
+    strategy: 'Neutral grey layers (white, Gray 10, Gray 100) with IBM Blue 60 for interaction and a fixed support palette for status.',
+    palette: [
+      { name: 'White', hex: '#FFFFFF', role: 'background' },
+      { name: 'Gray 10', hex: '#F4F4F4', role: 'layer / field' },
+      { name: 'Gray 100', hex: '#161616', role: 'text' },
+      { name: 'Gray 70', hex: '#525252', role: 'secondary text' },
+      { name: 'Blue 60', hex: '#0F62FE', role: 'interactive' },
+      { name: 'Red 60', hex: '#DA1E28', role: 'error' },
+      { name: 'Green 50', hex: '#24A148', role: 'success' },
+    ],
+  },
+  typography: {
+    approach: 'IBM Plex Sans for everything, with Plex Mono for code and data and Plex Serif for editorial moments. Carbon defines separate "productive" (compact) and "expressive" (fluid, larger) type sets.',
+    display: ['ibm-plex-sans', 'ibm-plex-sans-condensed'],
+    body: ['ibm-plex-sans', 'ibm-plex-serif'],
+    mono: ['ibm-plex-mono'],
+    scale: 'Carbon type scale (custom, 12 → 156px); roughly Major Third (1.25)',
+    notes: 'Light (300) weight for large expressive headings is a Carbon signature.',
+  },
+  shape: {
+    radius: '0px (square)',
+    borders: '1px dividers; inputs have a bottom border only; focus is a 2px inset blue ring',
+    elevation: 'Mostly flat; layering by background grey steps, shadows only on overlays',
+    texture: 'None',
+  },
+  layout: {
+    grid: 'The 2x Grid: 16 columns at large widths, 32px gutters, mini unit of 8px.',
+    layouts: ['dashboard-shell', 'sidebar-docs', 'twelve-col-grid', 'modular-grid'],
+    density: 'dense',
+  },
+  imagery: 'Product screenshots, data visualisation and the IBM line-art illustration style; photography is candid and cool.',
+  motion: {
+    character: 'Two modes: productive (fast, efficient) and expressive (slightly longer, for moments that matter).',
+    animations: ['fade-in', 'accordion-expand', 'toast-slide', 'shimmer-skeleton', 'progress-fill'],
+    easing: 'cubic-bezier(0.2, 0, 0.38, 0.9) — Carbon standard productive',
+    duration: '70–240ms (fast-01 to moderate-02)',
+  },
+  components: {
+    signature: ['data-table', 'sidebar-nav', 'tabs', 'toast', 'input', 'breadcrumb', 'chart'],
+    notes: 'Carbon’s data table (sorting, batch actions, expandable rows) and UI shell (header + side nav) are the parts most teams adopt.',
+  },
+  purposes: ['saas', 'devtool', 'fintech', 'government', 'healthcare', 'docs'],
+  avoidFor: ['kids', 'luxury-brand', 'restaurant'],
+  pairsWith: ['swiss', 'fluent2', 'minimalism'],
+  dos: [
+    'Use the 8px mini unit and 16-column grid',
+    'Keep Blue 60 for interactive elements only',
+    'Use the Gray 10 / White layering to separate regions',
+  ],
+  donts: [
+    'Round the corners — it stops looking like Carbon',
+    'Add decorative colour or gradients',
+    'Mix in another type family',
+  ],
+  a11y: 'Carbon components target WCAG 2.1 AA; keep the 2px focus ring and do not rely on the blue alone to show state.',
+  examples: [
+    { name: 'Carbon Design System', url: 'https://carbondesignsystem.com' },
+    { name: 'IBM', url: 'https://www.ibm.com' },
+  ],
+  references: [
+    {
+      label: 'Carbon — Elements & guidelines',
+      url: 'https://carbondesignsystem.com/elements/color/overview/',
+    },
+    { label: 'IBM Design Language', url: 'https://www.ibm.com/design/language/' },
+    { label: 'IBM Plex', url: 'https://www.ibm.com/plex/' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#FFFFFF',
+      surface: '#F4F4F4',
+      text: '#161616',
+      muted: '#525252',
+      accent: '#0F62FE',
+      accentText: '#FFFFFF',
+      border: '#C6C6C6',
+    },
+    fonts: {
+      display: '"IBM Plex Sans", system-ui, sans-serif',
+      body: '"IBM Plex Sans", system-ui, sans-serif',
+      mono: '"IBM Plex Mono", ui-monospace, monospace',
+    },
+    googleFonts: 'family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400',
+    radius: '0px',
+    radiusSm: '0px',
+    borderWidth: '1px',
+    shadow: 'none',
+    displayWeight: 300,
+    displayTracking: '0em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'IBM Cloud',
+    eyebrow: 'Observability',
+    headline: 'See every service, every second',
+    body: 'Trace requests across 4,000 microservices with alerts that explain themselves.',
+    cta: 'Start free trial',
+    media: 'Service map',
+  },
+};
+
+export default ibmCarbon;

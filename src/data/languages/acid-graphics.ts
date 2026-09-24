@@ -1,0 +1,111 @@
+import type { Language } from '../../types';
+
+const acidGraphics: Language = {
+  id: 'acid-graphics',
+  name: 'Acid Graphics',
+  aka: ['Acid design', 'Neo-Y2K', 'Acidwave'],
+  category: 'Aesthetic',
+  era: 'Late 1980s–90s rave flyers; revived c. 2018–present',
+  origin: 'Rooted in acid house and rave flyers of the late 1980s and 1990s (the smiley, techno flyers, The Designers Republic’s work for Warp Records and Wipeout) and in Y2K chrome. Its 2010s–20s revival — sometimes called Neo-Y2K or Acid — mixes liquid chrome, wireframe and 3D, blurred gradients, tribal and gothic linework, tiny tech type and stretched sans, often on black. It is popular in music, streetwear and club culture.',
+  summary: 'Rave-flyer chaos in 3D chrome: liquid metal, acid green on black, warped grids, tribal and star linework, stretched grotesks and micro tech type. Hyper, loud and futuristic.',
+  identify: [
+    'Liquid chrome and holographic 3D forms',
+    'Acid green, UV purple or silver on black',
+    'Warped grids, wireframes and star/tribal line ornaments',
+    'Stretched, extended or blurred sans type with tiny tech labels',
+    'Collage of stickers, barcodes and symbols',
+  ],
+  principles: [
+    'Maximum energy, minimum restraint',
+    'Chrome and code: the machine aesthetic',
+    'Micro-typography as texture',
+  ],
+  color: {
+    strategy: 'Black base with acid green or UV purple and chrome silver; gradients blurred and iridescent.',
+    palette: [
+      { name: 'Void', hex: '#0B0B0B', role: 'background' },
+      { name: 'Acid Green', hex: '#C6FF00', role: 'accent' },
+      { name: 'UV Purple', hex: '#8B5CF6', role: 'secondary' },
+      { name: 'Chrome', hex: '#D9DDE3', role: 'text' },
+      { name: 'Gunmetal', hex: '#4B5058', role: 'muted' },
+    ],
+  },
+  typography: {
+    approach: 'Wide, stretched or ultra-bold display grotesks, plus tiny monospaced labels scattered as texture.',
+    display: ['unbounded', 'syne', 'neue-machina'],
+    body: ['space-grotesk'],
+    mono: ['space-mono', 'jetbrains-mono'],
+    scale: 'Augmented Fourth (1.414)',
+    notes: 'Stretching type with transform: scaleX() is common but distorts glyphs — prefer faces with a width axis.',
+  },
+  shape: {
+    radius: 'Mixed: sharp frames with pill stickers',
+    borders: 'Thin wireframe lines, crosshairs',
+    elevation: 'Chrome highlights and glow',
+    texture: 'Noise, holographic gradients, warped grids',
+  },
+  layout: {
+    grid: 'Collage over a visible technical grid; tiny labels at the corners.',
+    layouts: ['broken-grid', 'full-bleed-hero', 'bento-layout'],
+    density: 'dense',
+  },
+  imagery: '3D chrome blobs, wireframe spheres, flames, stars, barcodes, smileys.',
+  motion: {
+    character: 'Pulsing and liquid: chrome ripples, marquees and glitch cuts.',
+    animations: ['image-distortion', 'marquee-scroll', 'glitch', 'gradient-drift', 'particles'],
+    easing: 'cubic-bezier(0.83, 0, 0.17, 1) — easeInOutQuint',
+    duration: '200–800ms',
+  },
+  components: {
+    signature: ['hero', 'marquee-band', 'product-card', 'badge'],
+    notes: 'Streetwear product cards with sticker badges and micro labels.',
+  },
+  purposes: ['event', 'ecommerce', 'gaming', 'agency', 'web3'],
+  avoidFor: ['healthcare', 'government', 'education'],
+  pairsWith: ['y2k', 'cyberpunk', 'maximalism'],
+  dos: ['Use one acid accent on black', 'Scatter micro labels as texture', 'Keep 3D chrome as hero art, not UI'],
+  donts: ['Put tiny type where people must read it', 'Stretch body text', 'Stack every effect at once'],
+  a11y: 'Micro type and chrome text fail contrast and size; keep real content at 16px+ and plain colour.',
+  examples: [],
+  references: [
+    {
+      label: 'The Designers Republic (Wikipedia)',
+      url: 'https://en.wikipedia.org/wiki/The_Designers_Republic',
+    },
+    { label: 'Acid house (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Acid_house' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#0B0B0B',
+      surface: '#161616',
+      text: '#E6E9EE',
+      muted: '#9AA0A8',
+      accent: '#C6FF00',
+      accentText: '#0B0B0B',
+      border: '#3A3D42',
+    },
+    fonts: {
+      display: '"Unbounded", "Syne", sans-serif',
+      body: '"Space Grotesk", system-ui, sans-serif',
+      mono: '"Space Mono", monospace',
+    },
+    googleFonts: 'family=Unbounded:wght@700;900&family=Space+Grotesk:wght@400;600&family=Space+Mono',
+    radius: '0px',
+    radiusSm: '999px',
+    borderWidth: '1px',
+    shadow: '0 0 24px rgba(198,255,0,.25)',
+    displayWeight: 900,
+    displayTracking: '-0.02em',
+    displayTransform: 'uppercase',
+  },
+  sample: {
+    brand: 'HYPERFLUX™',
+    eyebrow: 'SS27 // DROP 03',
+    headline: 'Liquid chrome season',
+    body: 'Twelve pieces, one night, no restock. Doors open 23:00.',
+    cta: 'Enter drop',
+    media: 'Chrome blob',
+  },
+};
+
+export default acidGraphics;

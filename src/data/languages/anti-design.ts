@@ -1,0 +1,110 @@
+import type { Language } from '../../types';
+
+const antiDesign: Language = {
+  id: 'anti-design',
+  name: 'Anti-design',
+  aka: ['Ugly design', 'Anti-UX', 'New Ugly'],
+  category: 'Aesthetic',
+  era: 'Italian Radical Design 1960s–70s; web revival 2018–present',
+  origin: 'The name comes from the Italian Radical Design movement (Archizoom, Superstudio, Ettore Sottsass) that attacked functionalist "good design". On the web it describes sites that deliberately ignore conventions — default browser styles, clashing fonts, overlapping elements, cursor tricks — seen in fashion (Balenciaga’s 2019 site), art-school portfolios and music. It overlaps with web brutalism but is more chaotic and intentionally "wrong".',
+  summary: 'Rules deliberately broken: default fonts at odd sizes, clashing colours, overlapping and misaligned elements, raw links and unexpected interactions. Anti-polish as a statement.',
+  identify: [
+    'Default system fonts (Times, Arial) mixed with odd display faces',
+    'Overlaps, collisions and elements off the grid',
+    'Clashing, unharmonious colours',
+    'Visible HTML defaults: blue underlined links, grey buttons',
+    'Surprising interactions — dragged, stretched, tilted elements',
+  ],
+  principles: ['Ugly on purpose is a point of view', 'Reject the template and the trend', 'Surprise over comfort'],
+  color: {
+    strategy: 'Unharmonious, clashing pairs and browser defaults (link blue, visited purple) on white.',
+    palette: [
+      { name: 'Browser White', hex: '#FFFFFF', role: 'background' },
+      { name: 'Default Black', hex: '#000000', role: 'text' },
+      { name: 'Link Blue', hex: '#0000EE', role: 'accent' },
+      { name: 'Visited Purple', hex: '#551A8B', role: 'secondary' },
+      { name: 'Clash Green', hex: '#00FF41', role: 'highlight' },
+    ],
+  },
+  typography: {
+    approach: 'System defaults (Times New Roman, Arial, Courier) at unexpected sizes, mixed with one strange display face.',
+    display: ['times-new-roman', 'syne', 'unifrakturmaguntia'],
+    body: ['times-new-roman', 'courier-prime'],
+    mono: ['courier-prime'],
+    scale: 'None — sizes jump wildly',
+    notes: 'Using the browser’s default serif is itself the statement.',
+  },
+  shape: {
+    radius: 'Default (0px) or absurd (999px) — never tasteful',
+    borders: 'Default 2px outset buttons, raw borders',
+    elevation: 'Random, clashing drop shadows',
+    texture: 'Low-res images, MS Paint marks',
+  },
+  layout: {
+    grid: 'No grid — overlapping, absolutely positioned elements.',
+    layouts: ['broken-grid', 'single-column-longform', 'masonry'],
+    density: 'dense',
+  },
+  imagery: 'Low-res JPEGs, stretched photos, clip art, screenshots and cursor trails.',
+  motion: {
+    character: 'Unexpected and janky: elements follow the cursor, jitter or snap.',
+    animations: ['cursor-follower', 'marquee-scroll', 'shake-error', 'glitch'],
+    easing: 'linear or steps(2)',
+    duration: 'anything',
+  },
+  components: {
+    signature: ['link', 'button', 'marquee-band', 'gallery-masonry'],
+    notes: 'Keep the actual buy/submit controls findable — anti-design that loses sales is just bad design.',
+  },
+  purposes: ['portfolio', 'agency', 'event', 'personal-blog'],
+  avoidFor: ['healthcare', 'government', 'fintech', 'education'],
+  pairsWith: ['brutalism', 'grunge', 'maximalism'],
+  dos: [
+    'Break conventions knowingly and consistently',
+    'Keep the core task usable',
+    'Use it for brands with an audience that gets the joke',
+  ],
+  donts: ['Break keyboard navigation or focus', 'Hide the primary action', 'Mistake carelessness for concept'],
+  a11y: 'Visual chaos is fine; semantic chaos is not. Keep reading order, headings, focus and labels correct underneath.',
+  examples: [
+    { name: 'Balenciaga', url: 'https://www.balenciaga.com' },
+  ],
+  references: [
+    { label: 'Anti-design (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Anti-design' },
+    { label: 'Brutalist Websites', url: 'https://brutalistwebsites.com' },
+  ],
+  tokens: {
+    colors: {
+      bg: '#FFFFFF',
+      surface: '#EFEFEF',
+      text: '#000000',
+      muted: '#444444',
+      accent: '#0000EE',
+      accentText: '#FFFFFF',
+      border: '#000000',
+    },
+    fonts: {
+      display: '"Times New Roman", Times, serif',
+      body: '"Times New Roman", Times, serif',
+      mono: '"Courier New", Courier, monospace',
+    },
+    googleFonts: 'family=Syne:wght@800',
+    radius: '0px',
+    radiusSm: '0px',
+    borderWidth: '2px',
+    shadow: '7px -5px 0 #00FF41',
+    displayWeight: 400,
+    displayTracking: '-0.04em',
+    displayTransform: 'none',
+  },
+  sample: {
+    brand: 'untitled (final) v3',
+    eyebrow: 'this is not a website',
+    headline: 'We forgot the template.',
+    body: 'Collection 04. No lookbook. No grid. Scroll at your own risk.',
+    cta: 'enter',
+    media: 'img_0043.jpg',
+  },
+};
+
+export default antiDesign;

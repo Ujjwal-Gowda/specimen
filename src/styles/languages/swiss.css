@@ -1,0 +1,54 @@
+/* swiss — tokens, primitive overrides and media-slot art direction, scoped under .lang-swiss */
+.lang-swiss {
+  --ui-bg: #FFFFFF; --ui-surface: #F2F2F2; --ui-text: #111111; --ui-muted: #555555;
+  --ui-accent: #E30613; --ui-accent-text: #FFFFFF; --ui-border: #111111;
+  --ui-radius: 0px; --ui-radius-sm: 0px; --ui-bw: 1px; --ui-shadow: none;
+  --ui-font-display: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ui-font-body: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ui-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --ui-display-weight: 700; --ui-display-tracking: -0.035em; --ui-display-transform: none;
+  /* faint 6-column grid behind everything */
+  background:
+    repeating-linear-gradient(90deg, transparent 0 calc(100% / 6 - 1px), rgba(227, 6, 19, .07) calc(100% / 6 - 1px) calc(100% / 6)),
+    #FFFFFF;
+}
+.lang-swiss .ui-nav { border-bottom: 4px solid #111; padding-bottom: 10px; }
+.lang-swiss .ui-logo { font-size: 14px; letter-spacing: -0.02em; }
+.lang-swiss .ui-link { color: #111; font-weight: 500; }
+.lang-swiss .ui-eyebrow { font-family: var(--ui-font-body); font-weight: 700; color: #E30613; letter-spacing: 0; text-transform: none; font-size: 12px; }
+.lang-swiss .ui-hero { position: relative; padding-left: 22%; }
+.lang-swiss .ui-hero::before {
+  content: '04';
+  position: absolute; left: 0; top: -4px;
+  font: 800 44px/1 var(--ui-font-display); letter-spacing: -0.05em; color: #E30613;
+}
+.lang-swiss .ui-h1 { font-size: clamp(30px, 4vw, 46px); line-height: .92; max-width: 11ch; }
+.lang-swiss .ui-btn { font-weight: 700; }
+.lang-swiss .ui-btn--ghost { border-color: #111; }
+.lang-swiss .ui-grid { gap: 0; border-top: 1px solid #111; }
+.lang-swiss .ui-card { background: transparent; border: 0; border-right: 1px solid #111; padding: 10px 12px 0 0; margin-right: 12px; }
+.lang-swiss .ui-card:last-child { border-right: 0; }
+.lang-swiss .ui-badge { border-radius: 0; background: #E30613; }
+.lang-swiss .ui-chip { border-radius: 0; border: 0; padding: 0; font-weight: 700; background: none; }
+.lang-swiss .ui-input { border: 0; border-bottom: 2px solid #111; padding-left: 0; background: transparent; }
+.lang-swiss .ui-tabs { border-radius: 0; background: transparent; border: 1px solid #111; padding: 0; }
+.lang-swiss .ui-tab { border-radius: 0; }
+.lang-swiss .ui-tab[aria-selected="true"] { background: #111; color: #fff; box-shadow: none; }
+.lang-swiss .ui-switch span { border-radius: 0; }
+.lang-swiss .ui-switch span::after { border-radius: 0; }
+.lang-swiss .ui-hero { padding-left: 18%; }
+.lang-swiss .ui-media {
+  border: 0; border-radius: 0;
+  background:
+    radial-gradient(circle at 62% 42%, #E30613 0 34%, transparent 34.5%),
+    radial-gradient(circle, rgba(255,255,255,.22) 1.2px, transparent 1.6px) 0 0 / 7px 7px,
+    #111;
+}
+.lang-swiss .ui-media::before {
+  content: '58'; position: absolute; left: 8px; top: 2px;
+  font: 800 64px/0.9 var(--ui-font-display); letter-spacing: -0.06em; color: #fff;
+}
+.lang-swiss .ui-media::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 26px; height: 4px; background: #fff;
+}
+.lang-swiss .ui-media-cap { color: #fff; font-family: var(--ui-font-body); font-weight: 700; text-transform: none; letter-spacing: 0; }

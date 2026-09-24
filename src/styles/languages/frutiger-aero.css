@@ -1,0 +1,33 @@
+/* frutiger-aero — tokens, primitive overrides and media-slot art direction, scoped under .lang-frutiger-aero */
+.lang-frutiger-aero {
+  --ui-bg: #EAF6FF;
+  --ui-surface: #FFFFFF;
+  --ui-text: #0B3D6B;
+  --ui-muted: #3E6788;
+  --ui-accent: #1479C9;
+  --ui-accent-text: #FFFFFF;
+  --ui-border: #A9D3F2;
+  --ui-radius: 14px;
+  --ui-radius-sm: 999px;
+  --ui-bw: 1px;
+  --ui-shadow: 0 6px 18px rgba(20,121,201,.25);
+  --ui-font-display: "Open Sans", "Segoe UI", Frutiger, sans-serif;
+  --ui-font-body: "Open Sans", "Segoe UI", sans-serif;
+  --ui-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --ui-display-weight: 700;
+  --ui-display-tracking: -0.01em;
+  --ui-display-transform: none;
+}
+.lang-frutiger-aero { background: linear-gradient(180deg, #bfe6ff 0%, #eaf6ff 45%, #f6fbff 100%); }
+.lang-frutiger-aero .ui-nav { border-radius: 14px; padding: 6px 12px; background: linear-gradient(#ffffffd9, #dff1ffcc); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(20,121,201,.2); }
+.lang-frutiger-aero .ui-btn { border-radius: 999px; background: linear-gradient(180deg, #7cc8f7 0%, #2b93dc 50%, #1479c9 51%, #3aa8e8 100%); border: 1px solid #0b5a9c; box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 3px 8px rgba(20,121,201,.35); text-shadow: 0 -1px 0 rgba(0,0,0,.25); }
+.lang-frutiger-aero .ui-btn--ghost { background: linear-gradient(#fff, #e3f2fd); color: #0b3d6b; border-color: #a9d3f2; text-shadow: none; }
+.lang-frutiger-aero .ui-card { background: linear-gradient(#ffffff, #eef8ff); border-color: #fff; box-shadow: 0 8px 20px rgba(20,121,201,.15), inset 0 1px 0 #fff; }
+.lang-frutiger-aero .ui-badge { background: linear-gradient(#9be15d, #4caf30); border-color: #3d8f25; color: #fff; }
+.lang-frutiger-aero .ui-media { border: 1px solid #fff; background:
+  radial-gradient(circle at 72% 30%, rgba(255,255,255,.95) 0 7%, rgba(255,255,255,.35) 8% 9%, transparent 10%),
+  radial-gradient(circle at 60% 52%, rgba(255,255,255,.8) 0 4%, transparent 5%),
+  radial-gradient(circle at 82% 60%, rgba(255,255,255,.7) 0 3%, transparent 4%),
+  radial-gradient(140% 60% at 50% 110%, #6cc24a 0 45%, #3f9a2d 46% 60%, transparent 61%),
+  linear-gradient(180deg, #3aa8e8, #bfe6ff 70%); box-shadow: inset 0 1px 0 #fff; }
+.lang-frutiger-aero .ui-media-cap { color: #fff; text-shadow: 0 1px 2px #0b4f8a; }
